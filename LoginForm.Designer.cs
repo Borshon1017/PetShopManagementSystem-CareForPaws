@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnClose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -42,6 +43,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -51,7 +53,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.txtPassword);
@@ -60,44 +61,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(434, 312);
             this.panel2.TabIndex = 0;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(82, 115);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(264, 34);
-            this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.txtPassword.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtPassword.StateCommon.Border.Rounding = 20;
-            this.txtPassword.StateCommon.Border.Width = 1;
-            this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtPassword.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "Password";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(82, 51);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(264, 34);
-            this.txtUserName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.txtUserName.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.txtUserName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtUserName.StateCommon.Border.Rounding = 20;
-            this.txtUserName.StateCommon.Border.Width = 1;
-            this.txtUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtUserName.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtUserName.TabIndex = 0;
-            this.txtUserName.Text = "Username";
             // 
             // btnLogin
             // 
@@ -161,6 +124,55 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Values.Text = "Login";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(82, 115);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(264, 34);
+            this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.txtPassword.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPassword.StateCommon.Border.Rounding = 20;
+            this.txtPassword.StateCommon.Border.Width = 1;
+            this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtPassword.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "Password";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(82, 51);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(264, 34);
+            this.txtUserName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.txtUserName.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.txtUserName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtUserName.StateCommon.Border.Rounding = 20;
+            this.txtUserName.StateCommon.Border.Width = 1;
+            this.txtUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtUserName.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtUserName.TabIndex = 0;
+            this.txtUserName.Text = "Username";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(829, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
+            this.btnClose.Size = new System.Drawing.Size(98, 25);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Values.Image")));
+            this.btnClose.Values.Text = "X";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -184,6 +196,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUserName;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClose;
     }
 }
 

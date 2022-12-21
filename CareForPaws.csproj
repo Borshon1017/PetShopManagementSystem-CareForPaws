@@ -40,7 +40,7 @@
       <HintPath>..\..\..\Desktop\University\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\Desktop\University\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\Downloads\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -71,6 +71,18 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageProductUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageProductUC.Designer.cs">
+      <DependentUpon>ManageProductUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSellerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageSellerUC.Designer.cs">
+      <DependentUpon>ManageSellerUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SellerHome.cs">
@@ -84,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProductUC.resx">
+      <DependentUpon>ManageProductUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSellerUC.resx">
+      <DependentUpon>ManageSellerUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

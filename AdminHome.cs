@@ -21,5 +21,30 @@ namespace CareForPaws
         {
 
         }
+
+        private void AddUserControl(UserControl userControl) { 
+        
+            userControl.Dock = DockStyle.Fill;
+            panel3.Controls.Clear();
+            panel3.Controls.Add(userControl);
+            userControl.BringToFront();
+        
+        }
+
+        private void btnManageSeller_Click(object sender, EventArgs e)
+        {
+
+            ManageSellerUC manageSellerUC = new ManageSellerUC();
+            this.AddUserControl(manageSellerUC);
+
+        }
+
+        private void btnManageProduct_Click(object sender, EventArgs e)
+        {
+
+            ManageProductUC manageProductUC = new ManageProductUC();
+            this.AddUserControl(manageProductUC);
+
+        }
     }
 }

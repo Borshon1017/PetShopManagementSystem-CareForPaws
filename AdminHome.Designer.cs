@@ -128,6 +128,7 @@
             this.btnManageProduct.Text = "Manage Product";
             this.btnManageProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnManageProduct.UseTransfarantBackground = true;
+            this.btnManageProduct.Click += new System.EventHandler(this.btnManageProduct_Click);
             // 
             // btnManageSeller
             // 
@@ -158,6 +159,7 @@
             this.btnManageSeller.Text = "Manage Seller";
             this.btnManageSeller.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnManageSeller.UseTransfarantBackground = true;
+            this.btnManageSeller.Click += new System.EventHandler(this.btnManageSeller_Click);
             // 
             // AdminHome
             // 

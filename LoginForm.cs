@@ -28,10 +28,16 @@ namespace CareForPaws
 
                 if (ds.Tables[0].Rows.Count == 1)
                 {
-                    if (ds.Tables[0].Rows[0][7].ToString() == "Admin")
-                        new AdminHome().Show();
-                    else if (ds.Tables[0].Rows[0][7].ToString() == "Seller")
-                        new SellerHome().Show();
+                if (ds.Tables[0].Rows[0][7].ToString() == "Admin")
+                {
+
+                    new AdminHome().Show();
+                    this.Hide();
+
+                }
+
+                else if (ds.Tables[0].Rows[0][7].ToString() == "Seller")
+                    new SellerHome().Show();
                 }
                 else
                 {

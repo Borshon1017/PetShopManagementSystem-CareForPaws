@@ -12,6 +12,7 @@ namespace CareForPaws
 {
     public partial class LoginForm : Form
     {
+       
 
         private DataAccess Da { get; set; }
 
@@ -90,5 +91,45 @@ namespace CareForPaws
             }
         }
 
+        private void gunaLinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar= true;
+        }
+
+        private void btnvisible_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.UseSystemPasswordChar == false)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+            btnInvisible.Visible = true;
+            btnVisible.Visible = false;
+            
+        }
+
+        private void btninvisible_Click(object sender, EventArgs e)
+        {
+           
+            if (txtPassword.UseSystemPasswordChar == true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            btnInvisible.Visible = false;
+            btnVisible.Visible = true;
+            
+
+
+
+        }
     }
 }

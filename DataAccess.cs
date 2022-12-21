@@ -45,6 +45,7 @@ namespace CareForPaws
            
             this.Sqlcon = new SqlConnection(@"Data Source=DESKTOP-VCDR0MA\SQLEXPRESS;Initial Catalog=CareForPaws;Integrated Security=True");
             Sqlcon.Open();
+            //test
         }
 
         private void QueryText(string query)

@@ -41,7 +41,7 @@ namespace CareForPaws
 
         public DataAccess()
         {
-            this.Sqlcon = new SqlConnection(@"Data Source=DESKTOP-5903S8A\\SQLEXPRESS;Initial Catalog=CareForPaws;Integrated Security=True");
+            this.Sqlcon = new SqlConnection(@"Data Source=DESKTOP-5903S8A\SQLEXPRESS;Initial Catalog=CareForPaws;Persist Security Info=True;User ID=sa;Password=2486");
             Sqlcon.Open();
         }
 

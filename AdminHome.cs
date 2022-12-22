@@ -66,5 +66,39 @@ namespace CareForPaws
         {
 
         }
+
+        private void pnlUserOptionList_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void icoUserProfile_Click(object sender, EventArgs e)
+        {
+            if (pnlUserOptionList.Visible == false)
+            {
+                transUsercontrol.ShowSync(pnlUserOptionList);
+            }
+            else if (pnlUserOptionList.Visible == true)
+            {
+                transUsercontrol.HideSync(pnlUserOptionList);
+            }
+        }
+
+        private void btnUserProfile_Click(object sender, EventArgs e)
+        {
+            if (pnlUserOptionList.Visible == false)
+            {
+                transUsercontrol.ShowSync(pnlUserOptionList);
+            }
+            else if (pnlUserOptionList.Visible == true)
+            {
+                transUsercontrol.HideSync(pnlUserOptionList);
+            }
+        }
+
+        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

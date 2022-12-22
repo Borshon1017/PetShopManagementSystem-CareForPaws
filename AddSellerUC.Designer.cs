@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddSellerUC));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtpSellerDOB = new Guna.UI.WinForms.GunaDateTimePicker();
@@ -47,9 +48,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPasswordError = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.icoCross = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCross)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -374,7 +378,7 @@
             this.lblPasswordError.AutoSize = true;
             this.lblPasswordError.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasswordError.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblPasswordError.Location = new System.Drawing.Point(574, 243);
+            this.lblPasswordError.Location = new System.Drawing.Point(585, 223);
             this.lblPasswordError.Name = "lblPasswordError";
             this.lblPasswordError.Size = new System.Drawing.Size(64, 32);
             this.lblPasswordError.TabIndex = 25;
@@ -382,11 +386,29 @@
             this.lblPasswordError.Visible = false;
             this.lblPasswordError.Click += new System.EventHandler(this.lblPasswordError_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // icoCross
+            // 
+            this.icoCross.Image = ((System.Drawing.Image)(resources.GetObject("icoCross.Image")));
+            this.icoCross.Location = new System.Drawing.Point(564, 230);
+            this.icoCross.Name = "icoCross";
+            this.icoCross.Size = new System.Drawing.Size(15, 22);
+            this.icoCross.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoCross.TabIndex = 26;
+            this.icoCross.TabStop = false;
+            this.icoCross.Visible = false;
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.icoCross);
             this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -411,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCross)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,5 +459,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPasswordError;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox icoCross;
     }
 }

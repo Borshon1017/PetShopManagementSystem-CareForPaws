@@ -55,6 +55,7 @@ namespace CareForPaws
             }
             if (txtPassword != txtConfirmPassword)
             {
+                icoCross.Visible = true;
                 lblPasswordError.Visible = true;
                 return;
             }
@@ -248,11 +249,13 @@ namespace CareForPaws
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
+            icoCross.Visible = false;
             lblPasswordError.Visible = false;
         }
 
         private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
         {
+            icoCross.Visible = false;
             lblPasswordError.Visible = false;
         }
     }

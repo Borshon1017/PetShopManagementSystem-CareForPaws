@@ -33,6 +33,7 @@
             this.btnSearchProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,11 +134,19 @@
             this.btnAddProduct.TabIndex = 1;
             this.btnAddProduct.Text = "Add Product";
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 55);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(652, 470);
+            this.panel2.TabIndex = 2;
+            // 
             // ManageProductUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "ManageProductUC";
@@ -154,5 +163,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSearchProduct;
         private Guna.UI2.WinForms.Guna2Button btnDeleteProduct;
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
+        private System.Windows.Forms.Panel panel2;
     }
 }

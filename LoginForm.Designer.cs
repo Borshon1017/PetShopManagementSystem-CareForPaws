@@ -241,9 +241,9 @@
             // iconPassword
             // 
             this.iconPassword.Image = ((System.Drawing.Image)(resources.GetObject("iconPassword.Image")));
-            this.iconPassword.Location = new System.Drawing.Point(38, 115);
+            this.iconPassword.Location = new System.Drawing.Point(37, 121);
             this.iconPassword.Name = "iconPassword";
-            this.iconPassword.Size = new System.Drawing.Size(38, 35);
+            this.iconPassword.Size = new System.Drawing.Size(26, 26);
             this.iconPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPassword.TabIndex = 5;
             this.iconPassword.TabStop = false;
@@ -251,9 +251,9 @@
             // iconUser
             // 
             this.iconUser.Image = ((System.Drawing.Image)(resources.GetObject("iconUser.Image")));
-            this.iconUser.Location = new System.Drawing.Point(38, 50);
+            this.iconUser.Location = new System.Drawing.Point(37, 54);
             this.iconUser.Name = "iconUser";
-            this.iconUser.Size = new System.Drawing.Size(38, 35);
+            this.iconUser.Size = new System.Drawing.Size(26, 26);
             this.iconUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconUser.TabIndex = 4;
             this.iconUser.TabStop = false;

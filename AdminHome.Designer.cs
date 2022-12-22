@@ -95,7 +95,7 @@
             this.pnlUserOptionList.Controls.Add(this.btnLogout);
             this.pnlUserOptionList.Controls.Add(this.btnSettings);
             this.transUsercontrol.SetDecoration(this.pnlUserOptionList, Guna.UI.Animation.DecorationType.None);
-            this.pnlUserOptionList.Location = new System.Drawing.Point(0, 44);
+            this.pnlUserOptionList.Location = new System.Drawing.Point(0, 47);
             this.pnlUserOptionList.Name = "pnlUserOptionList";
             this.pnlUserOptionList.Size = new System.Drawing.Size(156, 107);
             this.pnlUserOptionList.TabIndex = 18;
@@ -172,7 +172,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.lblUsername);
             this.transUsercontrol.SetDecoration(this.guna2CustomGradientPanel1, Guna.UI.Animation.DecorationType.None);
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.LightGray;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(-1, 0);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(-1, 1);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(279, 47);

@@ -17,21 +17,20 @@ namespace CareForPaws
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void AddUserControl(UserControl userControl)
         {
 
+            userControl.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(userControl);
+            userControl.BringToFront();
+
         }
 
-        private void btnAddSeller_Click(object sender, EventArgs e)
+        private void ManageSellerUC_Load(object sender, EventArgs e)
         {
             AddSellerUC addSellerUC = new AddSellerUC();
-            addSellerUC.Location = new Point(4, 53);
-            addSellerUC.Dock = DockStyle.None;
+            this.AddUserControl(addSellerUC);
         }
     }
 }

@@ -69,7 +69,7 @@ namespace CareForPaws
 
         private void pnlUserOptionList_Paint(object sender, PaintEventArgs e)
         {
-
+            this.DoubleBuffered = true;
         }
 
         private void icoUserProfile_Click(object sender, EventArgs e)
@@ -99,6 +99,21 @@ namespace CareForPaws
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            this.DoubleBuffered = true;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            this.DoubleBuffered = true;
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            this.DoubleBuffered = true;
         }
     }
 }

@@ -20,8 +20,9 @@ namespace CareForPaws
             InitializeComponent();
             this.Sa = new DataAccess();
         }
+       
 
-        
+
 
         private void txtFullName_TextChanged(object sender, EventArgs e)
         {
@@ -35,7 +36,7 @@ namespace CareForPaws
 
         private void btnAddSeller_Click(object sender, EventArgs e)
         {
-            string UID = "U-005";
+            string UID = "U-007";
             string fullName = txtFullName.Text;
             string userName = txtUserName.Text;
             string phoneNumber = txtPhoneNumber.Text;
@@ -52,21 +53,27 @@ namespace CareForPaws
             {
                gender= "Male";
             }
+            if (txtPassword != txtConfirmPassword)
+            {
+                lblPasswordError.Visible = true;
+                return;
+            }
 
-            // DateTime date = DateTime.ParseExact(dtpSellerDOB.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
-            //  string dateofbirth = date.ToString("yyyy/MM/dd");
-            /// DateTime date2 = DateTime.ParseExact(dtpSellerDOB.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
-            // string joiningdate = date.ToString("yyyy/MM/dd");
+          
+          
+          
+          
 
 
-            //string dateofbirth = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
-            // string joiningdate = DateTime.ParseExact(dtpJoiningDate.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+          
+          
             string dateofbirth= dtpSellerDOB.Value.ToString();
             string joiningdate = dtpJoiningDate.Value.ToString();
 
 
-            var sql = "insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', '" + salary + "', '" + joiningdate + "', 'Active',  ;";
+            var sql = "insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
             var ds = this.Sa.ExecuteQuery(sql);
+            DialogResult res = MessageBox.Show("Account added sucessfully", "Ok", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
         }
         
@@ -212,6 +219,41 @@ namespace CareForPaws
         {
             string test = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
            
+        }
+
+        private void txtSalary_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            txtFullName.Clear();
+            txtConfirmPassword.Clear();
+            txtSalary.Clear();
+            txtPassword.Clear();
+            txtPhoneNumber.Clear();
+            txtUserName.Clear();
+            dtpJoiningDate.Value = DateTime.Today;
+            dtpSellerDOB.Value = DateTime.Today;
+            rdbFemale.Checked = false;
+            rdbMale.Checked = false;
+
+        }
+
+        private void lblPasswordError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            lblPasswordError.Visible = false;
+        }
+
+        private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+            lblPasswordError.Visible = false;
         }
     }
 }

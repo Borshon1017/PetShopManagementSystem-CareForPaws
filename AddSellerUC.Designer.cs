@@ -46,6 +46,7 @@
             this.dtpJoiningDate = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblPasswordError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
@@ -243,6 +244,7 @@
             this.txtPassword.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtPassword.TabIndex = 18;
             this.txtPassword.Text = "Password";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
@@ -264,6 +266,7 @@
             this.txtConfirmPassword.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtConfirmPassword.TabIndex = 19;
             this.txtConfirmPassword.Text = "Confirm Password";
+            this.txtConfirmPassword.TextChanged += new System.EventHandler(this.txtConfirmPassword_TextChanged);
             this.txtConfirmPassword.Enter += new System.EventHandler(this.txtConfirmPassword_Enter);
             this.txtConfirmPassword.Leave += new System.EventHandler(this.txtConfirmPassword_Leave);
             // 
@@ -285,6 +288,7 @@
             this.txtSalary.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtSalary.TabIndex = 20;
             this.txtSalary.Text = "Salary";
+            this.txtSalary.TextChanged += new System.EventHandler(this.txtSalary_TextChanged);
             this.txtSalary.Enter += new System.EventHandler(this.txtSalary_Enter);
             this.txtSalary.Leave += new System.EventHandler(this.txtSalary_Leave);
             // 
@@ -318,6 +322,7 @@
             this.btnClearAll.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnClearAll.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnClearAll.UseTransfarantBackground = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // dtpJoiningDate
             // 
@@ -364,11 +369,25 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Date of Birth";
             // 
+            // lblPasswordError
+            // 
+            this.lblPasswordError.AutoSize = true;
+            this.lblPasswordError.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordError.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblPasswordError.Location = new System.Drawing.Point(574, 243);
+            this.lblPasswordError.Name = "lblPasswordError";
+            this.lblPasswordError.Size = new System.Drawing.Size(64, 32);
+            this.lblPasswordError.TabIndex = 25;
+            this.lblPasswordError.Text = "Password \r\nMismatch";
+            this.lblPasswordError.Visible = false;
+            this.lblPasswordError.Click += new System.EventHandler(this.lblPasswordError_Click);
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpJoiningDate);
@@ -416,5 +435,6 @@
         private Guna.UI.WinForms.GunaDateTimePicker dtpJoiningDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPasswordError;
     }
 }

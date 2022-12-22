@@ -65,10 +65,10 @@
             // 
             this.dtpSellerDOB.BackColor = System.Drawing.Color.Transparent;
             this.dtpSellerDOB.BaseColor = System.Drawing.Color.White;
-            this.dtpSellerDOB.BorderColor = System.Drawing.Color.Silver;
-            this.dtpSellerDOB.CustomFormat = "yyyy-MM-dd";
+            this.dtpSellerDOB.BorderColor = System.Drawing.Color.Black;
+            this.dtpSellerDOB.CustomFormat = null;
             this.dtpSellerDOB.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpSellerDOB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpSellerDOB.FocusedColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpSellerDOB.ForeColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -77,8 +77,8 @@
             this.dtpSellerDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpSellerDOB.Name = "dtpSellerDOB";
             this.dtpSellerDOB.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtpSellerDOB.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dtpSellerDOB.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dtpSellerDOB.OnPressedColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Size = new System.Drawing.Size(208, 30);
             this.dtpSellerDOB.TabIndex = 5;
@@ -91,7 +91,7 @@
             // 
             this.rdbMale.BaseColor = System.Drawing.Color.White;
             this.rdbMale.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rdbMale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rdbMale.CheckedOnColor = System.Drawing.Color.Black;
             this.rdbMale.FillColor = System.Drawing.Color.White;
             this.rdbMale.Location = new System.Drawing.Point(378, 350);
             this.rdbMale.Name = "rdbMale";
@@ -102,7 +102,7 @@
             // 
             this.rdbFemale.BaseColor = System.Drawing.Color.White;
             this.rdbFemale.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rdbFemale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rdbFemale.CheckedOnColor = System.Drawing.Color.Black;
             this.rdbFemale.FillColor = System.Drawing.Color.White;
             this.rdbFemale.Location = new System.Drawing.Point(537, 350);
             this.rdbFemale.Name = "rdbFemale";
@@ -172,6 +172,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtFullName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtFullName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtFullName.StateCommon.Border.Rounding = 20;
             this.txtFullName.StateCommon.Border.Width = 1;
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -179,7 +180,6 @@
             this.txtFullName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtFullName.TabIndex = 15;
             this.txtFullName.Text = "Full Name";
-            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged_1);
             this.txtFullName.Enter += new System.EventHandler(this.txtFullName_Enter);
             this.txtFullName.Leave += new System.EventHandler(this.txtFullName_Leave);
             // 
@@ -194,6 +194,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtUserName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtUserName.StateCommon.Border.Rounding = 20;
             this.txtUserName.StateCommon.Border.Width = 1;
             this.txtUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -215,6 +216,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPhoneNumber.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPhoneNumber.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPhoneNumber.StateCommon.Border.Rounding = 20;
             this.txtPhoneNumber.StateCommon.Border.Width = 1;
             this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -236,6 +238,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPassword.StateCommon.Border.Rounding = 20;
             this.txtPassword.StateCommon.Border.Width = 1;
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -257,6 +260,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtConfirmPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtConfirmPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtConfirmPassword.StateCommon.Border.Rounding = 20;
             this.txtConfirmPassword.StateCommon.Border.Width = 1;
             this.txtConfirmPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -278,6 +282,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSalary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtSalary.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSalary.StateCommon.Border.Rounding = 20;
             this.txtSalary.StateCommon.Border.Width = 1;
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -323,10 +328,10 @@
             // 
             this.dtpJoiningDate.BackColor = System.Drawing.Color.Transparent;
             this.dtpJoiningDate.BaseColor = System.Drawing.Color.White;
-            this.dtpJoiningDate.BorderColor = System.Drawing.Color.Silver;
+            this.dtpJoiningDate.BorderColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.CustomFormat = "yyyy-MM-dd";
             this.dtpJoiningDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpJoiningDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpJoiningDate.FocusedColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpJoiningDate.ForeColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -335,8 +340,8 @@
             this.dtpJoiningDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpJoiningDate.Name = "dtpJoiningDate";
             this.dtpJoiningDate.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtpJoiningDate.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtpJoiningDate.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpJoiningDate.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dtpJoiningDate.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dtpJoiningDate.OnPressedColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.Size = new System.Drawing.Size(208, 30);
             this.dtpJoiningDate.TabIndex = 22;
@@ -368,7 +373,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpJoiningDate);

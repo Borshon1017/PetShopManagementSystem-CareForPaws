@@ -14,11 +14,11 @@ namespace CareForPaws
 {
     public partial class AddSellerUC : UserControl
     {
-        private DataAccess Sa { get; set; }
+        private DataAccess Da { get; set; }
         public AddSellerUC()
         {
             InitializeComponent();
-            this.Sa = new DataAccess();
+            this.Da = new DataAccess();
         }
 
         
@@ -35,14 +35,14 @@ namespace CareForPaws
 
         private void btnAddSeller_Click(object sender, EventArgs e)
         {
-            string UID = "U-005";
+            string UID = "U-" + this.AutoId();
             string fullName = txtFullName.Text;
             string userName = txtUserName.Text;
             string phoneNumber = txtPhoneNumber.Text;
             string password = txtPassword.Text;
             string reenterpassword = txtConfirmPassword.Text;
             string gender ="null";
-            string role = "seller";
+            string role = "Seller";
             string salary = txtSalary.Text;
             if (rdbFemale.Checked == true)
             {
@@ -53,23 +53,25 @@ namespace CareForPaws
                gender= "Male";
             }
 
-            // DateTime date = DateTime.ParseExact(dtpSellerDOB.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
-            //  string dateofbirth = date.ToString("yyyy/MM/dd");
-            /// DateTime date2 = DateTime.ParseExact(dtpSellerDOB.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
-            // string joiningdate = date.ToString("yyyy/MM/dd");
-
-
-            //string dateofbirth = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
-            // string joiningdate = DateTime.ParseExact(dtpJoiningDate.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+            
             string dateofbirth= dtpSellerDOB.Value.ToString();
             string joiningdate = dtpJoiningDate.Value.ToString();
 
 
-            var sql = "insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', '" + salary + "', '" + joiningdate + "', 'Active',  ;";
-            var ds = this.Sa.ExecuteQuery(sql);
+            var sql = @"insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active');";
+            var ds = this.Da.ExecuteQuery(sql);
 
         }
-        
+
+        private string AutoId()
+        {
+            var dt = Da.ExecuteQueryTable(@"Select * from UserInfo order by U_ID Desc;");
+            string lastId = dt.Rows[0][0].ToString();
+            string[] id = lastId.Split('-');
+            int newIdNum = Convert.ToInt32(id[1]);
+            return (++newIdNum).ToString("d3");
+        }
+
 
         private void txtFullName_Enter(object sender, EventArgs e)
         {
@@ -203,15 +205,5 @@ namespace CareForPaws
             }
         }
 
-        private void txtFullName_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            string test = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
-           
-        }
     }
 }

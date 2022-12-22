@@ -66,7 +66,7 @@
             this.dtpSellerDOB.BackColor = System.Drawing.Color.Transparent;
             this.dtpSellerDOB.BaseColor = System.Drawing.Color.White;
             this.dtpSellerDOB.BorderColor = System.Drawing.Color.Silver;
-            this.dtpSellerDOB.CustomFormat = null;
+            this.dtpSellerDOB.CustomFormat = "yyyy-MM-dd";
             this.dtpSellerDOB.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpSellerDOB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpSellerDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -324,7 +324,7 @@
             this.dtpJoiningDate.BackColor = System.Drawing.Color.Transparent;
             this.dtpJoiningDate.BaseColor = System.Drawing.Color.White;
             this.dtpJoiningDate.BorderColor = System.Drawing.Color.Silver;
-            this.dtpJoiningDate.CustomFormat = null;
+            this.dtpJoiningDate.CustomFormat = "yyyy-MM-dd";
             this.dtpJoiningDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpJoiningDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpJoiningDate.Font = new System.Drawing.Font("Segoe UI", 9F);

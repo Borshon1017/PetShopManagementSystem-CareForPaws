@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Suite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,10 +52,18 @@ namespace CareForPaws
             {
                gender= "Male";
             }
-          
 
-            string dateofbirth = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
-            string joiningdate = DateTime.ParseExact(dtpJoiningDate.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+            // DateTime date = DateTime.ParseExact(dtpSellerDOB.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
+            //  string dateofbirth = date.ToString("yyyy/MM/dd");
+            /// DateTime date2 = DateTime.ParseExact(dtpSellerDOB.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
+            // string joiningdate = date.ToString("yyyy/MM/dd");
+
+
+            //string dateofbirth = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+            // string joiningdate = DateTime.ParseExact(dtpJoiningDate.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+            string dateofbirth= dtpSellerDOB.Value.ToString();
+            string joiningdate = dtpJoiningDate.Value.ToString();
+
 
             var sql = "insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', '" + salary + "', '" + joiningdate + "', 'Active',  ;";
             var ds = this.Sa.ExecuteQuery(sql);

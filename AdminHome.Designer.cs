@@ -227,8 +227,6 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.transUsercontrol.DefaultAnimation = animation1;
-            this.transUsercontrol.Interval = 1;
-            this.transUsercontrol.TimeStep = 1F;
             // 
             // pnlUserOptionList
             // 

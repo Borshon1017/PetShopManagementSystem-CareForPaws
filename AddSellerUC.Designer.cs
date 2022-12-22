@@ -230,6 +230,7 @@
             this.txtPhoneNumber.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtPhoneNumber.TabIndex = 17;
             this.txtPhoneNumber.Text = "Phone Number";
+            
             this.txtPhoneNumber.Enter += new System.EventHandler(this.txtPhoneNumber_Enter);
             this.txtPhoneNumber.Leave += new System.EventHandler(this.txtPhoneNumber_Leave);
             // 

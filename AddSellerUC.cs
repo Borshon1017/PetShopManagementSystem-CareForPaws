@@ -15,18 +15,15 @@ namespace CareForPaws
 {
     public partial class AddSellerUC : UserControl
     {
-        private DataAccess Sa { get; set; }
+        private DataAccess Da { get; set; }
         public AddSellerUC()
         {
             InitializeComponent();
-            this.Sa = new DataAccess();
-          //  if (string.IsNullOrWhiteSpace(txtUserName.Text) && string.IsNullOrWhiteSpace(txtFullName.Text) && string.IsNullOrWhiteSpace(txtPassword.Text) && string.IsNullOrWhiteSpace(txtConfirmPassword.Text) && string.IsNullOrWhiteSpace(txtSalary.Text) &&string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
-          //  { 
-         //       btnAddSeller.Enabled= true; 
-         //   }
+            this.Da = new DataAccess();
+
 
         }
-       
+
 
 
 
@@ -37,31 +34,31 @@ namespace CareForPaws
 
         private void dtpSellerDOB_ValueChanged(object sender, EventArgs e)
         {
-          
+
         }
 
-        
+
         private void btnAddSeller_Click(object sender, EventArgs e)
         {
-            string UID = "U-007";
+            string UID = "U-" + this.AutoId();
             string fullName = txtFullName.Text;
             string userName = txtUserName.Text;
-            
+
             string phoneNumber = txtPhoneNumber.Text;
             string password = txtPassword.Text;
             string reenterpassword = txtConfirmPassword.Text;
-            string gender ="null";
+            string gender = "null";
             string role = "seller";
             string salary = txtSalary.Text;
             if (rdbFemale.Checked == true)
             {
                 gender = "Female";
             }
-            else if (rdbMale.Checked== true)
+            else if (rdbMale.Checked == true)
             {
-               gender= "Male";
+                gender = "Male";
             }
-            if (txtPassword.Text == txtConfirmPassword.Text)
+            if (txtPassword.Text != txtConfirmPassword.Text)
             {
                 icoCrossPassword.Visible = true;
                 lblPasswordError.Visible = true;
@@ -75,8 +72,8 @@ namespace CareForPaws
             }
 
 
-            var sql = "select * from UserInfo where username = '" +userName + "';";
-            var ds = this.Sa.ExecuteQuery(sql);
+            var sql = "select * from UserInfo where username = '"+userName+"';";
+            var ds = this.Da.ExecuteQuery(sql);
             if (ds.Tables[0].Rows.Count == 1)
             {
                 icoCrossUsername.Visible = true;
@@ -91,20 +88,28 @@ namespace CareForPaws
             }
 
 
-            
 
 
 
-                string dateofbirth= dtpSellerDOB.Value.ToString();
+
+            string dateofbirth = dtpSellerDOB.Value.ToString();
             string joiningdate = dtpJoiningDate.Value.ToString();
 
 
-             sql = "insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
-             ds = this.Sa.ExecuteQuery(sql);
+            sql = "insert into UserInfo values ('" + UID + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
+            ds = this.Da.ExecuteQuery(sql);
             DialogResult res = MessageBox.Show("Account added sucessfully", "Ok", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
         }
-        
+        private string AutoId()
+        {
+            var dt = Da.ExecuteQueryTable(@"Select * from UserInfo order by U_ID Desc;");
+            string lastId = dt.Rows[0][0].ToString();
+            string[] id = lastId.Split('-');
+            int newIdNum = Convert.ToInt32(id[1]);
+            return (++newIdNum).ToString("d3");
+        }
+
 
         private void txtFullName_Enter(object sender, EventArgs e)
         {
@@ -246,7 +251,7 @@ namespace CareForPaws
         private void label3_Click(object sender, EventArgs e)
         {
             string test = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
-           
+
         }
 
         private void txtSalary_TextChanged(object sender, EventArgs e)
@@ -276,12 +281,12 @@ namespace CareForPaws
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

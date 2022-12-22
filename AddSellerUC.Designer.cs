@@ -49,11 +49,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblPasswordError = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.icoCross = new System.Windows.Forms.PictureBox();
+            this.icoCrossPassword = new System.Windows.Forms.PictureBox();
+            this.icoCrossUsername = new System.Windows.Forms.PictureBox();
+            this.lblUsernameError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCross)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCrossPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCrossUsername)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -392,23 +395,48 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // icoCross
+            // icoCrossPassword
             // 
-            this.icoCross.Image = ((System.Drawing.Image)(resources.GetObject("icoCross.Image")));
-            this.icoCross.Location = new System.Drawing.Point(564, 230);
-            this.icoCross.Name = "icoCross";
-            this.icoCross.Size = new System.Drawing.Size(15, 22);
-            this.icoCross.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoCross.TabIndex = 26;
-            this.icoCross.TabStop = false;
-            this.icoCross.Visible = false;
+            this.icoCrossPassword.Image = ((System.Drawing.Image)(resources.GetObject("icoCrossPassword.Image")));
+            this.icoCrossPassword.Location = new System.Drawing.Point(564, 230);
+            this.icoCrossPassword.Name = "icoCrossPassword";
+            this.icoCrossPassword.Size = new System.Drawing.Size(15, 22);
+            this.icoCrossPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoCrossPassword.TabIndex = 26;
+            this.icoCrossPassword.TabStop = false;
+            this.icoCrossPassword.Visible = false;
+            // 
+            // icoCrossUsername
+            // 
+            this.icoCrossUsername.Image = ((System.Drawing.Image)(resources.GetObject("icoCrossUsername.Image")));
+            this.icoCrossUsername.Location = new System.Drawing.Point(564, 73);
+            this.icoCrossUsername.Name = "icoCrossUsername";
+            this.icoCrossUsername.Size = new System.Drawing.Size(15, 22);
+            this.icoCrossUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoCrossUsername.TabIndex = 27;
+            this.icoCrossUsername.TabStop = false;
+            this.icoCrossUsername.Visible = false;
+            // 
+            // lblUsernameError
+            // 
+            this.lblUsernameError.AutoSize = true;
+            this.lblUsernameError.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameError.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblUsernameError.Location = new System.Drawing.Point(585, 73);
+            this.lblUsernameError.Name = "lblUsernameError";
+            this.lblUsernameError.Size = new System.Drawing.Size(67, 32);
+            this.lblUsernameError.TabIndex = 28;
+            this.lblUsernameError.Text = "Username \r\nExists\r\n";
+            this.lblUsernameError.Visible = false;
             // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.icoCross);
+            this.Controls.Add(this.lblUsernameError);
+            this.Controls.Add(this.icoCrossUsername);
+            this.Controls.Add(this.icoCrossPassword);
             this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -433,7 +461,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCross)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCrossPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCrossUsername)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,6 +489,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPasswordError;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox icoCross;
+        private System.Windows.Forms.PictureBox icoCrossPassword;
+        private System.Windows.Forms.PictureBox icoCrossUsername;
+        private System.Windows.Forms.Label lblUsernameError;
     }
 }

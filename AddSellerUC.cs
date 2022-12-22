@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms.Suite;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,11 @@ namespace CareForPaws
         {
             InitializeComponent();
             this.Sa = new DataAccess();
+          //  if (string.IsNullOrWhiteSpace(txtUserName.Text) && string.IsNullOrWhiteSpace(txtFullName.Text) && string.IsNullOrWhiteSpace(txtPassword.Text) && string.IsNullOrWhiteSpace(txtConfirmPassword.Text) && string.IsNullOrWhiteSpace(txtSalary.Text) &&string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
+          //  { 
+         //       btnAddSeller.Enabled= true; 
+         //   }
+
         }
        
 
@@ -31,14 +37,16 @@ namespace CareForPaws
 
         private void dtpSellerDOB_ValueChanged(object sender, EventArgs e)
         {
-            dtpSellerDOB.Text = "Select date of birth";
+          
         }
 
+        
         private void btnAddSeller_Click(object sender, EventArgs e)
         {
             string UID = "U-007";
             string fullName = txtFullName.Text;
             string userName = txtUserName.Text;
+            
             string phoneNumber = txtPhoneNumber.Text;
             string password = txtPassword.Text;
             string reenterpassword = txtConfirmPassword.Text;
@@ -53,27 +61,46 @@ namespace CareForPaws
             {
                gender= "Male";
             }
-            if (txtPassword != txtConfirmPassword)
+            if (txtPassword.Text == txtConfirmPassword.Text)
             {
-                icoCross.Visible = true;
+                icoCrossPassword.Visible = true;
                 lblPasswordError.Visible = true;
                 return;
+
+            }
+            else
+            {
+                icoCrossPassword.Visible = false;
+                lblPasswordError.Visible = false;
             }
 
-          
-          
-          
-          
+
+            var sql = "select * from UserInfo where username = '" +userName + "';";
+            var ds = this.Sa.ExecuteQuery(sql);
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                icoCrossUsername.Visible = true;
+                lblUsernameError.Visible = true;
+                return;
+
+            }
+            else
+            {
+                icoCrossUsername.Visible = false;
+                lblUsernameError.Visible = false;
+            }
 
 
-          
-          
-            string dateofbirth= dtpSellerDOB.Value.ToString();
+            
+
+
+
+                string dateofbirth= dtpSellerDOB.Value.ToString();
             string joiningdate = dtpJoiningDate.Value.ToString();
 
 
-            var sql = "insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
-            var ds = this.Sa.ExecuteQuery(sql);
+             sql = "insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
+             ds = this.Sa.ExecuteQuery(sql);
             DialogResult res = MessageBox.Show("Account added sucessfully", "Ok", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
         }
@@ -249,14 +276,12 @@ namespace CareForPaws
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            icoCross.Visible = false;
-            lblPasswordError.Visible = false;
+           
         }
 
         private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
         {
-            icoCross.Visible = false;
-            lblPasswordError.Visible = false;
+           
         }
     }
 }

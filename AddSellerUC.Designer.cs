@@ -52,6 +52,7 @@
             this.icoCrossPassword = new System.Windows.Forms.PictureBox();
             this.icoCrossUsername = new System.Windows.Forms.PictureBox();
             this.lblUsernameError = new System.Windows.Forms.Label();
+            this.lblPasswordLength = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
@@ -230,7 +231,6 @@
             this.txtPhoneNumber.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtPhoneNumber.TabIndex = 17;
             this.txtPhoneNumber.Text = "Phone Number";
-            
             this.txtPhoneNumber.Enter += new System.EventHandler(this.txtPhoneNumber_Enter);
             this.txtPhoneNumber.Leave += new System.EventHandler(this.txtPhoneNumber_Leave);
             // 
@@ -430,11 +430,24 @@
             this.lblUsernameError.Text = "Username \r\nExists\r\n";
             this.lblUsernameError.Visible = false;
             // 
+            // lblPasswordLength
+            // 
+            this.lblPasswordLength.AutoSize = true;
+            this.lblPasswordLength.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordLength.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblPasswordLength.Location = new System.Drawing.Point(585, 223);
+            this.lblPasswordLength.Name = "lblPasswordLength";
+            this.lblPasswordLength.Size = new System.Drawing.Size(68, 48);
+            this.lblPasswordLength.TabIndex = 29;
+            this.lblPasswordLength.Text = "At least 4 \r\ncharacters \r\nrequired";
+            this.lblPasswordLength.Visible = false;
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblPasswordLength);
             this.Controls.Add(this.lblUsernameError);
             this.Controls.Add(this.icoCrossUsername);
             this.Controls.Add(this.icoCrossPassword);
@@ -493,5 +506,6 @@
         private System.Windows.Forms.PictureBox icoCrossPassword;
         private System.Windows.Forms.PictureBox icoCrossUsername;
         private System.Windows.Forms.Label lblUsernameError;
+        private System.Windows.Forms.Label lblPasswordLength;
     }
 }

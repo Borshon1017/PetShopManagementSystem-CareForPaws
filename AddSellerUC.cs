@@ -70,9 +70,21 @@ namespace CareForPaws
                 icoCrossPassword.Visible = false;
                 lblPasswordError.Visible = false;
             }
+            if (txtPassword.Text.Length < 4 ||  txtConfirmPassword.Text.Length <4)
+                    {
 
+                icoCrossPassword.Visible = true;
+                lblPasswordLength.Visible = true;
 
-            var sql = "select * from UserInfo where username = '"+userName+"';";
+            }
+            else
+            {
+                icoCrossPassword.Visible = false;
+                lblPasswordLength.Visible = false;
+
+            }    
+
+                var sql = "select * from UserInfo where username = '"+userName+"';";
             var ds = this.Da.ExecuteQuery(sql);
             if (ds.Tables[0].Rows.Count == 1)
             {

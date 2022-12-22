@@ -2510,7 +2510,7 @@
   <data name="icoCrossPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAhMpJREFUeF7tnQl45VZ5/s02pBQoO6X7Dk2B8TIzlryMkxnp2llYQhlS1gKlgS4Q
+        DwAACw8BkvkDpQAAhMpJREFUeF7tnQl45VZ5/s02pBQoO6X7Dk2B8TIzlryMkxnp2llYQhlS1gKlgS4Q
         WijQFWjSlq0QwtYA/QMhAQplSygBQimEkARIWMISCElm8z6+i2ffbP3Pd+eTR1f3SDpH1pWO7n3f53mf
         xFfn/cn3Svd7ZY8t9znOWRuE7yfcl0aU4zxxfIOnKMpxHrwUohznu5bnvbbv3ge2DT+65lhPWHLsbXsd
         +8Jpx3rxjGu/etax/23etd5dc+yraq716ZprX1+v2DfWKvatwnfWKtY94vFaq+1jYo1HFv/v7RNecOxj
@@ -3083,7 +3083,7 @@
   <data name="icoCrossUsername.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAhMpJREFUeF7tnQl45VZ5/s02pBQoO6X7Dk2B8TIzlryMkxnp2llYQhlS1gKlgS4Q
+        DgAACw4BQL7hQQAAhMpJREFUeF7tnQl45VZ5/s02pBQoO6X7Dk2B8TIzlryMkxnp2llYQhlS1gKlgS4Q
         WijQFWjSlq0QwtYA/QMhAQplSygBQimEkARIWMISCElm8z6+i2ffbP3Pd+eTR1f3SDpH1pWO7n3f53mf
         xFfn/cn3Svd7ZY8t9znOWRuE7yfcl0aU4zxxfIOnKMpxHrwUohznu5bnvbbv3ge2DT+65lhPWHLsbXsd
         +8Jpx3rxjGu/etax/23etd5dc+yraq716ZprX1+v2DfWKvatwnfWKtY94vFaq+1jYo1HFv/v7RNecOxj

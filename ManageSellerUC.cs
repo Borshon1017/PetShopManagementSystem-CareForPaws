@@ -27,5 +27,11 @@ namespace CareForPaws
 
         }
 
+        private void btnAddSeller_Click(object sender, EventArgs e)
+        {
+            AddSellerUC addSellerUC = new AddSellerUC();
+            addSellerUC.Location = new Point(4, 53);
+            addSellerUC.Dock = DockStyle.None;
+        }
     }
 }

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddSeller = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDeleteSeller = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSearchSeller = new Guna.UI2.WinForms.Guna2Button();
             this.btnSellerList = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearchSeller = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteSeller = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddSeller = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,48 +49,26 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnAddSeller
+            // btnSellerList
             // 
-            this.btnAddSeller.BackColor = System.Drawing.Color.White;
-            this.btnAddSeller.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnAddSeller.Checked = true;
-            this.btnAddSeller.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.btnAddSeller.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnAddSeller.CheckedState.Parent = this.btnAddSeller;
-            this.btnAddSeller.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnAddSeller.CustomImages.Parent = this.btnAddSeller;
-            this.btnAddSeller.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddSeller.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSeller.ForeColor = System.Drawing.Color.Black;
-            this.btnAddSeller.HoverState.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.btnAddSeller.HoverState.Parent = this.btnAddSeller;
-            this.btnAddSeller.Location = new System.Drawing.Point(-1, 0);
-            this.btnAddSeller.Name = "btnAddSeller";
-            this.btnAddSeller.ShadowDecoration.Parent = this.btnAddSeller;
-            this.btnAddSeller.Size = new System.Drawing.Size(163, 53);
-            this.btnAddSeller.TabIndex = 1;
-            this.btnAddSeller.Text = "Add Seller";
-            // 
-            // btnDeleteSeller
-            // 
-            this.btnDeleteSeller.BackColor = System.Drawing.Color.White;
-            this.btnDeleteSeller.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDeleteSeller.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.btnDeleteSeller.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnDeleteSeller.CheckedState.Parent = this.btnDeleteSeller;
-            this.btnDeleteSeller.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnDeleteSeller.CustomImages.Parent = this.btnDeleteSeller;
-            this.btnDeleteSeller.FillColor = System.Drawing.Color.Transparent;
-            this.btnDeleteSeller.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSeller.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteSeller.HoverState.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.btnDeleteSeller.HoverState.Parent = this.btnDeleteSeller;
-            this.btnDeleteSeller.Location = new System.Drawing.Point(162, 0);
-            this.btnDeleteSeller.Name = "btnDeleteSeller";
-            this.btnDeleteSeller.ShadowDecoration.Parent = this.btnDeleteSeller;
-            this.btnDeleteSeller.Size = new System.Drawing.Size(163, 53);
-            this.btnDeleteSeller.TabIndex = 2;
-            this.btnDeleteSeller.Text = "Delete Seller";
+            this.btnSellerList.BackColor = System.Drawing.Color.White;
+            this.btnSellerList.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSellerList.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSellerList.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnSellerList.CheckedState.Parent = this.btnSellerList;
+            this.btnSellerList.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnSellerList.CustomImages.Parent = this.btnSellerList;
+            this.btnSellerList.FillColor = System.Drawing.Color.Transparent;
+            this.btnSellerList.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSellerList.ForeColor = System.Drawing.Color.Black;
+            this.btnSellerList.HoverState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSellerList.HoverState.Parent = this.btnSellerList;
+            this.btnSellerList.Location = new System.Drawing.Point(488, 0);
+            this.btnSellerList.Name = "btnSellerList";
+            this.btnSellerList.ShadowDecoration.Parent = this.btnSellerList;
+            this.btnSellerList.Size = new System.Drawing.Size(163, 53);
+            this.btnSellerList.TabIndex = 4;
+            this.btnSellerList.Text = "Seller List";
             // 
             // btnSearchSeller
             // 
@@ -113,26 +91,49 @@
             this.btnSearchSeller.TabIndex = 3;
             this.btnSearchSeller.Text = "Search Seller";
             // 
-            // btnSellerList
+            // btnDeleteSeller
             // 
-            this.btnSellerList.BackColor = System.Drawing.Color.White;
-            this.btnSellerList.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnSellerList.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.btnSellerList.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnSellerList.CheckedState.Parent = this.btnSellerList;
-            this.btnSellerList.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnSellerList.CustomImages.Parent = this.btnSellerList;
-            this.btnSellerList.FillColor = System.Drawing.Color.Transparent;
-            this.btnSellerList.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSellerList.ForeColor = System.Drawing.Color.Black;
-            this.btnSellerList.HoverState.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.btnSellerList.HoverState.Parent = this.btnSellerList;
-            this.btnSellerList.Location = new System.Drawing.Point(488, 0);
-            this.btnSellerList.Name = "btnSellerList";
-            this.btnSellerList.ShadowDecoration.Parent = this.btnSellerList;
-            this.btnSellerList.Size = new System.Drawing.Size(163, 53);
-            this.btnSellerList.TabIndex = 4;
-            this.btnSellerList.Text = "Seller List";
+            this.btnDeleteSeller.BackColor = System.Drawing.Color.White;
+            this.btnDeleteSeller.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDeleteSeller.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteSeller.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnDeleteSeller.CheckedState.Parent = this.btnDeleteSeller;
+            this.btnDeleteSeller.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnDeleteSeller.CustomImages.Parent = this.btnDeleteSeller;
+            this.btnDeleteSeller.FillColor = System.Drawing.Color.Transparent;
+            this.btnDeleteSeller.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSeller.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteSeller.HoverState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteSeller.HoverState.Parent = this.btnDeleteSeller;
+            this.btnDeleteSeller.Location = new System.Drawing.Point(162, 0);
+            this.btnDeleteSeller.Name = "btnDeleteSeller";
+            this.btnDeleteSeller.ShadowDecoration.Parent = this.btnDeleteSeller;
+            this.btnDeleteSeller.Size = new System.Drawing.Size(163, 53);
+            this.btnDeleteSeller.TabIndex = 2;
+            this.btnDeleteSeller.Text = "Delete Seller";
+            // 
+            // btnAddSeller
+            // 
+            this.btnAddSeller.BackColor = System.Drawing.Color.White;
+            this.btnAddSeller.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnAddSeller.Checked = true;
+            this.btnAddSeller.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddSeller.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnAddSeller.CheckedState.Parent = this.btnAddSeller;
+            this.btnAddSeller.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnAddSeller.CustomImages.Parent = this.btnAddSeller;
+            this.btnAddSeller.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddSeller.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSeller.ForeColor = System.Drawing.Color.Black;
+            this.btnAddSeller.HoverState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddSeller.HoverState.Parent = this.btnAddSeller;
+            this.btnAddSeller.Location = new System.Drawing.Point(-1, 0);
+            this.btnAddSeller.Name = "btnAddSeller";
+            this.btnAddSeller.ShadowDecoration.Parent = this.btnAddSeller;
+            this.btnAddSeller.Size = new System.Drawing.Size(163, 53);
+            this.btnAddSeller.TabIndex = 1;
+            this.btnAddSeller.Text = "Add Seller";
+            this.btnAddSeller.Click += new System.EventHandler(this.btnAddSeller_Click);
             // 
             // ManageSellerUC
             // 

@@ -36,9 +36,13 @@
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.dtpSellerDOB = new Guna.UI.WinForms.GunaDateTimePicker();
             this.txtSellerPhoneNumber = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.gunaMediumRadioButton1 = new Guna.UI.WinForms.GunaMediumRadioButton();
-            this.gunaMediumRadioButton2 = new Guna.UI.WinForms.GunaMediumRadioButton();
+            this.rdbMale = new Guna.UI.WinForms.GunaMediumRadioButton();
+            this.rdbFemale = new Guna.UI.WinForms.GunaMediumRadioButton();
+            this.icoMale = new System.Windows.Forms.PictureBox();
+            this.icoFemale = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -139,8 +143,8 @@
             this.dtpSellerDOB.ForeColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpSellerDOB.Location = new System.Drawing.Point(3, 274);
-            this.dtpSellerDOB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpSellerDOB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpSellerDOB.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
+            this.dtpSellerDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpSellerDOB.Name = "dtpSellerDOB";
             this.dtpSellerDOB.OnHoverBaseColor = System.Drawing.Color.White;
             this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -149,7 +153,8 @@
             this.dtpSellerDOB.Size = new System.Drawing.Size(223, 30);
             this.dtpSellerDOB.TabIndex = 5;
             this.dtpSellerDOB.Text = "12/22/2022";
-            this.dtpSellerDOB.Value = new System.DateTime(2022, 12, 22, 12, 15, 26, 233);
+            this.dtpSellerDOB.Value = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
+            this.dtpSellerDOB.ValueChanged += new System.EventHandler(this.dtpSellerDOB_ValueChanged);
             // 
             // txtSellerPhoneNumber
             // 
@@ -170,34 +175,56 @@
             this.txtSellerPhoneNumber.TabIndex = 6;
             this.txtSellerPhoneNumber.Text = "Phone Number";
             // 
-            // gunaMediumRadioButton1
+            // rdbMale
             // 
-            this.gunaMediumRadioButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaMediumRadioButton1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaMediumRadioButton1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaMediumRadioButton1.FillColor = System.Drawing.Color.White;
-            this.gunaMediumRadioButton1.Location = new System.Drawing.Point(298, 367);
-            this.gunaMediumRadioButton1.Name = "gunaMediumRadioButton1";
-            this.gunaMediumRadioButton1.Size = new System.Drawing.Size(20, 20);
-            this.gunaMediumRadioButton1.TabIndex = 7;
+            this.rdbMale.BaseColor = System.Drawing.Color.White;
+            this.rdbMale.CheckedOffColor = System.Drawing.Color.Gray;
+            this.rdbMale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rdbMale.FillColor = System.Drawing.Color.White;
+            this.rdbMale.Location = new System.Drawing.Point(345, 380);
+            this.rdbMale.Name = "rdbMale";
+            this.rdbMale.Size = new System.Drawing.Size(20, 20);
+            this.rdbMale.TabIndex = 7;
             // 
-            // gunaMediumRadioButton2
+            // rdbFemale
             // 
-            this.gunaMediumRadioButton2.BaseColor = System.Drawing.Color.White;
-            this.gunaMediumRadioButton2.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaMediumRadioButton2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaMediumRadioButton2.FillColor = System.Drawing.Color.White;
-            this.gunaMediumRadioButton2.Location = new System.Drawing.Point(493, 367);
-            this.gunaMediumRadioButton2.Name = "gunaMediumRadioButton2";
-            this.gunaMediumRadioButton2.Size = new System.Drawing.Size(20, 20);
-            this.gunaMediumRadioButton2.TabIndex = 8;
+            this.rdbFemale.BaseColor = System.Drawing.Color.White;
+            this.rdbFemale.CheckedOffColor = System.Drawing.Color.Gray;
+            this.rdbFemale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rdbFemale.FillColor = System.Drawing.Color.White;
+            this.rdbFemale.Location = new System.Drawing.Point(504, 380);
+            this.rdbFemale.Name = "rdbFemale";
+            this.rdbFemale.Size = new System.Drawing.Size(20, 20);
+            this.rdbFemale.TabIndex = 8;
+            // 
+            // icoMale
+            // 
+            this.icoMale.Image = ((System.Drawing.Image)(resources.GetObject("icoMale.Image")));
+            this.icoMale.Location = new System.Drawing.Point(269, 353);
+            this.icoMale.Name = "icoMale";
+            this.icoMale.Size = new System.Drawing.Size(70, 60);
+            this.icoMale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoMale.TabIndex = 9;
+            this.icoMale.TabStop = false;
+            // 
+            // icoFemale
+            // 
+            this.icoFemale.Image = ((System.Drawing.Image)(resources.GetObject("icoFemale.Image")));
+            this.icoFemale.Location = new System.Drawing.Point(428, 353);
+            this.icoFemale.Name = "icoFemale";
+            this.icoFemale.Size = new System.Drawing.Size(70, 60);
+            this.icoFemale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoFemale.TabIndex = 10;
+            this.icoFemale.TabStop = false;
             // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gunaMediumRadioButton2);
-            this.Controls.Add(this.gunaMediumRadioButton1);
+            this.Controls.Add(this.icoFemale);
+            this.Controls.Add(this.icoMale);
+            this.Controls.Add(this.rdbFemale);
+            this.Controls.Add(this.rdbMale);
             this.Controls.Add(this.txtSellerPhoneNumber);
             this.Controls.Add(this.dtpSellerDOB);
             this.Controls.Add(this.kryptonTextBox2);
@@ -208,6 +235,8 @@
             this.Name = "AddSellerUC";
             this.Size = new System.Drawing.Size(652, 473);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoMale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +251,9 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private Guna.UI.WinForms.GunaDateTimePicker dtpSellerDOB;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSellerPhoneNumber;
-        private Guna.UI.WinForms.GunaMediumRadioButton gunaMediumRadioButton1;
-        private Guna.UI.WinForms.GunaMediumRadioButton gunaMediumRadioButton2;
+        private Guna.UI.WinForms.GunaMediumRadioButton rdbMale;
+        private Guna.UI.WinForms.GunaMediumRadioButton rdbFemale;
+        private System.Windows.Forms.PictureBox icoMale;
+        private System.Windows.Forms.PictureBox icoFemale;
     }
 }

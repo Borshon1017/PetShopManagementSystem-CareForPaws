@@ -13,6 +13,9 @@ namespace CareForPaws
 
     public partial class AdminHome : Form
     {
+       
+        
+
         private string username;
         public void EnableDoubleBuffering()
         {
@@ -51,6 +54,10 @@ namespace CareForPaws
 
             ManageSellerUC manageSellerUC = new ManageSellerUC();
             this.AddUserControl(manageSellerUC);
+            
+
+
+
 
         }
 
@@ -114,6 +121,11 @@ namespace CareForPaws
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
             this.DoubleBuffered = true;
+        }
+
+        private void addSellerUC1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

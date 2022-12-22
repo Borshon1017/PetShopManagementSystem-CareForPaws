@@ -12,7 +12,15 @@ namespace CareForPaws
 {
     public partial class LoginForm : Form
     {
-       
+        public void EnableDoubleBuffering()
+        {
+            // Set the value of the double-buffering style bits to true.
+            this.SetStyle(ControlStyles.DoubleBuffer |
+               ControlStyles.UserPaint |
+               ControlStyles.AllPaintingInWmPaint,
+               true);
+            this.UpdateStyles();
+        }
 
         private DataAccess Da { get; set; }
 
@@ -32,7 +40,7 @@ namespace CareForPaws
                 if (ds.Tables[0].Rows[0][7].ToString() == "Admin")
                 {
 
-                    new AdminHome().Show();
+                    new AdminHome(this.txtUserName.Text).Show();
                     this.Hide();
 
                 }
@@ -151,8 +159,8 @@ namespace CareForPaws
             {
                 if (ds.Tables[0].Rows[0][7].ToString() == "Admin")
                 {
-
-                    new AdminHome().Show();
+                    string usernameLabel = this.txtUserName.Text;
+                    new AdminHome(usernameLabel).Show();
                     this.Hide();
 
                 }

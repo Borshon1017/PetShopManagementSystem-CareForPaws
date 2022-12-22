@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace CareForPaws
 {
+
     public partial class AdminHome : Form
     {
-        public AdminHome()
+        private string username;
+        public void EnableDoubleBuffering()
         {
+            // Set the value of the double-buffering style bits to true.
+            this.SetStyle(ControlStyles.DoubleBuffer |
+               ControlStyles.UserPaint |
+               ControlStyles.AllPaintingInWmPaint,
+               true);
+            this.UpdateStyles();
+        }
+
+
+        public AdminHome(string username)
+        {
+            this.username = username;
             InitializeComponent();
+            lblUsername.Text = username;
         }
 
         private void siticoneButton1_Click(object sender, EventArgs e)
@@ -44,6 +59,11 @@ namespace CareForPaws
 
             ManageProductUC manageProductUC = new ManageProductUC();
             this.AddUserControl(manageProductUC);
+
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
 
         }
     }

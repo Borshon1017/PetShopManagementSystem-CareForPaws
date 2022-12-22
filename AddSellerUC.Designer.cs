@@ -61,10 +61,10 @@
             // dtpSellerDOB
             // 
             this.dtpSellerDOB.BaseColor = System.Drawing.Color.White;
-            this.dtpSellerDOB.BorderColor = System.Drawing.Color.Silver;
+            this.dtpSellerDOB.BorderColor = System.Drawing.Color.Gray;
             this.dtpSellerDOB.CustomFormat = null;
             this.dtpSellerDOB.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpSellerDOB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpSellerDOB.FocusedColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpSellerDOB.ForeColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -73,8 +73,8 @@
             this.dtpSellerDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpSellerDOB.Name = "dtpSellerDOB";
             this.dtpSellerDOB.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtpSellerDOB.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dtpSellerDOB.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dtpSellerDOB.OnPressedColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Size = new System.Drawing.Size(208, 30);
             this.dtpSellerDOB.TabIndex = 5;
@@ -86,7 +86,7 @@
             // 
             this.rdbMale.BaseColor = System.Drawing.Color.White;
             this.rdbMale.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rdbMale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rdbMale.CheckedOnColor = System.Drawing.Color.Black;
             this.rdbMale.FillColor = System.Drawing.Color.White;
             this.rdbMale.Location = new System.Drawing.Point(378, 350);
             this.rdbMale.Name = "rdbMale";
@@ -97,7 +97,7 @@
             // 
             this.rdbFemale.BaseColor = System.Drawing.Color.White;
             this.rdbFemale.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rdbFemale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rdbFemale.CheckedOnColor = System.Drawing.Color.Black;
             this.rdbFemale.FillColor = System.Drawing.Color.White;
             this.rdbFemale.Location = new System.Drawing.Point(537, 350);
             this.rdbFemale.Name = "rdbFemale";

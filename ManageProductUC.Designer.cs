@@ -53,7 +53,7 @@
             // 
             this.btnProductList.BackColor = System.Drawing.Color.White;
             this.btnProductList.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnProductList.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnProductList.CheckedState.CustomBorderColor = System.Drawing.Color.Gray;
             this.btnProductList.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnProductList.CheckedState.Parent = this.btnProductList;
             this.btnProductList.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -74,7 +74,7 @@
             // 
             this.btnSearchProduct.BackColor = System.Drawing.Color.White;
             this.btnSearchProduct.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnSearchProduct.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSearchProduct.CheckedState.CustomBorderColor = System.Drawing.Color.Gray;
             this.btnSearchProduct.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnSearchProduct.CheckedState.Parent = this.btnSearchProduct;
             this.btnSearchProduct.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -95,7 +95,7 @@
             // 
             this.btnDeleteProduct.BackColor = System.Drawing.Color.White;
             this.btnDeleteProduct.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDeleteProduct.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteProduct.CheckedState.CustomBorderColor = System.Drawing.Color.Gray;
             this.btnDeleteProduct.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnDeleteProduct.CheckedState.Parent = this.btnDeleteProduct;
             this.btnDeleteProduct.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -117,7 +117,7 @@
             this.btnAddProduct.BackColor = System.Drawing.Color.White;
             this.btnAddProduct.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnAddProduct.Checked = true;
-            this.btnAddProduct.CheckedState.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddProduct.CheckedState.CustomBorderColor = System.Drawing.Color.Gray;
             this.btnAddProduct.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnAddProduct.CheckedState.Parent = this.btnAddProduct;
             this.btnAddProduct.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);

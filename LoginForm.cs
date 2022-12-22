@@ -104,6 +104,10 @@ namespace CareForPaws
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar= true;
+            btnInvisible.Visible= true;
+            btnVisible.Visible= true;
+            btnInvisible.BringToFront();
+
         }
 
         private void btnvisible_Click(object sender, EventArgs e)
@@ -111,9 +115,12 @@ namespace CareForPaws
             if (txtPassword.UseSystemPasswordChar == false)
             {
                 txtPassword.UseSystemPasswordChar = true;
+                btnInvisible.BringToFront();
+               // btnInvisible.Visible = true;
+                //btnVisible.Visible = false;
             }
-            btnInvisible.Visible = true;
-            btnVisible.Visible = false;
+            
+            
             
         }
 
@@ -123,9 +130,12 @@ namespace CareForPaws
             if (txtPassword.UseSystemPasswordChar == true)
             {
                 txtPassword.UseSystemPasswordChar = false;
+                btnVisible.BringToFront();
+              //  btnInvisible.Visible = false;
+               // btnVisible.Visible = true;
             }
-            btnInvisible.Visible = false;
-            btnVisible.Visible = true;
+            
+           
             
 
 

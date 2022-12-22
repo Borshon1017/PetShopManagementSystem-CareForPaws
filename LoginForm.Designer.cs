@@ -118,6 +118,7 @@
             this.btnInvisible.TabIndex = 7;
             this.btnInvisible.Text = "0";
             this.btnInvisible.UseVisualStyleBackColor = false;
+            this.btnInvisible.Visible = false;
             this.btnInvisible.Click += new System.EventHandler(this.btninvisible_Click);
             // 
             // iconPassword

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaLinkLabel1 = new Guna.UI.WinForms.GunaLinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnVisible = new System.Windows.Forms.Button();
             this.btnInvisible = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@
             this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.btnLoginGuna = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).BeginInit();
@@ -49,36 +49,24 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.gunaLinkLabel1);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 525);
             this.panel1.TabIndex = 0;
-            // 
-            // gunaLinkLabel1
-            // 
-            this.gunaLinkLabel1.AutoSize = true;
-            this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLinkLabel1.Location = new System.Drawing.Point(113, 290);
-            this.gunaLinkLabel1.Name = "gunaLinkLabel1";
-            this.gunaLinkLabel1.Size = new System.Drawing.Size(90, 15);
-            this.gunaLinkLabel1.TabIndex = 5;
-            this.gunaLinkLabel1.TabStop = true;
-            this.gunaLinkLabel1.Text = "gunaLinkLabel1";
-            this.gunaLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gunaLinkLabel1_LinkClicked);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnLoginGuna);
             this.panel2.Controls.Add(this.btnVisible);
             this.panel2.Controls.Add(this.btnInvisible);
             this.panel2.Controls.Add(this.iconPassword);
             this.panel2.Controls.Add(this.iconUser);
             this.panel2.Controls.Add(this.lblInvalidLogin);
-            this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.txtUserName);
             this.panel2.Location = new System.Drawing.Point(245, 115);
@@ -124,7 +112,7 @@
             // iconPassword
             // 
             this.iconPassword.Image = ((System.Drawing.Image)(resources.GetObject("iconPassword.Image")));
-            this.iconPassword.Location = new System.Drawing.Point(28, 115);
+            this.iconPassword.Location = new System.Drawing.Point(38, 115);
             this.iconPassword.Name = "iconPassword";
             this.iconPassword.Size = new System.Drawing.Size(38, 35);
             this.iconPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,7 +122,7 @@
             // iconUser
             // 
             this.iconUser.Image = ((System.Drawing.Image)(resources.GetObject("iconUser.Image")));
-            this.iconUser.Location = new System.Drawing.Point(28, 50);
+            this.iconUser.Location = new System.Drawing.Point(38, 50);
             this.iconUser.Name = "iconUser";
             this.iconUser.Size = new System.Drawing.Size(38, 35);
             this.iconUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +143,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(82, 220);
+            this.btnLogin.Location = new System.Drawing.Point(317, 433);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btnLogin.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -214,6 +202,7 @@
             this.btnLogin.StateTracking.Border.Width = 1;
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Values.Text = "Login";
+            this.btnLogin.Visible = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
@@ -259,6 +248,32 @@
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
             this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave_1);
             // 
+            // btnLoginGuna
+            // 
+            this.btnLoginGuna.AnimationHoverSpeed = 0.07F;
+            this.btnLoginGuna.AnimationSpeed = 0.03F;
+            this.btnLoginGuna.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnLoginGuna.BorderColor = System.Drawing.Color.Black;
+            this.btnLoginGuna.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLoginGuna.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLoginGuna.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginGuna.ForeColor = System.Drawing.Color.White;
+            this.btnLoginGuna.Image = ((System.Drawing.Image)(resources.GetObject("btnLoginGuna.Image")));
+            this.btnLoginGuna.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLoginGuna.Location = new System.Drawing.Point(133, 219);
+            this.btnLoginGuna.Name = "btnLoginGuna";
+            this.btnLoginGuna.OnHoverBaseColor = System.Drawing.Color.SteelBlue;
+            this.btnLoginGuna.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLoginGuna.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLoginGuna.OnHoverImage = null;
+            this.btnLoginGuna.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLoginGuna.Size = new System.Drawing.Size(160, 42);
+            this.btnLoginGuna.TabIndex = 9;
+            this.btnLoginGuna.Text = "Login";
+            this.btnLoginGuna.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLoginGuna.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnLoginGuna.Click += new System.EventHandler(this.btnLoginGuna_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -269,7 +284,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).EndInit();
@@ -287,10 +301,10 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
         private System.Windows.Forms.Label lblInvalidLogin;
         private System.Windows.Forms.PictureBox iconUser;
-        private Guna.UI.WinForms.GunaLinkLabel gunaLinkLabel1;
         private System.Windows.Forms.PictureBox iconPassword;
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button btnInvisible;
+        private Guna.UI.WinForms.GunaButton btnLoginGuna;
     }
 }
 

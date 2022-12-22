@@ -141,5 +141,29 @@ namespace CareForPaws
 
 
         }
+
+        private void btnLoginGuna_Click(object sender, EventArgs e)
+        {
+            var sql = "select * from UserInfo where Username = '" + this.txtUserName.Text + "' and Password = '" + this.txtPassword.Text + "';";
+            var ds = this.Da.ExecuteQuery(sql);
+
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                if (ds.Tables[0].Rows[0][7].ToString() == "Admin")
+                {
+
+                    new AdminHome().Show();
+                    this.Hide();
+
+                }
+
+                else if (ds.Tables[0].Rows[0][7].ToString() == "Seller")
+                    new SellerHome().Show();
+            }
+            else
+            {
+                lblInvalidLogin.Visible = true;
+            }
+        }
     }
 }

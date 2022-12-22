@@ -266,6 +266,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Name = "AddSellerUC";
             this.Size = new System.Drawing.Size(652, 473);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

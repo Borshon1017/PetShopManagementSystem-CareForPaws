@@ -40,19 +40,19 @@
             this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnLoginGuna = new Guna.UI.WinForms.GunaButton();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pnlTopLogin = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconUser)).BeginInit();
-            this.guna2GradientPanel1.SuspendLayout();
+            this.pnlTopLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.guna2GradientPanel1);
+            this.panel1.Controls.Add(this.pnlTopLogin);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -278,16 +278,17 @@
             this.btnLoginGuna.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnLoginGuna.Click += new System.EventHandler(this.btnLoginGuna_Click);
             // 
-            // guna2GradientPanel1
+            // pnlTopLogin
             // 
-            this.guna2GradientPanel1.Controls.Add(this.btnClose);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.Black;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(930, 33);
-            this.guna2GradientPanel1.TabIndex = 3;
+            this.pnlTopLogin.Controls.Add(this.btnClose);
+            this.pnlTopLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlTopLogin.FillColor2 = System.Drawing.Color.Black;
+            this.pnlTopLogin.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopLogin.Name = "pnlTopLogin";
+            this.pnlTopLogin.ShadowDecoration.Parent = this.pnlTopLogin;
+            this.pnlTopLogin.Size = new System.Drawing.Size(930, 33);
+            this.pnlTopLogin.TabIndex = 3;
+            this.pnlTopLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // btnClose
             // 
@@ -322,7 +323,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconUser)).EndInit();
-            this.guna2GradientPanel1.ResumeLayout(false);
+            this.pnlTopLogin.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -340,7 +341,7 @@
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button btnInvisible;
         private Guna.UI.WinForms.GunaButton btnLoginGuna;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnlTopLogin;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
     }
 }

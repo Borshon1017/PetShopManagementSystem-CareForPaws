@@ -40,6 +40,7 @@
             this.rdbFemale = new Guna.UI.WinForms.GunaMediumRadioButton();
             this.icoMale = new System.Windows.Forms.PictureBox();
             this.icoFemale = new System.Windows.Forms.PictureBox();
+            this.btnAddSeller = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
@@ -217,10 +218,43 @@
             this.icoFemale.TabIndex = 10;
             this.icoFemale.TabStop = false;
             // 
+            // btnAddSeller
+            // 
+            this.btnAddSeller.AnimationHoverSpeed = 0.07F;
+            this.btnAddSeller.AnimationSpeed = 0.03F;
+            this.btnAddSeller.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddSeller.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddSeller.BaseColor = System.Drawing.Color.Black;
+            this.btnAddSeller.BorderColor = System.Drawing.Color.White;
+            this.btnAddSeller.BorderSize = 1;
+            this.btnAddSeller.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAddSeller.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAddSeller.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSeller.ForeColor = System.Drawing.Color.White;
+            this.btnAddSeller.Image = null;
+            this.btnAddSeller.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAddSeller.Location = new System.Drawing.Point(3, 355);
+            this.btnAddSeller.Name = "btnAddSeller";
+            this.btnAddSeller.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
+            this.btnAddSeller.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAddSeller.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnAddSeller.OnHoverImage = null;
+            this.btnAddSeller.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAddSeller.OnPressedDepth = 20;
+            this.btnAddSeller.Radius = 22;
+            this.btnAddSeller.Size = new System.Drawing.Size(225, 58);
+            this.btnAddSeller.TabIndex = 14;
+            this.btnAddSeller.Text = "Add Seller";
+            this.btnAddSeller.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddSeller.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnAddSeller.UseTransfarantBackground = true;
+            this.btnAddSeller.Click += new System.EventHandler(this.btnAddSeller_Click);
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAddSeller);
             this.Controls.Add(this.icoFemale);
             this.Controls.Add(this.icoMale);
             this.Controls.Add(this.rdbFemale);
@@ -255,5 +289,6 @@
         private Guna.UI.WinForms.GunaMediumRadioButton rdbFemale;
         private System.Windows.Forms.PictureBox icoMale;
         private System.Windows.Forms.PictureBox icoFemale;
+        private Guna.UI.WinForms.GunaButton btnAddSeller;
     }
 }

@@ -26,5 +26,10 @@ namespace CareForPaws
         {
             dtpSellerDOB.Text = "Select date of birth";
         }
+
+        private void btnAddSeller_Click(object sender, EventArgs e)
+        {
+            //test
+        }
     }
 }

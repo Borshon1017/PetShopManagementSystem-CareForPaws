@@ -148,6 +148,7 @@
             this.btnAddSeller.BorderColor = System.Drawing.Color.White;
             this.btnAddSeller.BorderSize = 1;
             this.btnAddSeller.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAddSeller.Enabled = false;
             this.btnAddSeller.FocusedColor = System.Drawing.Color.Empty;
             this.btnAddSeller.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSeller.ForeColor = System.Drawing.Color.White;

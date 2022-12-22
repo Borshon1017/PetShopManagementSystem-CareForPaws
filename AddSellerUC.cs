@@ -15,11 +15,17 @@ namespace CareForPaws
 {
     public partial class AddSellerUC : UserControl
     {
+        public int totalFilled=0;
         private DataAccess Da { get; set; }
         public AddSellerUC()
         {
             InitializeComponent();
             this.Da = new DataAccess();
+              
+            if(String.IsNullOrEmpty(txtFullName.Text)==false)
+            {
+                btnAddSeller.Enabled = true;
+            }
 
 
         }
@@ -257,7 +263,8 @@ namespace CareForPaws
 
         private void txtFullName_TextChanged_1(object sender, EventArgs e)
         {
-
+            
+            
         }
 
         private void label3_Click(object sender, EventArgs e)

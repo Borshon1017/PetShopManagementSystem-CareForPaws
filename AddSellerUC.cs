@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Suite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +14,14 @@ namespace CareForPaws
 {
     public partial class AddSellerUC : UserControl
     {
+        private DataAccess Sa { get; set; }
         public AddSellerUC()
         {
             InitializeComponent();
+            this.Sa = new DataAccess();
         }
+
+        
 
         private void txtFullName_TextChanged(object sender, EventArgs e)
         {
@@ -29,8 +35,41 @@ namespace CareForPaws
 
         private void btnAddSeller_Click(object sender, EventArgs e)
         {
-            //test
+            string UID = "U-005";
+            string fullName = txtFullName.Text;
+            string userName = txtUserName.Text;
+            string phoneNumber = txtPhoneNumber.Text;
+            string password = txtPassword.Text;
+            string reenterpassword = txtConfirmPassword.Text;
+            string gender ="null";
+            string role = "seller";
+            string salary = txtSalary.Text;
+            if (rdbFemale.Checked == true)
+            {
+                gender = "Female";
+            }
+            else if (rdbMale.Checked== true)
+            {
+               gender= "Male";
+            }
+
+            // DateTime date = DateTime.ParseExact(dtpSellerDOB.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
+            //  string dateofbirth = date.ToString("yyyy/MM/dd");
+            /// DateTime date2 = DateTime.ParseExact(dtpSellerDOB.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture);
+            // string joiningdate = date.ToString("yyyy/MM/dd");
+
+
+            //string dateofbirth = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+            // string joiningdate = DateTime.ParseExact(dtpJoiningDate.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+            string dateofbirth= dtpSellerDOB.Value.ToString();
+            string joiningdate = dtpJoiningDate.Value.ToString();
+
+
+            var sql = "insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', '" + salary + "', '" + joiningdate + "', 'Active',  ;";
+            var ds = this.Sa.ExecuteQuery(sql);
+
         }
+        
 
         private void txtFullName_Enter(object sender, EventArgs e)
         {
@@ -162,6 +201,17 @@ namespace CareForPaws
                 this.txtSalary.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
 
             }
+        }
+
+        private void txtFullName_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            string test = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+           
         }
     }
 }

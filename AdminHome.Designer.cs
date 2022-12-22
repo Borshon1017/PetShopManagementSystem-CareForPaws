@@ -342,6 +342,7 @@
             this.ClientSize = new System.Drawing.Size(930, 525);
             this.Controls.Add(this.panel1);
             this.transUsercontrol.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

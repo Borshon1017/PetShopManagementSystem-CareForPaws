@@ -12,16 +12,9 @@ namespace CareForPaws
 {
     public partial class LoginForm : Form
     {
-        public void EnableDoubleBuffering()
-        {
-            // Set the value of the double-buffering style bits to true.
-            this.SetStyle(ControlStyles.DoubleBuffer |
-               ControlStyles.UserPaint |
-               ControlStyles.AllPaintingInWmPaint,
-               true);
-            this.UpdateStyles();
-        }
-
+        
+   
+        
         private DataAccess Da { get; set; }
 
         public LoginForm()

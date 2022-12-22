@@ -43,6 +43,9 @@
             this.txtConfirmPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSalary = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnClearAll = new Guna.UI.WinForms.GunaButton();
+            this.dtpJoiningDate = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
@@ -60,25 +63,27 @@
             // 
             // dtpSellerDOB
             // 
+            this.dtpSellerDOB.BackColor = System.Drawing.Color.Transparent;
             this.dtpSellerDOB.BaseColor = System.Drawing.Color.White;
-            this.dtpSellerDOB.BorderColor = System.Drawing.Color.Gray;
-            this.dtpSellerDOB.CustomFormat = null;
+            this.dtpSellerDOB.BorderColor = System.Drawing.Color.Silver;
+            this.dtpSellerDOB.CustomFormat = "yyyy-MM-dd";
             this.dtpSellerDOB.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpSellerDOB.FocusedColor = System.Drawing.Color.Black;
+            this.dtpSellerDOB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpSellerDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpSellerDOB.ForeColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpSellerDOB.Location = new System.Drawing.Point(16, 274);
+            this.dtpSellerDOB.Location = new System.Drawing.Point(16, 368);
             this.dtpSellerDOB.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
             this.dtpSellerDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpSellerDOB.Name = "dtpSellerDOB";
             this.dtpSellerDOB.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dtpSellerDOB.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpSellerDOB.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpSellerDOB.OnPressedColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Size = new System.Drawing.Size(208, 30);
             this.dtpSellerDOB.TabIndex = 5;
             this.dtpSellerDOB.Text = "12/22/2022";
+            this.dtpSellerDOB.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.dtpSellerDOB.Value = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
             this.dtpSellerDOB.ValueChanged += new System.EventHandler(this.dtpSellerDOB_ValueChanged);
             // 
@@ -86,7 +91,7 @@
             // 
             this.rdbMale.BaseColor = System.Drawing.Color.White;
             this.rdbMale.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rdbMale.CheckedOnColor = System.Drawing.Color.Black;
+            this.rdbMale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.rdbMale.FillColor = System.Drawing.Color.White;
             this.rdbMale.Location = new System.Drawing.Point(378, 350);
             this.rdbMale.Name = "rdbMale";
@@ -97,7 +102,7 @@
             // 
             this.rdbFemale.BaseColor = System.Drawing.Color.White;
             this.rdbFemale.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rdbFemale.CheckedOnColor = System.Drawing.Color.Black;
+            this.rdbFemale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.rdbFemale.FillColor = System.Drawing.Color.White;
             this.rdbFemale.Location = new System.Drawing.Point(537, 350);
             this.rdbFemale.Name = "rdbFemale";
@@ -174,6 +179,7 @@
             this.txtFullName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtFullName.TabIndex = 15;
             this.txtFullName.Text = "Full Name";
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged_1);
             this.txtFullName.Enter += new System.EventHandler(this.txtFullName_Enter);
             this.txtFullName.Leave += new System.EventHandler(this.txtFullName_Leave);
             // 
@@ -313,11 +319,59 @@
             this.btnClearAll.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnClearAll.UseTransfarantBackground = true;
             // 
+            // dtpJoiningDate
+            // 
+            this.dtpJoiningDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtpJoiningDate.BaseColor = System.Drawing.Color.White;
+            this.dtpJoiningDate.BorderColor = System.Drawing.Color.Silver;
+            this.dtpJoiningDate.CustomFormat = "yyyy-MM-dd";
+            this.dtpJoiningDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpJoiningDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpJoiningDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpJoiningDate.ForeColor = System.Drawing.Color.Black;
+            this.dtpJoiningDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpJoiningDate.Location = new System.Drawing.Point(16, 293);
+            this.dtpJoiningDate.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
+            this.dtpJoiningDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpJoiningDate.Name = "dtpJoiningDate";
+            this.dtpJoiningDate.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtpJoiningDate.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpJoiningDate.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpJoiningDate.OnPressedColor = System.Drawing.Color.Black;
+            this.dtpJoiningDate.Size = new System.Drawing.Size(208, 30);
+            this.dtpJoiningDate.TabIndex = 22;
+            this.dtpJoiningDate.Text = "12/22/2022";
+            this.dtpJoiningDate.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.dtpJoiningDate.Value = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 270);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Joining Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 345);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 20);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Date of Birth";
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dtpJoiningDate);
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.txtConfirmPassword);
@@ -332,6 +386,7 @@
             this.Controls.Add(this.rdbMale);
             this.Controls.Add(this.dtpSellerDOB);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Name = "AddSellerUC";
             this.Size = new System.Drawing.Size(652, 470);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -358,5 +413,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtConfirmPassword;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSalary;
         private Guna.UI.WinForms.GunaButton btnClearAll;
+        private Guna.UI.WinForms.GunaDateTimePicker dtpJoiningDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

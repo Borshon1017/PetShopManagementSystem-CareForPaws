@@ -33,6 +33,7 @@
             this.btnSearchSeller = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteSeller = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddSeller = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(652, 55);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnSellerList
             // 
@@ -133,16 +133,24 @@
             this.btnAddSeller.Size = new System.Drawing.Size(163, 53);
             this.btnAddSeller.TabIndex = 1;
             this.btnAddSeller.Text = "Add Seller";
-            this.btnAddSeller.Click += new System.EventHandler(this.btnAddSeller_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 55);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(652, 470);
+            this.panel2.TabIndex = 3;
             // 
             // ManageSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ManageSellerUC";
             this.Size = new System.Drawing.Size(652, 525);
+            this.Load += new System.EventHandler(this.ManageSellerUC_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -155,5 +163,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSellerList;
         private Guna.UI2.WinForms.Guna2Button btnSearchSeller;
         private Guna.UI2.WinForms.Guna2Button btnDeleteSeller;
+        private System.Windows.Forms.Panel panel2;
     }
 }

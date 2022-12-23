@@ -152,7 +152,7 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count == 1)
             {
                 lblUsernameEmpty.Visible = true;
-                new ComfirmationError("Username already exists", 70, 19).Show();
+                new ComfirmationError("Username already exists", 15, 17).Show();
 
             }
            
@@ -168,7 +168,7 @@ namespace CareForPaws
             {
                 lblPasswordError.Visible = true;
 
-                new ComfirmationError("Password Mismatch", 70, 19).Show();
+                new ComfirmationError("Password Mismatch", 68, 17).Show();
 
             }
 
@@ -448,6 +448,11 @@ namespace CareForPaws
         private void txtUserName_TextChanged(object sender, EventArgs e)
         {
             lblUsernameEmpty.Visible = false;
+        }
+
+        private void lblFullNameEmpty_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -448,6 +448,7 @@
             this.lblFullNameEmpty.TabIndex = 33;
             this.lblFullNameEmpty.Text = "*";
             this.lblFullNameEmpty.Visible = false;
+            this.lblFullNameEmpty.Click += new System.EventHandler(this.lblFullNameEmpty_Click);
             // 
             // icoSalaryError
             // 

@@ -123,9 +123,6 @@
   <metadata name="careForPawsDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="careForPawsDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="U_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -160,7 +157,7 @@
   <data name="gunaCirclePictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAtl9JREFUeF7tvQmcLFlZ5k2DNpvssrkASkv3rcys2/Rtmu57MzLpjd5uRUS1XNDR
+        DwAACw8BkvkDpQAAtl9JREFUeF7tvQmcLFlZ5k2DNpvssrkASkv3rcys2/Rtmu57MzLpjd5uRUS1XNDR
         TxCU0cFBwVEcdWx0BEX93FgUd9RPBfcBFERRZxRlFBcUEAQXFAEB2ffu5jtP5nMqT0S8keect7LqZlW9
         z+/3/Lor4/0/5z0R557IrCXzNldd9YhznT/d+TYagSOPHG/LSxQ48panEDjylqcQOPKWpxA48panEDjy
         lqcQOPK6vKzilsCR1w3eEjjylqcQOPKWpxA48panEDjylqcQOPKWpxA48paXqqziQOA4mH7wQODIW55C

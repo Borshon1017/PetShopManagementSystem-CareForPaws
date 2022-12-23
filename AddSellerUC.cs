@@ -350,8 +350,8 @@ namespace CareForPaws
             txtPassword.Clear();
             txtPhoneNumber.Clear();
             txtUserName.Clear();
-            dtpJoiningDate.Value = DateTime.Today;
-            dtpSellerDOB.Value = DateTime.Today;
+            dtpJoiningDate.Value = DateTime.Today.AddDays(-1);
+            dtpSellerDOB.Value = DateTime.Today.AddDays(-1);
             rdbFemale.Checked = false;
             rdbMale.Checked = false;
 

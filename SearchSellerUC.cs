@@ -105,7 +105,7 @@ namespace CareForPaws
 
         private void txtSearchByID_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearchByID.Text != "Search By ID") {
+            if (txtSearchByID.StateCommon.Content.Color1 != Color.Gray || string.IsNullOrEmpty(txtSearchByID.Text) == false) {
                 var sql = "select * from UserInfo where U_ID like '" + this.txtSearchByID.Text + "%' and Role = 'Seller';";
                 this.PopulateGridView(sql);
             }
@@ -113,7 +113,7 @@ namespace CareForPaws
 
         private void txtSearchByUserName_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearchByUserName.Text != "Search By Username") {
+            if (txtSearchByUserName.StateCommon.Content.Color1 != Color.Gray || string.IsNullOrEmpty(txtSearchByUserName.Text) == false) {
                 var sql = "select * from UserInfo where Username like '" + this.txtSearchByUserName.Text + "%' and Role = 'Seller';";
                 this.PopulateGridView(sql);
             }
@@ -121,7 +121,7 @@ namespace CareForPaws
 
         private void txtSeachByName_TextChanged(object sender, EventArgs e)
         {
-            if (txtSeachByName.Text != "Search By Full Name") {
+            if (txtSeachByName.StateCommon.Content.Color1 != Color.Gray || string.IsNullOrEmpty(txtSeachByName.Text) == false ) {
                 var sql = "select * from UserInfo where FullName like '" + this.txtSeachByName.Text + "%' and Role = 'Seller';";
                 this.PopulateGridView(sql);
             }

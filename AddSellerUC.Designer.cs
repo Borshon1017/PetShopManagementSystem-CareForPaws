@@ -180,7 +180,7 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(294, 21);
+            this.txtFullName.Location = new System.Drawing.Point(311, 28);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(264, 34);
             this.txtFullName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -189,6 +189,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtFullName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtFullName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtFullName.StateCommon.Border.Rounding = 20;
             this.txtFullName.StateCommon.Border.Width = 1;
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -202,7 +203,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(294, 71);
+            this.txtUserName.Location = new System.Drawing.Point(311, 78);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(264, 34);
             this.txtUserName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -211,6 +212,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtUserName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtUserName.StateCommon.Border.Rounding = 20;
             this.txtUserName.StateCommon.Border.Width = 1;
             this.txtUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -223,7 +225,7 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(294, 121);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(311, 128);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(264, 34);
             this.txtPhoneNumber.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -232,6 +234,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPhoneNumber.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPhoneNumber.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPhoneNumber.StateCommon.Border.Rounding = 20;
             this.txtPhoneNumber.StateCommon.Border.Width = 1;
             this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -246,7 +249,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(294, 221);
+            this.txtPassword.Location = new System.Drawing.Point(311, 228);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(264, 34);
             this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -255,6 +258,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPassword.StateCommon.Border.Rounding = 20;
             this.txtPassword.StateCommon.Border.Width = 1;
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -268,7 +272,7 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(294, 270);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(311, 277);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(264, 34);
             this.txtConfirmPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -277,6 +281,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtConfirmPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtConfirmPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtConfirmPassword.StateCommon.Border.Rounding = 20;
             this.txtConfirmPassword.StateCommon.Border.Width = 1;
             this.txtConfirmPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -290,7 +295,7 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(294, 171);
+            this.txtSalary.Location = new System.Drawing.Point(311, 178);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(264, 34);
             this.txtSalary.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -299,6 +304,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSalary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtSalary.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSalary.StateCommon.Border.Rounding = 20;
             this.txtSalary.StateCommon.Border.Width = 1;
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -396,7 +402,7 @@
             // 
             // icoCrossPassword
             // 
-            this.icoCrossPassword.Location = new System.Drawing.Point(574, 227);
+            this.icoCrossPassword.Location = new System.Drawing.Point(591, 234);
             this.icoCrossPassword.Name = "icoCrossPassword";
             this.icoCrossPassword.Size = new System.Drawing.Size(22, 22);
             this.icoCrossPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -406,7 +412,7 @@
             // 
             // icoCrossUsername
             // 
-            this.icoCrossUsername.Location = new System.Drawing.Point(574, 78);
+            this.icoCrossUsername.Location = new System.Drawing.Point(591, 85);
             this.icoCrossUsername.Name = "icoCrossUsername";
             this.icoCrossUsername.Size = new System.Drawing.Size(22, 22);
             this.icoCrossUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -416,7 +422,7 @@
             // 
             // icoInvalidNumber
             // 
-            this.icoInvalidNumber.Location = new System.Drawing.Point(574, 126);
+            this.icoInvalidNumber.Location = new System.Drawing.Point(591, 133);
             this.icoInvalidNumber.Name = "icoInvalidNumber";
             this.icoInvalidNumber.Size = new System.Drawing.Size(22, 22);
             this.icoInvalidNumber.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -426,7 +432,7 @@
             // 
             // icoFullNameError
             // 
-            this.icoFullNameError.Location = new System.Drawing.Point(574, 28);
+            this.icoFullNameError.Location = new System.Drawing.Point(591, 35);
             this.icoFullNameError.Name = "icoFullNameError";
             this.icoFullNameError.Size = new System.Drawing.Size(22, 22);
             this.icoFullNameError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -439,7 +445,7 @@
             this.lblFullNameEmpty.AutoSize = true;
             this.lblFullNameEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullNameEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblFullNameEmpty.Location = new System.Drawing.Point(267, 27);
+            this.lblFullNameEmpty.Location = new System.Drawing.Point(284, 34);
             this.lblFullNameEmpty.Name = "lblFullNameEmpty";
             this.lblFullNameEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblFullNameEmpty.TabIndex = 33;
@@ -448,7 +454,7 @@
             // 
             // icoSalaryError
             // 
-            this.icoSalaryError.Location = new System.Drawing.Point(574, 176);
+            this.icoSalaryError.Location = new System.Drawing.Point(591, 183);
             this.icoSalaryError.Name = "icoSalaryError";
             this.icoSalaryError.Size = new System.Drawing.Size(22, 22);
             this.icoSalaryError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -461,7 +467,7 @@
             this.lblSalaryEmpty.AutoSize = true;
             this.lblSalaryEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalaryEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblSalaryEmpty.Location = new System.Drawing.Point(267, 178);
+            this.lblSalaryEmpty.Location = new System.Drawing.Point(284, 185);
             this.lblSalaryEmpty.Name = "lblSalaryEmpty";
             this.lblSalaryEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblSalaryEmpty.TabIndex = 35;
@@ -474,7 +480,7 @@
             this.lblUsernameEmpty.AutoSize = true;
             this.lblUsernameEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsernameEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblUsernameEmpty.Location = new System.Drawing.Point(267, 77);
+            this.lblUsernameEmpty.Location = new System.Drawing.Point(284, 84);
             this.lblUsernameEmpty.Name = "lblUsernameEmpty";
             this.lblUsernameEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblUsernameEmpty.TabIndex = 36;
@@ -486,7 +492,7 @@
             this.lblPhoneNumberEmpty.AutoSize = true;
             this.lblPhoneNumberEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumberEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblPhoneNumberEmpty.Location = new System.Drawing.Point(267, 127);
+            this.lblPhoneNumberEmpty.Location = new System.Drawing.Point(284, 134);
             this.lblPhoneNumberEmpty.Name = "lblPhoneNumberEmpty";
             this.lblPhoneNumberEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblPhoneNumberEmpty.TabIndex = 37;

@@ -53,11 +53,14 @@
             this.icoCrossUsername = new System.Windows.Forms.PictureBox();
             this.lblUsernameError = new System.Windows.Forms.Label();
             this.lblPasswordLength = new System.Windows.Forms.Label();
+            this.icoInvalidNumber = new System.Windows.Forms.PictureBox();
+            this.lblInvalidNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoCrossPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoCrossUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoInvalidNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -174,6 +177,7 @@
             // txtFullName
             // 
             this.txtFullName.Location = new System.Drawing.Point(294, 21);
+            this.txtFullName.MaxLength = 32;
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(264, 34);
             this.txtFullName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -196,6 +200,7 @@
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(294, 71);
+            this.txtUserName.MaxLength = 32;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(264, 34);
             this.txtUserName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -217,6 +222,7 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(294, 121);
+            this.txtPhoneNumber.MaxLength = 11;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(264, 34);
             this.txtPhoneNumber.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -232,12 +238,14 @@
             this.txtPhoneNumber.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtPhoneNumber.TabIndex = 17;
             this.txtPhoneNumber.Text = "Phone Number";
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             this.txtPhoneNumber.Enter += new System.EventHandler(this.txtPhoneNumber_Enter);
             this.txtPhoneNumber.Leave += new System.EventHandler(this.txtPhoneNumber_Leave);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(294, 221);
+            this.txtPassword.MaxLength = 40;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(264, 34);
             this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -260,6 +268,7 @@
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Location = new System.Drawing.Point(294, 270);
+            this.txtConfirmPassword.MaxLength = 40;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(264, 34);
             this.txtConfirmPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -282,6 +291,7 @@
             // txtSalary
             // 
             this.txtSalary.Location = new System.Drawing.Point(294, 171);
+            this.txtSalary.MaxLength = 20;
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(264, 34);
             this.txtSalary.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -443,11 +453,36 @@
             this.lblPasswordLength.Text = "At least 4 \r\ncharacters \r\nrequired";
             this.lblPasswordLength.Visible = false;
             // 
+            // icoInvalidNumber
+            // 
+            this.icoInvalidNumber.Image = ((System.Drawing.Image)(resources.GetObject("icoInvalidNumber.Image")));
+            this.icoInvalidNumber.Location = new System.Drawing.Point(563, 128);
+            this.icoInvalidNumber.Name = "icoInvalidNumber";
+            this.icoInvalidNumber.Size = new System.Drawing.Size(15, 22);
+            this.icoInvalidNumber.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoInvalidNumber.TabIndex = 31;
+            this.icoInvalidNumber.TabStop = false;
+            this.icoInvalidNumber.Visible = false;
+            // 
+            // lblInvalidNumber
+            // 
+            this.lblInvalidNumber.AutoSize = true;
+            this.lblInvalidNumber.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvalidNumber.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblInvalidNumber.Location = new System.Drawing.Point(584, 128);
+            this.lblInvalidNumber.Name = "lblInvalidNumber";
+            this.lblInvalidNumber.Size = new System.Drawing.Size(51, 32);
+            this.lblInvalidNumber.TabIndex = 30;
+            this.lblInvalidNumber.Text = "Invalid \r\nNumber";
+            this.lblInvalidNumber.Visible = false;
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.icoInvalidNumber);
+            this.Controls.Add(this.lblInvalidNumber);
             this.Controls.Add(this.lblPasswordLength);
             this.Controls.Add(this.lblUsernameError);
             this.Controls.Add(this.icoCrossUsername);
@@ -478,6 +513,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoCrossPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoCrossUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoInvalidNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,5 +544,7 @@
         private System.Windows.Forms.PictureBox icoCrossUsername;
         private System.Windows.Forms.Label lblUsernameError;
         private System.Windows.Forms.Label lblPasswordLength;
+        private System.Windows.Forms.PictureBox icoInvalidNumber;
+        private System.Windows.Forms.Label lblInvalidNumber;
     }
 }

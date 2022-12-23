@@ -88,7 +88,12 @@ namespace CareForPaws
                 icoCrossPassword.Visible = false;
                 lblPasswordLength.Visible = false;
 
-            }    
+            }
+            if (txtPhoneNumber.Text.Length != 11)
+            { 
+                icoInvalidNumber.Visible = true;  
+                lblInvalidNumber.Visible = true;   
+            }
 
                 var sql = "select * from UserInfo where username = '"+userName+"';";
             var ds = this.Da.ExecuteQuery(sql);
@@ -304,6 +309,11 @@ namespace CareForPaws
         }
 
         private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
         {
 
         }

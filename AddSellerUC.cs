@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CareForPaws
 {
@@ -121,7 +122,8 @@ namespace CareForPaws
 
             sql = "insert into UserInfo values ('" + UID + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
             ds = this.Da.ExecuteQuery(sql);
-            DialogResult res = MessageBox.Show("Account added sucessfully", "Ok", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            new Comfirmation("Seller Added Sucessfully",38, 369).Show();
 
         }
         private string AutoId()
@@ -268,8 +270,8 @@ namespace CareForPaws
 
         private void txtFullName_TextChanged_1(object sender, EventArgs e)
         {
-            
-            
+           
+
         }
 
         private void label3_Click(object sender, EventArgs e)

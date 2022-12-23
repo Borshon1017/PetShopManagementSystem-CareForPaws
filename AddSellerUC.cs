@@ -16,14 +16,14 @@ namespace CareForPaws
 {
     public partial class AddSellerUC : UserControl
     {
-        public int totalFilled=0;
+        public int totalFilled = 0;
         private DataAccess Da { get; set; }
         public AddSellerUC()
         {
             InitializeComponent();
             this.Da = new DataAccess();
-              
-            if(String.IsNullOrEmpty(txtFullName.Text)==false)
+
+            if (String.IsNullOrEmpty(txtFullName.Text) == false)
             {
                 btnAddSeller.Enabled = true;
             }
@@ -51,13 +51,13 @@ namespace CareForPaws
             string fullName = txtFullName.Text;
             string userName = txtUserName.Text;
 
-            string phoneNumber ="+880"+ txtPhoneNumber.Text;
+            string phoneNumber = "+880" + txtPhoneNumber.Text;
             string password = txtPassword.Text;
             string reenterpassword = txtConfirmPassword.Text;
             string gender = "null";
             string role = "seller";
             string salary = txtSalary.Text;
-         
+
             if (rdbFemale.Checked == true)
             {
                 gender = "Female";
@@ -73,96 +73,136 @@ namespace CareForPaws
             //Exceptions
             if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
             {
-                icoFullNameError.Visible = true;
+
                 lblFullNameEmpty.Visible = true;
-                return;
+                
             }
             else
             {
-                icoFullNameError.Visible = false;
+
                 lblFullNameEmpty.Visible = false;
             }
             if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
             {
-                icoCrossUsername.Visible = true;    
-                return;
+
+                lblUsernameEmpty.Visible= true;
             }
             else
             {
-                icoCrossUsername.Visible = false;
 
+                lblUsernameEmpty.Visible =false;
             }
             if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
             {
-                icoInvalidNumber.Visible = true;
-                return;
+                lblPhoneNumberEmpty.Visible= true;
+
+
             }
             else
             {
-                icoSalaryError.Visible = false;
-                lblSalaryEmpty.Visible = false;
+
+                lblPhoneNumberEmpty.Visible = false;
             }
             if (txtSalary.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtSalary.Text) == true)
             {
-                icoSalaryError.Visible = true;
+
                 lblSalaryEmpty.Visible = true;
-                return;
+
             }
             else
             {
-                icoSalaryError.Visible = false;
+
                 lblSalaryEmpty.Visible = false;
             }
 
-
-
-
-
-
-
-            if (txtPassword.Text != txtConfirmPassword.Text)
+            if (txtPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPassword.Text) == true)
             {
-                icoCrossPassword.Visible = true;
-                return;
 
-            }
-           
-            else
-            {
-                icoCrossPassword.Visible = false;
-            }
-            if (txtPassword.Text.Length < 4 ||  txtConfirmPassword.Text.Length <4)
-                    {
-
-                icoCrossPassword.Visible = true;
+                lblPasswordError.Visible = true;
 
             }
             else
             {
-                icoCrossPassword.Visible = false;
+
+                lblPasswordError.Visible = false;
+            }
+            if (txtConfirmPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtConfirmPassword.Text) == true)
+            {
+
+                lblComfirmPasswordError.Visible = true;
 
             }
-            if (txtPhoneNumber.Text.Length != 11)
-            { 
-                icoInvalidNumber.Visible = true;  
+            else
+            {
+
+                lblComfirmPasswordError.Visible = false;
             }
+
+
+
+
+
+
+
+
             //Username Existance Check
 
-                var sql = "select * from UserInfo where username = '"+userName+"';";
+            var sql = "select * from UserInfo where username = '" + userName + "';";
             var ds = this.Da.ExecuteQuery(sql);
             if (ds.Tables[0].Rows.Count == 1)
             {
-                icoCrossUsername.Visible = true;
-                return;
+                lblUsernameEmpty.Visible = true;
+                new ComfirmationError("Username already exists", 70, 19).Show();
 
+            }
+           
+
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true)
+            {
+                return;
+            }
+
+
+            //Error Message Exceptions
+            if (txtPassword.Text != txtConfirmPassword.Text)
+            {
+                lblPasswordError.Visible = true;
+
+                new ComfirmationError("Password Mismatch", 70, 19).Show();
+
+            }
+
+            else
+            {
+                lblPasswordError.Visible = false;
+            }
+            if (txtPassword.Text.Length < 4 || txtConfirmPassword.Text.Length < 4)
+            {
+
+                lblPasswordError.Visible = true;
+                new ComfirmationError().Show();
             }
             else
             {
-                icoCrossUsername.Visible = false;
+                lblPasswordError.Visible = false;
+
+            }
+            if (txtPhoneNumber.Text.Length != 11)
+            {
+                lblPhoneNumberEmpty.Visible = true;
+                new ComfirmationError("Invalid Phone Number", 70, 19).Show();
+            }
+            else
+            {
+                lblPhoneNumberEmpty.Visible = false;
+            }
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true)
+            {
+                return;
             }
 
 
-           
+
             //Seller Add SQL
 
             sql = "insert into UserInfo values ('" + UID + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
@@ -317,7 +357,7 @@ namespace CareForPaws
 
         private void txtFullName_TextChanged_1(object sender, EventArgs e)
         {
-           
+            lblFullNameEmpty.Visible = false;
 
         }
 
@@ -329,7 +369,7 @@ namespace CareForPaws
 
         private void txtSalary_TextChanged(object sender, EventArgs e)
         {
-
+            lblSalaryEmpty.Visible = false;
         }
         //Clear All
         private void btnClearAll_Click(object sender, EventArgs e)
@@ -346,8 +386,8 @@ namespace CareForPaws
             this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
             txtUserName.Text = "Username";
             this.txtUserName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
-            dtpJoiningDate.Value = DateTime.Today.AddDays(-1);
-            dtpSellerDOB.Value = DateTime.Today.AddDays(-1);
+            //dtpJoiningDate.Value = DateTime.Today.AddDays(-1);
+            //dtpSellerDOB.Value = DateTime.Today.AddDays(-1);
             rdbFemale.Checked = false;
             rdbMale.Checked = false;
 
@@ -366,17 +406,17 @@ namespace CareForPaws
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-
+            lblPasswordError.Visible = false;
         }
 
         private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
         {
-
+            lblComfirmPasswordError.Visible = false;
         }
 
         private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
         {
-
+            lblPhoneNumberEmpty.Visible = false;
         }
 
         private void lblSalaryEmpty_Click(object sender, EventArgs e)
@@ -403,6 +443,11 @@ namespace CareForPaws
         private void lblPasswordLength_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+            lblUsernameEmpty.Visible = false;
         }
     }
 }

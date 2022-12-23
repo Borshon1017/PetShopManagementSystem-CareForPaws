@@ -82,6 +82,12 @@
     <Compile Include="Comfirmation.Designer.cs">
       <DependentUpon>Comfirmation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComfirmationError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComfirmationError.Designer.cs">
+      <DependentUpon>ComfirmationError.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Comfirmation.resx">
       <DependentUpon>Comfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComfirmationError.resx">
+      <DependentUpon>ComfirmationError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

@@ -57,6 +57,8 @@
             this.lblSalaryEmpty = new System.Windows.Forms.Label();
             this.lblUsernameEmpty = new System.Windows.Forms.Label();
             this.lblPhoneNumberEmpty = new System.Windows.Forms.Label();
+            this.lblPasswordError = new System.Windows.Forms.Label();
+            this.lblComfirmPasswordError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
@@ -189,7 +191,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtFullName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtFullName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtFullName.StateCommon.Border.Rounding = 20;
             this.txtFullName.StateCommon.Border.Width = 1;
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -212,7 +213,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtUserName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtUserName.StateCommon.Border.Rounding = 20;
             this.txtUserName.StateCommon.Border.Width = 1;
             this.txtUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -220,6 +220,7 @@
             this.txtUserName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtUserName.TabIndex = 16;
             this.txtUserName.Text = "Username";
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
             this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave);
             // 
@@ -234,7 +235,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPhoneNumber.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtPhoneNumber.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPhoneNumber.StateCommon.Border.Rounding = 20;
             this.txtPhoneNumber.StateCommon.Border.Width = 1;
             this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -258,7 +258,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPassword.StateCommon.Border.Rounding = 20;
             this.txtPassword.StateCommon.Border.Width = 1;
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -281,7 +280,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtConfirmPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtConfirmPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtConfirmPassword.StateCommon.Border.Rounding = 20;
             this.txtConfirmPassword.StateCommon.Border.Width = 1;
             this.txtConfirmPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -304,7 +302,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSalary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSalary.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSalary.StateCommon.Border.Rounding = 20;
             this.txtSalary.StateCommon.Border.Width = 1;
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -499,11 +496,37 @@
             this.lblPhoneNumberEmpty.Text = "*";
             this.lblPhoneNumberEmpty.Visible = false;
             // 
+            // lblPasswordError
+            // 
+            this.lblPasswordError.AutoSize = true;
+            this.lblPasswordError.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordError.ForeColor = System.Drawing.Color.Red;
+            this.lblPasswordError.Location = new System.Drawing.Point(284, 237);
+            this.lblPasswordError.Name = "lblPasswordError";
+            this.lblPasswordError.Size = new System.Drawing.Size(21, 25);
+            this.lblPasswordError.TabIndex = 38;
+            this.lblPasswordError.Text = "*";
+            this.lblPasswordError.Visible = false;
+            // 
+            // lblComfirmPasswordError
+            // 
+            this.lblComfirmPasswordError.AutoSize = true;
+            this.lblComfirmPasswordError.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComfirmPasswordError.ForeColor = System.Drawing.Color.Red;
+            this.lblComfirmPasswordError.Location = new System.Drawing.Point(284, 286);
+            this.lblComfirmPasswordError.Name = "lblComfirmPasswordError";
+            this.lblComfirmPasswordError.Size = new System.Drawing.Size(21, 25);
+            this.lblComfirmPasswordError.TabIndex = 39;
+            this.lblComfirmPasswordError.Text = "*";
+            this.lblComfirmPasswordError.Visible = false;
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lblComfirmPasswordError);
+            this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.lblPhoneNumberEmpty);
             this.Controls.Add(this.lblUsernameEmpty);
             this.Controls.Add(this.lblSalaryEmpty);
@@ -575,5 +598,7 @@
         private System.Windows.Forms.Label lblSalaryEmpty;
         private System.Windows.Forms.Label lblUsernameEmpty;
         private System.Windows.Forms.Label lblPhoneNumberEmpty;
+        private System.Windows.Forms.Label lblPasswordError;
+        private System.Windows.Forms.Label lblComfirmPasswordError;
     }
 }

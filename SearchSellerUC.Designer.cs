@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchSellerUC));
             this.txtSearchByID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSearchByUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -67,6 +67,15 @@
             this.txtID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnClear = new Guna.UI.WinForms.GunaButton();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
+            this.lblSalaryEmpty = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeller)).BeginInit();
@@ -156,20 +165,20 @@
             this.dgvSeller.AllowUserToDeleteRows = false;
             this.dgvSeller.AllowUserToResizeColumns = false;
             this.dgvSeller.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSeller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSeller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSeller.BackgroundColor = System.Drawing.Color.White;
             this.dgvSeller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSeller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSeller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSeller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvSeller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSeller.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.U_ID,
@@ -182,32 +191,32 @@
             this.Gender,
             this.Salary,
             this.JoiningDate});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSeller.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSeller.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvSeller.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvSeller.Location = new System.Drawing.Point(20, 176);
             this.dgvSeller.Name = "dgvSeller";
             this.dgvSeller.ReadOnly = true;
             this.dgvSeller.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSeller.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSeller.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvSeller.RowHeadersWidth = 15;
             this.dgvSeller.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSeller.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSeller.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvSeller.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
             this.dgvSeller.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvSeller.RowTemplate.Height = 40;
@@ -221,12 +230,12 @@
             // U_ID
             // 
             this.U_ID.DataPropertyName = "U_ID";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.U_ID.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.U_ID.DefaultCellStyle = dataGridViewCellStyle11;
             this.U_ID.HeaderText = "ID";
             this.U_ID.Name = "U_ID";
             this.U_ID.ReadOnly = true;
@@ -254,11 +263,11 @@
             // Username
             // 
             this.Username.DataPropertyName = "Username";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Username.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.Username.DefaultCellStyle = dataGridViewCellStyle12;
             this.Username.HeaderText = "Username";
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
@@ -270,10 +279,10 @@
             // 
             this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FullName.DataPropertyName = "FullName";
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle13;
             this.FullName.HeaderText = "Full Name";
             this.FullName.Name = "FullName";
             this.FullName.ReadOnly = true;
@@ -323,6 +332,15 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblSalaryEmpty);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.gunaCirclePictureBox1);
             this.panel2.Controls.Add(this.txtJoiningDate);
@@ -340,10 +358,10 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(12, 186);
+            this.txtPassword.Location = new System.Drawing.Point(35, 184);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(213, 34);
+            this.txtPassword.Size = new System.Drawing.Size(168, 34);
             this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtPassword.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -375,10 +393,10 @@
             // 
             // txtJoiningDate
             // 
-            this.txtJoiningDate.Location = new System.Drawing.Point(12, 386);
+            this.txtJoiningDate.Location = new System.Drawing.Point(35, 384);
             this.txtJoiningDate.Name = "txtJoiningDate";
             this.txtJoiningDate.ReadOnly = true;
-            this.txtJoiningDate.Size = new System.Drawing.Size(213, 34);
+            this.txtJoiningDate.Size = new System.Drawing.Size(168, 34);
             this.txtJoiningDate.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtJoiningDate.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtJoiningDate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -395,10 +413,10 @@
             // 
             // txtGender
             // 
-            this.txtGender.Location = new System.Drawing.Point(12, 346);
+            this.txtGender.Location = new System.Drawing.Point(35, 344);
             this.txtGender.Name = "txtGender";
             this.txtGender.ReadOnly = true;
-            this.txtGender.Size = new System.Drawing.Size(213, 34);
+            this.txtGender.Size = new System.Drawing.Size(168, 34);
             this.txtGender.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtGender.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtGender.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -415,10 +433,10 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(12, 306);
+            this.txtPhone.Location = new System.Drawing.Point(35, 304);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(213, 34);
+            this.txtPhone.Size = new System.Drawing.Size(168, 34);
             this.txtPhone.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtPhone.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtPhone.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -435,10 +453,10 @@
             // 
             // txtDOB
             // 
-            this.txtDOB.Location = new System.Drawing.Point(12, 266);
+            this.txtDOB.Location = new System.Drawing.Point(35, 264);
             this.txtDOB.Name = "txtDOB";
             this.txtDOB.ReadOnly = true;
-            this.txtDOB.Size = new System.Drawing.Size(213, 34);
+            this.txtDOB.Size = new System.Drawing.Size(168, 34);
             this.txtDOB.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtDOB.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtDOB.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -455,10 +473,10 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(12, 426);
+            this.txtSalary.Location = new System.Drawing.Point(35, 424);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.ReadOnly = true;
-            this.txtSalary.Size = new System.Drawing.Size(213, 34);
+            this.txtSalary.Size = new System.Drawing.Size(168, 34);
             this.txtSalary.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtSalary.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtSalary.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -475,10 +493,10 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(12, 226);
+            this.txtFullName.Location = new System.Drawing.Point(35, 224);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.ReadOnly = true;
-            this.txtFullName.Size = new System.Drawing.Size(213, 34);
+            this.txtFullName.Size = new System.Drawing.Size(168, 34);
             this.txtFullName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtFullName.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtFullName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -495,10 +513,10 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(12, 146);
+            this.txtUsername.Location = new System.Drawing.Point(35, 144);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(213, 34);
+            this.txtUsername.Size = new System.Drawing.Size(168, 34);
             this.txtUsername.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtUsername.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtUsername.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -515,10 +533,10 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(12, 106);
+            this.txtID.Location = new System.Drawing.Point(35, 104);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(213, 34);
+            this.txtID.Size = new System.Drawing.Size(168, 34);
             this.txtID.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtID.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -595,6 +613,114 @@
             this.btnSave.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnSave.UseTransfarantBackground = true;
             // 
+            // lblSalaryEmpty
+            // 
+            this.lblSalaryEmpty.AutoSize = true;
+            this.lblSalaryEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblSalaryEmpty.Location = new System.Drawing.Point(10, 111);
+            this.lblSalaryEmpty.Name = "lblSalaryEmpty";
+            this.lblSalaryEmpty.Size = new System.Drawing.Size(21, 25);
+            this.lblSalaryEmpty.TabIndex = 36;
+            this.lblSalaryEmpty.Text = "*";
+            this.lblSalaryEmpty.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(10, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 25);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "*";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(10, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 25);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "*";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(10, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 25);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "*";
+            this.label3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(10, 392);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 25);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "*";
+            this.label4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(10, 352);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 25);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "*";
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(10, 311);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 25);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "*";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(10, 271);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 25);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "*";
+            this.label7.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(10, 432);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 25);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "*";
+            this.label8.Visible = false;
+            // 
             // SearchSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,7 +733,6 @@
             this.Controls.Add(this.txtSearchByID);
             this.Controls.Add(this.txtSearchByUserName);
             this.Controls.Add(this.txtSeachByName);
-            this.DoubleBuffered = true;
             this.Name = "SearchSellerUC";
             this.Size = new System.Drawing.Size(652, 570);
             this.Load += new System.EventHandler(this.SearchSellerUC_Load);
@@ -653,5 +778,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn JoiningDate;
         private Guna.UI.WinForms.GunaButton btnClear;
         private Guna.UI.WinForms.GunaButton btnSave;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSalaryEmpty;
     }
 }

@@ -35,7 +35,8 @@ namespace CareForPaws
 
         private void btnAddSeller_Click(object sender, EventArgs e)
         {
-
+            AddSellerUC addSellerUC = new AddSellerUC();
+            this.AddUserControl(addSellerUC);
         }
 
         private void btnSearchSeller_Click(object sender, EventArgs e)

@@ -85,19 +85,16 @@ namespace CareForPaws
             if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
             {
                 icoCrossUsername.Visible = true;    
-                lblUsernameError.Visible = true;
                 return;
             }
             else
             {
                 icoCrossUsername.Visible = false;
-                lblUsernameError.Visible = false;
 
             }
             if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
             {
                 icoInvalidNumber.Visible = true;
-                lblPasswordError.Visible = true;    
                 return;
             }
             else
@@ -126,7 +123,6 @@ namespace CareForPaws
             if (txtPassword.Text != txtConfirmPassword.Text)
             {
                 icoCrossPassword.Visible = true;
-                lblPasswordError.Visible = true;
                 return;
 
             }
@@ -134,25 +130,21 @@ namespace CareForPaws
             else
             {
                 icoCrossPassword.Visible = false;
-                lblPasswordError.Visible = false;
             }
             if (txtPassword.Text.Length < 4 ||  txtConfirmPassword.Text.Length <4)
                     {
 
                 icoCrossPassword.Visible = true;
-                lblPasswordLength.Visible = true;
 
             }
             else
             {
                 icoCrossPassword.Visible = false;
-                lblPasswordLength.Visible = false;
 
             }
             if (txtPhoneNumber.Text.Length != 11)
             { 
                 icoInvalidNumber.Visible = true;  
-                lblInvalidNumber.Visible = true;   
             }
             //Username Existance Check
 
@@ -161,14 +153,12 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count == 1)
             {
                 icoCrossUsername.Visible = true;
-                lblUsernameError.Visible = true;
                 return;
 
             }
             else
             {
                 icoCrossUsername.Visible = false;
-                lblUsernameError.Visible = false;
             }
 
 
@@ -344,12 +334,18 @@ namespace CareForPaws
         //Clear All
         private void btnClearAll_Click(object sender, EventArgs e)
         {
-            txtFullName.Clear();
-            txtConfirmPassword.Clear();
-            txtSalary.Clear();
-            txtPassword.Clear();
-            txtPhoneNumber.Clear();
-            txtUserName.Clear();
+            txtFullName.Text = "Full Name";
+            this.txtFullName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtConfirmPassword.Text = "Confirm Password";
+            this.txtConfirmPassword.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtSalary.Text = "Salary";
+            this.txtSalary.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtPassword.Text = "Password";
+            this.txtPassword.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtPhoneNumber.Text = "Phone Number";
+            this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtUserName.Text = "Username";
+            this.txtUserName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
             dtpJoiningDate.Value = DateTime.Today.AddDays(-1);
             dtpSellerDOB.Value = DateTime.Today.AddDays(-1);
             rdbFemale.Checked = false;
@@ -402,6 +398,11 @@ namespace CareForPaws
             {
                 e.Handled = true;
             }
+        }
+
+        private void lblPasswordLength_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

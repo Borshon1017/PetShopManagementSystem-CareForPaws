@@ -55,12 +55,20 @@
             this.lblPasswordLength = new System.Windows.Forms.Label();
             this.icoInvalidNumber = new System.Windows.Forms.PictureBox();
             this.lblInvalidNumber = new System.Windows.Forms.Label();
+            this.icoFullNameError = new System.Windows.Forms.PictureBox();
+            this.lblFullNameEmpty = new System.Windows.Forms.Label();
+            this.icoSalaryError = new System.Windows.Forms.PictureBox();
+            this.lblSalaryEmpty = new System.Windows.Forms.Label();
+            this.lblUsernameEmpty = new System.Windows.Forms.Label();
+            this.lblPhoneNumberEmpty = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoCrossPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoCrossUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoInvalidNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoFullNameError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoSalaryError)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -240,6 +248,7 @@
             this.txtPhoneNumber.Text = "Phone Number";
             this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             this.txtPhoneNumber.Enter += new System.EventHandler(this.txtPhoneNumber_Enter);
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             this.txtPhoneNumber.Leave += new System.EventHandler(this.txtPhoneNumber_Leave);
             // 
             // txtPassword
@@ -309,6 +318,7 @@
             this.txtSalary.Text = "Salary";
             this.txtSalary.TextChanged += new System.EventHandler(this.txtSalary_TextChanged);
             this.txtSalary.Enter += new System.EventHandler(this.txtSalary_Enter);
+            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
             this.txtSalary.Leave += new System.EventHandler(this.txtSalary_Leave);
             // 
             // btnClearAll
@@ -476,11 +486,88 @@
             this.lblInvalidNumber.Text = "Invalid \r\nNumber";
             this.lblInvalidNumber.Visible = false;
             // 
+            // icoFullNameError
+            // 
+            this.icoFullNameError.Image = ((System.Drawing.Image)(resources.GetObject("icoFullNameError.Image")));
+            this.icoFullNameError.Location = new System.Drawing.Point(563, 33);
+            this.icoFullNameError.Name = "icoFullNameError";
+            this.icoFullNameError.Size = new System.Drawing.Size(15, 22);
+            this.icoFullNameError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoFullNameError.TabIndex = 32;
+            this.icoFullNameError.TabStop = false;
+            this.icoFullNameError.Visible = false;
+            // 
+            // lblFullNameEmpty
+            // 
+            this.lblFullNameEmpty.AutoSize = true;
+            this.lblFullNameEmpty.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullNameEmpty.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblFullNameEmpty.Location = new System.Drawing.Point(586, 33);
+            this.lblFullNameEmpty.Name = "lblFullNameEmpty";
+            this.lblFullNameEmpty.Size = new System.Drawing.Size(58, 32);
+            this.lblFullNameEmpty.TabIndex = 33;
+            this.lblFullNameEmpty.Text = "Can not \r\nbe empty";
+            this.lblFullNameEmpty.Visible = false;
+            // 
+            // icoSalaryError
+            // 
+            this.icoSalaryError.Image = ((System.Drawing.Image)(resources.GetObject("icoSalaryError.Image")));
+            this.icoSalaryError.Location = new System.Drawing.Point(564, 183);
+            this.icoSalaryError.Name = "icoSalaryError";
+            this.icoSalaryError.Size = new System.Drawing.Size(15, 22);
+            this.icoSalaryError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoSalaryError.TabIndex = 34;
+            this.icoSalaryError.TabStop = false;
+            this.icoSalaryError.Visible = false;
+            // 
+            // lblSalaryEmpty
+            // 
+            this.lblSalaryEmpty.AutoSize = true;
+            this.lblSalaryEmpty.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryEmpty.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblSalaryEmpty.Location = new System.Drawing.Point(586, 183);
+            this.lblSalaryEmpty.Name = "lblSalaryEmpty";
+            this.lblSalaryEmpty.Size = new System.Drawing.Size(58, 32);
+            this.lblSalaryEmpty.TabIndex = 35;
+            this.lblSalaryEmpty.Text = "Can not\r\nbe empty";
+            this.lblSalaryEmpty.Visible = false;
+            this.lblSalaryEmpty.Click += new System.EventHandler(this.lblSalaryEmpty_Click);
+            // 
+            // lblUsernameEmpty
+            // 
+            this.lblUsernameEmpty.AutoSize = true;
+            this.lblUsernameEmpty.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameEmpty.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblUsernameEmpty.Location = new System.Drawing.Point(586, 73);
+            this.lblUsernameEmpty.Name = "lblUsernameEmpty";
+            this.lblUsernameEmpty.Size = new System.Drawing.Size(58, 32);
+            this.lblUsernameEmpty.TabIndex = 36;
+            this.lblUsernameEmpty.Text = "Can not\r\nbe empty";
+            this.lblUsernameEmpty.Visible = false;
+            // 
+            // lblPhoneNumberEmpty
+            // 
+            this.lblPhoneNumberEmpty.AutoSize = true;
+            this.lblPhoneNumberEmpty.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumberEmpty.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblPhoneNumberEmpty.Location = new System.Drawing.Point(586, 128);
+            this.lblPhoneNumberEmpty.Name = "lblPhoneNumberEmpty";
+            this.lblPhoneNumberEmpty.Size = new System.Drawing.Size(58, 32);
+            this.lblPhoneNumberEmpty.TabIndex = 37;
+            this.lblPhoneNumberEmpty.Text = "Can not\r\nbe empty";
+            this.lblPhoneNumberEmpty.Visible = false;
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblPhoneNumberEmpty);
+            this.Controls.Add(this.lblUsernameEmpty);
+            this.Controls.Add(this.lblSalaryEmpty);
+            this.Controls.Add(this.icoSalaryError);
+            this.Controls.Add(this.lblFullNameEmpty);
+            this.Controls.Add(this.icoFullNameError);
             this.Controls.Add(this.icoInvalidNumber);
             this.Controls.Add(this.lblInvalidNumber);
             this.Controls.Add(this.lblPasswordLength);
@@ -514,6 +601,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.icoCrossPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoCrossUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoInvalidNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoFullNameError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoSalaryError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,5 +635,11 @@
         private System.Windows.Forms.Label lblPasswordLength;
         private System.Windows.Forms.PictureBox icoInvalidNumber;
         private System.Windows.Forms.Label lblInvalidNumber;
+        private System.Windows.Forms.PictureBox icoFullNameError;
+        private System.Windows.Forms.Label lblFullNameEmpty;
+        private System.Windows.Forms.PictureBox icoSalaryError;
+        private System.Windows.Forms.Label lblSalaryEmpty;
+        private System.Windows.Forms.Label lblUsernameEmpty;
+        private System.Windows.Forms.Label lblPhoneNumberEmpty;
     }
 }

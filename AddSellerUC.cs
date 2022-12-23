@@ -57,6 +57,7 @@ namespace CareForPaws
             string gender = "null";
             string role = "seller";
             string salary = txtSalary.Text;
+         
             if (rdbFemale.Checked == true)
             {
                 gender = "Female";
@@ -65,6 +66,63 @@ namespace CareForPaws
             {
                 gender = "Male";
             }
+            string dateofbirth = dtpSellerDOB.Value.ToString();
+            string joiningdate = dtpJoiningDate.Value.ToString();
+
+
+            //Exceptions
+            if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
+            {
+                icoFullNameError.Visible = true;
+                lblFullNameEmpty.Visible = true;
+                return;
+            }
+            else
+            {
+                icoFullNameError.Visible = false;
+                lblFullNameEmpty.Visible = false;
+            }
+            if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
+            {
+                icoCrossUsername.Visible = true;    
+                lblUsernameError.Visible = true;
+                return;
+            }
+            else
+            {
+                icoCrossUsername.Visible = false;
+                lblUsernameError.Visible = false;
+
+            }
+            if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
+            {
+                icoInvalidNumber.Visible = true;
+                lblPasswordError.Visible = true;    
+                return;
+            }
+            else
+            {
+                icoSalaryError.Visible = false;
+                lblSalaryEmpty.Visible = false;
+            }
+            if (txtSalary.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtSalary.Text) == true)
+            {
+                icoSalaryError.Visible = true;
+                lblSalaryEmpty.Visible = true;
+                return;
+            }
+            else
+            {
+                icoSalaryError.Visible = false;
+                lblSalaryEmpty.Visible = false;
+            }
+
+
+
+
+
+
+
             if (txtPassword.Text != txtConfirmPassword.Text)
             {
                 icoCrossPassword.Visible = true;
@@ -72,6 +130,7 @@ namespace CareForPaws
                 return;
 
             }
+           
             else
             {
                 icoCrossPassword.Visible = false;
@@ -95,6 +154,7 @@ namespace CareForPaws
                 icoInvalidNumber.Visible = true;  
                 lblInvalidNumber.Visible = true;   
             }
+            //Username Existance Check
 
                 var sql = "select * from UserInfo where username = '"+userName+"';";
             var ds = this.Da.ExecuteQuery(sql);
@@ -112,20 +172,17 @@ namespace CareForPaws
             }
 
 
-
-
-
-
-            string dateofbirth = dtpSellerDOB.Value.ToString();
-            string joiningdate = dtpJoiningDate.Value.ToString();
-
+           
+            //Seller Add SQL
 
             sql = "insert into UserInfo values ('" + UID + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
             ds = this.Da.ExecuteQuery(sql);
 
             new Comfirmation("Seller Added Sucessfully",38, 369).Show();
+            
 
         }
+
         private string AutoId()
         {
             var dt = Da.ExecuteQueryTable(@"Select * from UserInfo order by U_ID Desc;");
@@ -284,7 +341,7 @@ namespace CareForPaws
         {
 
         }
-
+        //Clear All
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             txtFullName.Clear();
@@ -299,7 +356,13 @@ namespace CareForPaws
             rdbMale.Checked = false;
 
         }
-
+        private void txtbox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         private void lblPasswordError_Click(object sender, EventArgs e)
         {
 
@@ -318,6 +381,27 @@ namespace CareForPaws
         private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblSalaryEmpty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

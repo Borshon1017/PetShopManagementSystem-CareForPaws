@@ -70,6 +70,11 @@
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="CareForPawsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -91,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchSellerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchSellerUC.Designer.cs">
+      <DependentUpon>SearchSellerUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="SellerHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,9 +132,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SearchSellerUC.resx">
+      <DependentUpon>SearchSellerUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SellerHome.resx">
       <DependentUpon>SellerHome.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CareForPawsDataSet.xsc">
+      <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CareForPawsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CareForPawsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CareForPawsDataSet.xss">
+      <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

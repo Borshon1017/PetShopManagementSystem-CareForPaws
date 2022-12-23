@@ -54,7 +54,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(208, 239);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -72,7 +72,7 @@
             this.dtpSellerDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpSellerDOB.ForeColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpSellerDOB.Location = new System.Drawing.Point(16, 368);
+            this.dtpSellerDOB.Location = new System.Drawing.Point(30, 401);
             this.dtpSellerDOB.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
             this.dtpSellerDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpSellerDOB.Name = "dtpSellerDOB";
@@ -93,7 +93,7 @@
             this.rdbMale.CheckedOffColor = System.Drawing.Color.Gray;
             this.rdbMale.CheckedOnColor = System.Drawing.Color.Black;
             this.rdbMale.FillColor = System.Drawing.Color.White;
-            this.rdbMale.Location = new System.Drawing.Point(378, 350);
+            this.rdbMale.Location = new System.Drawing.Point(396, 398);
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(20, 20);
             this.rdbMale.TabIndex = 7;
@@ -104,7 +104,7 @@
             this.rdbFemale.CheckedOffColor = System.Drawing.Color.Gray;
             this.rdbFemale.CheckedOnColor = System.Drawing.Color.Black;
             this.rdbFemale.FillColor = System.Drawing.Color.White;
-            this.rdbFemale.Location = new System.Drawing.Point(537, 350);
+            this.rdbFemale.Location = new System.Drawing.Point(555, 398);
             this.rdbFemale.Name = "rdbFemale";
             this.rdbFemale.Size = new System.Drawing.Size(20, 20);
             this.rdbFemale.TabIndex = 8;
@@ -112,7 +112,7 @@
             // icoMale
             // 
             this.icoMale.Image = ((System.Drawing.Image)(resources.GetObject("icoMale.Image")));
-            this.icoMale.Location = new System.Drawing.Point(302, 323);
+            this.icoMale.Location = new System.Drawing.Point(320, 371);
             this.icoMale.Name = "icoMale";
             this.icoMale.Size = new System.Drawing.Size(70, 60);
             this.icoMale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +122,7 @@
             // icoFemale
             // 
             this.icoFemale.Image = ((System.Drawing.Image)(resources.GetObject("icoFemale.Image")));
-            this.icoFemale.Location = new System.Drawing.Point(461, 323);
+            this.icoFemale.Location = new System.Drawing.Point(479, 371);
             this.icoFemale.Name = "icoFemale";
             this.icoFemale.Size = new System.Drawing.Size(70, 60);
             this.icoFemale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,7 +144,7 @@
             this.btnAddSeller.ForeColor = System.Drawing.Color.White;
             this.btnAddSeller.Image = null;
             this.btnAddSeller.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddSeller.Location = new System.Drawing.Point(432, 401);
+            this.btnAddSeller.Location = new System.Drawing.Point(450, 472);
             this.btnAddSeller.Name = "btnAddSeller";
             this.btnAddSeller.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnAddSeller.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -163,7 +163,7 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(294, 21);
+            this.txtFullName.Location = new System.Drawing.Point(311, 28);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(264, 34);
             this.txtFullName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -172,7 +172,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtFullName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtFullName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtFullName.StateCommon.Border.Rounding = 20;
             this.txtFullName.StateCommon.Border.Width = 1;
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -185,7 +184,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(294, 71);
+            this.txtUserName.Location = new System.Drawing.Point(311, 83);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(264, 34);
             this.txtUserName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -194,7 +193,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtUserName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtUserName.StateCommon.Border.Rounding = 20;
             this.txtUserName.StateCommon.Border.Width = 1;
             this.txtUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -207,7 +205,7 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(294, 121);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(311, 138);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(264, 34);
             this.txtPhoneNumber.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -216,7 +214,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPhoneNumber.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtPhoneNumber.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPhoneNumber.StateCommon.Border.Rounding = 20;
             this.txtPhoneNumber.StateCommon.Border.Width = 1;
             this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -229,7 +226,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(294, 221);
+            this.txtPassword.Location = new System.Drawing.Point(311, 248);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(264, 34);
             this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -238,7 +235,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPassword.StateCommon.Border.Rounding = 20;
             this.txtPassword.StateCommon.Border.Width = 1;
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -251,7 +247,7 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(294, 270);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(311, 302);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(264, 34);
             this.txtConfirmPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -260,7 +256,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtConfirmPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtConfirmPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtConfirmPassword.StateCommon.Border.Rounding = 20;
             this.txtConfirmPassword.StateCommon.Border.Width = 1;
             this.txtConfirmPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -273,7 +268,7 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(294, 171);
+            this.txtSalary.Location = new System.Drawing.Point(311, 193);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(264, 34);
             this.txtSalary.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -282,7 +277,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSalary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSalary.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSalary.StateCommon.Border.Rounding = 20;
             this.txtSalary.StateCommon.Border.Width = 1;
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -308,7 +302,7 @@
             this.btnClearAll.ForeColor = System.Drawing.Color.White;
             this.btnClearAll.Image = null;
             this.btnClearAll.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnClearAll.Location = new System.Drawing.Point(294, 401);
+            this.btnClearAll.Location = new System.Drawing.Point(312, 472);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnClearAll.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -335,7 +329,7 @@
             this.dtpJoiningDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpJoiningDate.ForeColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpJoiningDate.Location = new System.Drawing.Point(16, 293);
+            this.dtpJoiningDate.Location = new System.Drawing.Point(30, 326);
             this.dtpJoiningDate.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
             this.dtpJoiningDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpJoiningDate.Name = "dtpJoiningDate";
@@ -353,7 +347,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 270);
+            this.label1.Location = new System.Drawing.Point(26, 303);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 23;
@@ -363,7 +357,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 345);
+            this.label2.Location = new System.Drawing.Point(26, 378);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 24;
@@ -393,7 +387,7 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "AddSellerUC";
-            this.Size = new System.Drawing.Size(652, 470);
+            this.Size = new System.Drawing.Size(652, 570);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).EndInit();

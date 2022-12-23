@@ -31,8 +31,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlTopLogin = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLoginGuna = new Guna.UI.WinForms.GunaButton();
@@ -44,7 +42,6 @@
             this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1.SuspendLayout();
-            this.pnlTopLogin.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconUser)).BeginInit();
@@ -53,51 +50,18 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.pnlTopLogin);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 525);
+            this.panel1.Size = new System.Drawing.Size(930, 625);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pnlTopLogin
-            // 
-            this.pnlTopLogin.Controls.Add(this.btnClose);
-            this.pnlTopLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlTopLogin.FillColor2 = System.Drawing.Color.Black;
-            this.pnlTopLogin.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.pnlTopLogin.Location = new System.Drawing.Point(0, 0);
-            this.pnlTopLogin.Name = "pnlTopLogin";
-            this.pnlTopLogin.ShadowDecoration.Parent = this.pnlTopLogin;
-            this.pnlTopLogin.Size = new System.Drawing.Size(930, 33);
-            this.pnlTopLogin.TabIndex = 3;
-            this.pnlTopLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.CheckedState.Parent = this.btnClose;
-            this.btnClose.CustomImages.Parent = this.btnClose;
-            this.btnClose.FillColor = System.Drawing.Color.White;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.Location = new System.Drawing.Point(895, 7);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PressedColor = System.Drawing.Color.Gray;
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(23, 23);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "X";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(317, 433);
+            this.btnLogin.Location = new System.Drawing.Point(331, 84);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btnLogin.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -157,7 +121,6 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Values.Text = "Login";
             this.btnLogin.Visible = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel2
             // 
@@ -172,7 +135,7 @@
             this.panel2.Controls.Add(this.lblInvalidLogin);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.txtUserName);
-            this.panel2.Location = new System.Drawing.Point(245, 115);
+            this.panel2.Location = new System.Drawing.Point(248, 156);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(434, 312);
             this.panel2.TabIndex = 0;
@@ -316,7 +279,7 @@
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(930, 525);
+            this.ClientSize = new System.Drawing.Size(930, 625);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -324,7 +287,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            this.pnlTopLogin.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).EndInit();
@@ -346,8 +308,6 @@
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button btnInvisible;
         private Guna.UI.WinForms.GunaButton btnLoginGuna;
-        private Guna.UI2.WinForms.Guna2GradientPanel pnlTopLogin;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
     }
 }
 

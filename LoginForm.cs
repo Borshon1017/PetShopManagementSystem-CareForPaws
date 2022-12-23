@@ -23,34 +23,6 @@ namespace CareForPaws
             this.Da = new DataAccess();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-                var sql = "select * from UserInfo where Username = '" + this.txtUserName.Text + "' and Password = '" + this.txtPassword.Text + "';";
-                var ds = this.Da.ExecuteQuery(sql);
-
-                if (ds.Tables[0].Rows.Count == 1)
-                {
-                if (ds.Tables[0].Rows[0][7].ToString() == "Admin" && ds.Tables[0].Rows[0][10].ToString() == "Active")
-                {
-
-                    new AdminHome(this.txtUserName.Text).Show();
-                    this.Hide();
-
-                }
-
-                else if (ds.Tables[0].Rows[0][7].ToString() == "Seller" && ds.Tables[0].Rows[0][10].ToString() == "Active") {
-
-                    new SellerHome().Show();
-                    this.Hide();
-
-                }
-                }
-                else
-                {
-                    lblInvalidLogin.Visible = true;
-                }
-        }
-
         private void txtUserName_Enter(object sender, EventArgs e)
         {
 
@@ -154,16 +126,21 @@ namespace CareForPaws
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                if (ds.Tables[0].Rows[0][7].ToString() == "Admin")
+                if (ds.Tables[0].Rows[0][7].ToString() == "Admin" && ds.Tables[0].Rows[0][10].ToString() == "Active")
                 {
-                    string usernameLabel = this.txtUserName.Text;
-                    new AdminHome(usernameLabel).Show();
+
+                    new AdminHome(this.txtUserName.Text).Show();
                     this.Hide();
 
                 }
 
-                else if (ds.Tables[0].Rows[0][7].ToString() == "Seller")
+                else if (ds.Tables[0].Rows[0][7].ToString() == "Seller" && ds.Tables[0].Rows[0][10].ToString() == "Active")
+                {
+
                     new SellerHome().Show();
+                    this.Hide();
+
+                }
             }
             else
             {

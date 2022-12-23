@@ -138,7 +138,7 @@
             // 
             this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 470);
+            this.panel2.Size = new System.Drawing.Size(652, 570);
             this.panel2.TabIndex = 2;
             // 
             // ManageProductUC
@@ -150,7 +150,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "ManageProductUC";
-            this.Size = new System.Drawing.Size(652, 525);
+            this.Size = new System.Drawing.Size(652, 625);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

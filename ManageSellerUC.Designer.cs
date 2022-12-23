@@ -90,6 +90,7 @@
             this.btnSearchSeller.Size = new System.Drawing.Size(163, 53);
             this.btnSearchSeller.TabIndex = 3;
             this.btnSearchSeller.Text = "Search Seller";
+            this.btnSearchSeller.Click += new System.EventHandler(this.btnSearchSeller_Click);
             // 
             // btnDeleteSeller
             // 
@@ -133,12 +134,13 @@
             this.btnAddSeller.Size = new System.Drawing.Size(163, 53);
             this.btnAddSeller.TabIndex = 1;
             this.btnAddSeller.Text = "Add Seller";
+            this.btnAddSeller.Click += new System.EventHandler(this.btnAddSeller_Click);
             // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 470);
+            this.panel2.Size = new System.Drawing.Size(652, 570);
             this.panel2.TabIndex = 3;
             // 
             // ManageSellerUC
@@ -149,7 +151,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ManageSellerUC";
-            this.Size = new System.Drawing.Size(652, 525);
+            this.Size = new System.Drawing.Size(652, 625);
             this.Load += new System.EventHandler(this.ManageSellerUC_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

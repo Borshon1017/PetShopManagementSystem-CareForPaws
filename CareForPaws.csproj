@@ -76,6 +76,12 @@
       <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="Comfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comfirmation.Designer.cs">
+      <DependentUpon>Comfirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comfirmation.resx">
+      <DependentUpon>Comfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

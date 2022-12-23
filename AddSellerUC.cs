@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms.Suite;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,19 +10,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CareForPaws
 {
     public partial class AddSellerUC : UserControl
     {
+        public int totalFilled=0;
         private DataAccess Da { get; set; }
         public AddSellerUC()
         {
             InitializeComponent();
             this.Da = new DataAccess();
+              
+            if(String.IsNullOrEmpty(txtFullName.Text)==false)
+            {
+                btnAddSeller.Enabled = true;
+            }
+
+
         }
 
-        
+
+
 
         private void txtFullName_TextChanged(object sender, EventArgs e)
         {
@@ -30,36 +41,145 @@ namespace CareForPaws
 
         private void dtpSellerDOB_ValueChanged(object sender, EventArgs e)
         {
-            dtpSellerDOB.Text = "Select date of birth";
+
         }
+
 
         private void btnAddSeller_Click(object sender, EventArgs e)
         {
             string UID = "U-" + this.AutoId();
             string fullName = txtFullName.Text;
             string userName = txtUserName.Text;
-            string phoneNumber = txtPhoneNumber.Text;
+
+            string phoneNumber ="+880"+ txtPhoneNumber.Text;
             string password = txtPassword.Text;
             string reenterpassword = txtConfirmPassword.Text;
-            string gender ="null";
-            string role = "Seller";
+            string gender = "null";
+            string role = "seller";
             string salary = txtSalary.Text;
+         
             if (rdbFemale.Checked == true)
             {
                 gender = "Female";
             }
-            else if (rdbMale.Checked== true)
+            else if (rdbMale.Checked == true)
             {
-               gender= "Male";
+                gender = "Male";
             }
-
-            
-            string dateofbirth= dtpSellerDOB.Value.ToString();
+            string dateofbirth = dtpSellerDOB.Value.ToString();
             string joiningdate = dtpJoiningDate.Value.ToString();
 
 
-            var sql = @"insert into UserInfo values ('" + UID  + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active');";
+            //Exceptions
+            if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
+            {
+                icoFullNameError.Visible = true;
+                lblFullNameEmpty.Visible = true;
+                return;
+            }
+            else
+            {
+                icoFullNameError.Visible = false;
+                lblFullNameEmpty.Visible = false;
+            }
+            if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
+            {
+                icoCrossUsername.Visible = true;    
+                lblUsernameError.Visible = true;
+                return;
+            }
+            else
+            {
+                icoCrossUsername.Visible = false;
+                lblUsernameError.Visible = false;
+
+            }
+            if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
+            {
+                icoInvalidNumber.Visible = true;
+                lblPasswordError.Visible = true;    
+                return;
+            }
+            else
+            {
+                icoSalaryError.Visible = false;
+                lblSalaryEmpty.Visible = false;
+            }
+            if (txtSalary.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtSalary.Text) == true)
+            {
+                icoSalaryError.Visible = true;
+                lblSalaryEmpty.Visible = true;
+                return;
+            }
+            else
+            {
+                icoSalaryError.Visible = false;
+                lblSalaryEmpty.Visible = false;
+            }
+
+
+
+
+
+
+
+            if (txtPassword.Text != txtConfirmPassword.Text)
+            {
+                icoCrossPassword.Visible = true;
+                lblPasswordError.Visible = true;
+                return;
+
+            }
+           
+            else
+            {
+                icoCrossPassword.Visible = false;
+                lblPasswordError.Visible = false;
+            }
+            if (txtPassword.Text.Length < 4 ||  txtConfirmPassword.Text.Length <4)
+                    {
+
+                icoCrossPassword.Visible = true;
+                lblPasswordLength.Visible = true;
+
+            }
+            else
+            {
+                icoCrossPassword.Visible = false;
+                lblPasswordLength.Visible = false;
+
+            }
+            if (txtPhoneNumber.Text.Length != 11)
+            { 
+                icoInvalidNumber.Visible = true;  
+                lblInvalidNumber.Visible = true;   
+            }
+            //Username Existance Check
+
+                var sql = "select * from UserInfo where username = '"+userName+"';";
             var ds = this.Da.ExecuteQuery(sql);
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                icoCrossUsername.Visible = true;
+                lblUsernameError.Visible = true;
+                return;
+
+            }
+            else
+            {
+                icoCrossUsername.Visible = false;
+                lblUsernameError.Visible = false;
+            }
+
+
+           
+            //Seller Add SQL
+
+            sql = "insert into UserInfo values ('" + UID + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
+            ds = this.Da.ExecuteQuery(sql);
+
+            new Comfirmation("Seller Added Sucessfully",38, 369).Show();
+            
 
         }
 
@@ -205,5 +325,83 @@ namespace CareForPaws
             }
         }
 
+        private void txtFullName_TextChanged_1(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            string test = DateTime.ParseExact(dtpSellerDOB.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+
+        }
+
+        private void txtSalary_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        //Clear All
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            txtFullName.Clear();
+            txtConfirmPassword.Clear();
+            txtSalary.Clear();
+            txtPassword.Clear();
+            txtPhoneNumber.Clear();
+            txtUserName.Clear();
+            dtpJoiningDate.Value = DateTime.Today;
+            dtpSellerDOB.Value = DateTime.Today;
+            rdbFemale.Checked = false;
+            rdbMale.Checked = false;
+
+        }
+        private void txtbox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void lblPasswordError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSalaryEmpty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

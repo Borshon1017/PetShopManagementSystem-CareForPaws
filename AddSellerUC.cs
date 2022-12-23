@@ -51,7 +51,7 @@ namespace CareForPaws
             string fullName = txtFullName.Text;
             string userName = txtUserName.Text;
 
-            string phoneNumber = txtPhoneNumber.Text;
+            string phoneNumber ="+880"+ txtPhoneNumber.Text;
             string password = txtPassword.Text;
             string reenterpassword = txtConfirmPassword.Text;
             string gender = "null";

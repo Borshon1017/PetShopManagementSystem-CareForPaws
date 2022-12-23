@@ -47,14 +47,10 @@
             this.dtpJoiningDate = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblPasswordError = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.icoCrossPassword = new System.Windows.Forms.PictureBox();
             this.icoCrossUsername = new System.Windows.Forms.PictureBox();
-            this.lblUsernameError = new System.Windows.Forms.Label();
-            this.lblPasswordLength = new System.Windows.Forms.Label();
             this.icoInvalidNumber = new System.Windows.Forms.PictureBox();
-            this.lblInvalidNumber = new System.Windows.Forms.Label();
             this.icoFullNameError = new System.Windows.Forms.PictureBox();
             this.lblFullNameEmpty = new System.Windows.Forms.Label();
             this.icoSalaryError = new System.Windows.Forms.PictureBox();
@@ -74,7 +70,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(208, 239);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,17 +84,17 @@
             this.dtpSellerDOB.BorderColor = System.Drawing.Color.Silver;
             this.dtpSellerDOB.CustomFormat = "yyyy-MM-dd";
             this.dtpSellerDOB.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpSellerDOB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpSellerDOB.FocusedColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpSellerDOB.ForeColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpSellerDOB.Location = new System.Drawing.Point(16, 368);
+            this.dtpSellerDOB.Location = new System.Drawing.Point(30, 401);
             this.dtpSellerDOB.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
             this.dtpSellerDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpSellerDOB.Name = "dtpSellerDOB";
             this.dtpSellerDOB.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtpSellerDOB.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpSellerDOB.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.dtpSellerDOB.OnHoverForeColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.OnPressedColor = System.Drawing.Color.Black;
             this.dtpSellerDOB.Size = new System.Drawing.Size(208, 30);
             this.dtpSellerDOB.TabIndex = 5;
@@ -111,9 +107,9 @@
             // 
             this.rdbMale.BaseColor = System.Drawing.Color.White;
             this.rdbMale.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rdbMale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rdbMale.CheckedOnColor = System.Drawing.Color.Black;
             this.rdbMale.FillColor = System.Drawing.Color.White;
-            this.rdbMale.Location = new System.Drawing.Point(378, 350);
+            this.rdbMale.Location = new System.Drawing.Point(396, 398);
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(20, 20);
             this.rdbMale.TabIndex = 7;
@@ -122,9 +118,9 @@
             // 
             this.rdbFemale.BaseColor = System.Drawing.Color.White;
             this.rdbFemale.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rdbFemale.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rdbFemale.CheckedOnColor = System.Drawing.Color.Black;
             this.rdbFemale.FillColor = System.Drawing.Color.White;
-            this.rdbFemale.Location = new System.Drawing.Point(537, 350);
+            this.rdbFemale.Location = new System.Drawing.Point(555, 398);
             this.rdbFemale.Name = "rdbFemale";
             this.rdbFemale.Size = new System.Drawing.Size(20, 20);
             this.rdbFemale.TabIndex = 8;
@@ -132,7 +128,7 @@
             // icoMale
             // 
             this.icoMale.Image = ((System.Drawing.Image)(resources.GetObject("icoMale.Image")));
-            this.icoMale.Location = new System.Drawing.Point(302, 323);
+            this.icoMale.Location = new System.Drawing.Point(320, 371);
             this.icoMale.Name = "icoMale";
             this.icoMale.Size = new System.Drawing.Size(70, 60);
             this.icoMale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,7 +138,7 @@
             // icoFemale
             // 
             this.icoFemale.Image = ((System.Drawing.Image)(resources.GetObject("icoFemale.Image")));
-            this.icoFemale.Location = new System.Drawing.Point(461, 323);
+            this.icoFemale.Location = new System.Drawing.Point(479, 371);
             this.icoFemale.Name = "icoFemale";
             this.icoFemale.Size = new System.Drawing.Size(70, 60);
             this.icoFemale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,7 +161,7 @@
             this.btnAddSeller.ForeColor = System.Drawing.Color.White;
             this.btnAddSeller.Image = null;
             this.btnAddSeller.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddSeller.Location = new System.Drawing.Point(432, 401);
+            this.btnAddSeller.Location = new System.Drawing.Point(450, 472);
             this.btnAddSeller.Name = "btnAddSeller";
             this.btnAddSeller.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnAddSeller.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -185,7 +181,6 @@
             // txtFullName
             // 
             this.txtFullName.Location = new System.Drawing.Point(294, 21);
-            this.txtFullName.MaxLength = 32;
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(264, 34);
             this.txtFullName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -208,7 +203,6 @@
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(294, 71);
-            this.txtUserName.MaxLength = 32;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(264, 34);
             this.txtUserName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -230,7 +224,6 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(294, 121);
-            this.txtPhoneNumber.MaxLength = 11;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(264, 34);
             this.txtPhoneNumber.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -254,7 +247,6 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(294, 221);
-            this.txtPassword.MaxLength = 40;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(264, 34);
             this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -277,7 +269,6 @@
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Location = new System.Drawing.Point(294, 270);
-            this.txtConfirmPassword.MaxLength = 40;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(264, 34);
             this.txtConfirmPassword.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -300,7 +291,6 @@
             // txtSalary
             // 
             this.txtSalary.Location = new System.Drawing.Point(294, 171);
-            this.txtSalary.MaxLength = 20;
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(264, 34);
             this.txtSalary.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -336,7 +326,7 @@
             this.btnClearAll.ForeColor = System.Drawing.Color.White;
             this.btnClearAll.Image = null;
             this.btnClearAll.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnClearAll.Location = new System.Drawing.Point(294, 401);
+            this.btnClearAll.Location = new System.Drawing.Point(312, 472);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnClearAll.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -360,17 +350,17 @@
             this.dtpJoiningDate.BorderColor = System.Drawing.Color.Silver;
             this.dtpJoiningDate.CustomFormat = "yyyy-MM-dd";
             this.dtpJoiningDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpJoiningDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpJoiningDate.FocusedColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpJoiningDate.ForeColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpJoiningDate.Location = new System.Drawing.Point(16, 293);
+            this.dtpJoiningDate.Location = new System.Drawing.Point(30, 326);
             this.dtpJoiningDate.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
             this.dtpJoiningDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpJoiningDate.Name = "dtpJoiningDate";
             this.dtpJoiningDate.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtpJoiningDate.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtpJoiningDate.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpJoiningDate.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.dtpJoiningDate.OnHoverForeColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.OnPressedColor = System.Drawing.Color.Black;
             this.dtpJoiningDate.Size = new System.Drawing.Size(208, 30);
             this.dtpJoiningDate.TabIndex = 22;
@@ -382,7 +372,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 270);
+            this.label1.Location = new System.Drawing.Point(26, 303);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 23;
@@ -392,24 +382,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 345);
+            this.label2.Location = new System.Drawing.Point(26, 378);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Date of Birth";
-            // 
-            // lblPasswordError
-            // 
-            this.lblPasswordError.AutoSize = true;
-            this.lblPasswordError.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordError.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblPasswordError.Location = new System.Drawing.Point(585, 223);
-            this.lblPasswordError.Name = "lblPasswordError";
-            this.lblPasswordError.Size = new System.Drawing.Size(64, 32);
-            this.lblPasswordError.TabIndex = 25;
-            this.lblPasswordError.Text = "Password \r\nMismatch";
-            this.lblPasswordError.Visible = false;
-            this.lblPasswordError.Click += new System.EventHandler(this.lblPasswordError_Click);
             // 
             // imageList1
             // 
@@ -419,10 +396,9 @@
             // 
             // icoCrossPassword
             // 
-            this.icoCrossPassword.Image = ((System.Drawing.Image)(resources.GetObject("icoCrossPassword.Image")));
-            this.icoCrossPassword.Location = new System.Drawing.Point(564, 230);
+            this.icoCrossPassword.Location = new System.Drawing.Point(574, 227);
             this.icoCrossPassword.Name = "icoCrossPassword";
-            this.icoCrossPassword.Size = new System.Drawing.Size(15, 22);
+            this.icoCrossPassword.Size = new System.Drawing.Size(22, 22);
             this.icoCrossPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.icoCrossPassword.TabIndex = 26;
             this.icoCrossPassword.TabStop = false;
@@ -430,68 +406,29 @@
             // 
             // icoCrossUsername
             // 
-            this.icoCrossUsername.Image = ((System.Drawing.Image)(resources.GetObject("icoCrossUsername.Image")));
-            this.icoCrossUsername.Location = new System.Drawing.Point(564, 73);
+            this.icoCrossUsername.Location = new System.Drawing.Point(574, 78);
             this.icoCrossUsername.Name = "icoCrossUsername";
-            this.icoCrossUsername.Size = new System.Drawing.Size(15, 22);
+            this.icoCrossUsername.Size = new System.Drawing.Size(22, 22);
             this.icoCrossUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.icoCrossUsername.TabIndex = 27;
             this.icoCrossUsername.TabStop = false;
             this.icoCrossUsername.Visible = false;
             // 
-            // lblUsernameError
-            // 
-            this.lblUsernameError.AutoSize = true;
-            this.lblUsernameError.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsernameError.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblUsernameError.Location = new System.Drawing.Point(585, 73);
-            this.lblUsernameError.Name = "lblUsernameError";
-            this.lblUsernameError.Size = new System.Drawing.Size(67, 32);
-            this.lblUsernameError.TabIndex = 28;
-            this.lblUsernameError.Text = "Username \r\nExists\r\n";
-            this.lblUsernameError.Visible = false;
-            // 
-            // lblPasswordLength
-            // 
-            this.lblPasswordLength.AutoSize = true;
-            this.lblPasswordLength.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordLength.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblPasswordLength.Location = new System.Drawing.Point(585, 223);
-            this.lblPasswordLength.Name = "lblPasswordLength";
-            this.lblPasswordLength.Size = new System.Drawing.Size(68, 48);
-            this.lblPasswordLength.TabIndex = 29;
-            this.lblPasswordLength.Text = "At least 4 \r\ncharacters \r\nrequired";
-            this.lblPasswordLength.Visible = false;
-            // 
             // icoInvalidNumber
             // 
-            this.icoInvalidNumber.Image = ((System.Drawing.Image)(resources.GetObject("icoInvalidNumber.Image")));
-            this.icoInvalidNumber.Location = new System.Drawing.Point(563, 128);
+            this.icoInvalidNumber.Location = new System.Drawing.Point(574, 126);
             this.icoInvalidNumber.Name = "icoInvalidNumber";
-            this.icoInvalidNumber.Size = new System.Drawing.Size(15, 22);
+            this.icoInvalidNumber.Size = new System.Drawing.Size(22, 22);
             this.icoInvalidNumber.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.icoInvalidNumber.TabIndex = 31;
             this.icoInvalidNumber.TabStop = false;
             this.icoInvalidNumber.Visible = false;
             // 
-            // lblInvalidNumber
-            // 
-            this.lblInvalidNumber.AutoSize = true;
-            this.lblInvalidNumber.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvalidNumber.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblInvalidNumber.Location = new System.Drawing.Point(584, 128);
-            this.lblInvalidNumber.Name = "lblInvalidNumber";
-            this.lblInvalidNumber.Size = new System.Drawing.Size(51, 32);
-            this.lblInvalidNumber.TabIndex = 30;
-            this.lblInvalidNumber.Text = "Invalid \r\nNumber";
-            this.lblInvalidNumber.Visible = false;
-            // 
             // icoFullNameError
             // 
-            this.icoFullNameError.Image = ((System.Drawing.Image)(resources.GetObject("icoFullNameError.Image")));
-            this.icoFullNameError.Location = new System.Drawing.Point(563, 33);
+            this.icoFullNameError.Location = new System.Drawing.Point(574, 28);
             this.icoFullNameError.Name = "icoFullNameError";
-            this.icoFullNameError.Size = new System.Drawing.Size(15, 22);
+            this.icoFullNameError.Size = new System.Drawing.Size(22, 22);
             this.icoFullNameError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.icoFullNameError.TabIndex = 32;
             this.icoFullNameError.TabStop = false;
@@ -500,21 +437,20 @@
             // lblFullNameEmpty
             // 
             this.lblFullNameEmpty.AutoSize = true;
-            this.lblFullNameEmpty.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullNameEmpty.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblFullNameEmpty.Location = new System.Drawing.Point(586, 33);
+            this.lblFullNameEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullNameEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblFullNameEmpty.Location = new System.Drawing.Point(267, 27);
             this.lblFullNameEmpty.Name = "lblFullNameEmpty";
-            this.lblFullNameEmpty.Size = new System.Drawing.Size(58, 32);
+            this.lblFullNameEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblFullNameEmpty.TabIndex = 33;
-            this.lblFullNameEmpty.Text = "Can not \r\nbe empty";
+            this.lblFullNameEmpty.Text = "*";
             this.lblFullNameEmpty.Visible = false;
             // 
             // icoSalaryError
             // 
-            this.icoSalaryError.Image = ((System.Drawing.Image)(resources.GetObject("icoSalaryError.Image")));
-            this.icoSalaryError.Location = new System.Drawing.Point(564, 183);
+            this.icoSalaryError.Location = new System.Drawing.Point(574, 176);
             this.icoSalaryError.Name = "icoSalaryError";
-            this.icoSalaryError.Size = new System.Drawing.Size(15, 22);
+            this.icoSalaryError.Size = new System.Drawing.Size(22, 22);
             this.icoSalaryError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.icoSalaryError.TabIndex = 34;
             this.icoSalaryError.TabStop = false;
@@ -523,45 +459,45 @@
             // lblSalaryEmpty
             // 
             this.lblSalaryEmpty.AutoSize = true;
-            this.lblSalaryEmpty.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalaryEmpty.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblSalaryEmpty.Location = new System.Drawing.Point(586, 183);
+            this.lblSalaryEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblSalaryEmpty.Location = new System.Drawing.Point(267, 178);
             this.lblSalaryEmpty.Name = "lblSalaryEmpty";
-            this.lblSalaryEmpty.Size = new System.Drawing.Size(58, 32);
+            this.lblSalaryEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblSalaryEmpty.TabIndex = 35;
-            this.lblSalaryEmpty.Text = "Can not\r\nbe empty";
+            this.lblSalaryEmpty.Text = "*";
             this.lblSalaryEmpty.Visible = false;
             this.lblSalaryEmpty.Click += new System.EventHandler(this.lblSalaryEmpty_Click);
             // 
             // lblUsernameEmpty
             // 
             this.lblUsernameEmpty.AutoSize = true;
-            this.lblUsernameEmpty.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsernameEmpty.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblUsernameEmpty.Location = new System.Drawing.Point(586, 73);
+            this.lblUsernameEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblUsernameEmpty.Location = new System.Drawing.Point(267, 77);
             this.lblUsernameEmpty.Name = "lblUsernameEmpty";
-            this.lblUsernameEmpty.Size = new System.Drawing.Size(58, 32);
+            this.lblUsernameEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblUsernameEmpty.TabIndex = 36;
-            this.lblUsernameEmpty.Text = "Can not\r\nbe empty";
+            this.lblUsernameEmpty.Text = "*";
             this.lblUsernameEmpty.Visible = false;
             // 
             // lblPhoneNumberEmpty
             // 
             this.lblPhoneNumberEmpty.AutoSize = true;
-            this.lblPhoneNumberEmpty.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumberEmpty.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblPhoneNumberEmpty.Location = new System.Drawing.Point(586, 128);
+            this.lblPhoneNumberEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumberEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblPhoneNumberEmpty.Location = new System.Drawing.Point(267, 127);
             this.lblPhoneNumberEmpty.Name = "lblPhoneNumberEmpty";
-            this.lblPhoneNumberEmpty.Size = new System.Drawing.Size(58, 32);
+            this.lblPhoneNumberEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblPhoneNumberEmpty.TabIndex = 37;
-            this.lblPhoneNumberEmpty.Text = "Can not\r\nbe empty";
+            this.lblPhoneNumberEmpty.Text = "*";
             this.lblPhoneNumberEmpty.Visible = false;
             // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.lblPhoneNumberEmpty);
             this.Controls.Add(this.lblUsernameEmpty);
             this.Controls.Add(this.lblSalaryEmpty);
@@ -569,12 +505,8 @@
             this.Controls.Add(this.lblFullNameEmpty);
             this.Controls.Add(this.icoFullNameError);
             this.Controls.Add(this.icoInvalidNumber);
-            this.Controls.Add(this.lblInvalidNumber);
-            this.Controls.Add(this.lblPasswordLength);
-            this.Controls.Add(this.lblUsernameError);
             this.Controls.Add(this.icoCrossUsername);
             this.Controls.Add(this.icoCrossPassword);
-            this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpJoiningDate);
@@ -594,7 +526,7 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "AddSellerUC";
-            this.Size = new System.Drawing.Size(652, 470);
+            this.Size = new System.Drawing.Size(652, 570);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).EndInit();
@@ -627,14 +559,10 @@
         private Guna.UI.WinForms.GunaDateTimePicker dtpJoiningDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblPasswordError;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox icoCrossPassword;
         private System.Windows.Forms.PictureBox icoCrossUsername;
-        private System.Windows.Forms.Label lblUsernameError;
-        private System.Windows.Forms.Label lblPasswordLength;
         private System.Windows.Forms.PictureBox icoInvalidNumber;
-        private System.Windows.Forms.Label lblInvalidNumber;
         private System.Windows.Forms.PictureBox icoFullNameError;
         private System.Windows.Forms.Label lblFullNameEmpty;
         private System.Windows.Forms.PictureBox icoSalaryError;

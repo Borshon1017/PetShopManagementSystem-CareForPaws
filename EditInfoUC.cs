@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace CareForPaws
 {
-    public partial class SearchSellerUC : UserControl
+    public partial class EditInfoUC : UserControl
     {
 
         private DataAccess Da { get; set; }
 
-        public SearchSellerUC()
+        public EditInfoUC()
         {
             InitializeComponent();
             this.Da = new DataAccess();
@@ -55,6 +55,8 @@ namespace CareForPaws
 
                 this.txtSearchByID.Text = "Search By ID";
                 this.txtSearchByID.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+                this.PopulateGridView();
+
 
             }
         }
@@ -77,6 +79,7 @@ namespace CareForPaws
 
                 this.txtSearchByUserName.Text = "Search By Username";
                 this.txtSearchByUserName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+                this.PopulateGridView();
 
             }
         }
@@ -99,30 +102,31 @@ namespace CareForPaws
 
                 this.txtSeachByName.Text = "Search By Full Name";
                 this.txtSeachByName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+                this.PopulateGridView();
 
             }
         }
 
         private void txtSearchByID_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearchByID.StateCommon.Content.Color1 != Color.Gray || string.IsNullOrEmpty(txtSearchByID.Text) == false) {
-                var sql = "select * from UserInfo where U_ID like '" + this.txtSearchByID.Text + "%' and Role = 'Seller';";
+            if (txtSearchByID.Text != "Search By ID" || string.IsNullOrEmpty(txtSearchByID.Text) == false || string.IsNullOrWhiteSpace(txtSearchByID.Text) == false) {
+                var sql = "select * from UserInfo where U_ID like '%" + this.txtSearchByID.Text + "%' and Role = 'Seller';";
                 this.PopulateGridView(sql);
             }
         }
 
         private void txtSearchByUserName_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearchByUserName.StateCommon.Content.Color1 != Color.Gray || string.IsNullOrEmpty(txtSearchByUserName.Text) == false) {
-                var sql = "select * from UserInfo where Username like '" + this.txtSearchByUserName.Text + "%' and Role = 'Seller';";
+            if (txtSearchByUserName.Text != "Search By Username" || string.IsNullOrEmpty(txtSearchByUserName.Text) == false || string.IsNullOrWhiteSpace(txtSearchByUserName.Text) == false) {
+                var sql = "select * from UserInfo where Username like '%" + this.txtSearchByUserName.Text + "%' and Role = 'Seller';";
                 this.PopulateGridView(sql);
             }
         }
 
         private void txtSeachByName_TextChanged(object sender, EventArgs e)
         {
-            if (txtSeachByName.StateCommon.Content.Color1 != Color.Gray || string.IsNullOrEmpty(txtSeachByName.Text) == false ) {
-                var sql = "select * from UserInfo where FullName like '" + this.txtSeachByName.Text + "%' and Role = 'Seller';";
+            if (txtSeachByName.Text != "Search By Full Name" || string.IsNullOrEmpty(txtSeachByName.Text) == false || string.IsNullOrWhiteSpace(txtSeachByName.Text) == false) {
+                var sql = "select * from UserInfo where FullName like '%" + this.txtSeachByName.Text + "%' and Role = 'Seller';";
                 this.PopulateGridView(sql);
             }
         }
@@ -139,22 +143,23 @@ namespace CareForPaws
 
         private void dgvSeller_DoubleClick(object sender, EventArgs e)
         {
+            this.TurnOffReadOnly();
             this.txtID.Text = this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString();
             this.txtID.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtFullName.Text = this.dgvSeller.CurrentRow.Cells["FullName"].Value.ToString();
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtUsername.Text = this.dgvSeller.CurrentRow.Cells["Username"].Value.ToString();
             this.txtUsername.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtDOB.Text = Convert.ToDateTime(this.dgvSeller.CurrentRow.Cells["DOB"].Value).ToString("d");
-            this.txtDOB.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dtpDOB.Value = Convert.ToDateTime(this.dgvSeller.CurrentRow.Cells["DOB"].Value);
+            this.dtpDOB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtPhone.Text = this.dgvSeller.CurrentRow.Cells["Phone"].Value.ToString();
             this.txtPhone.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSalary.Text = this.dgvSeller.CurrentRow.Cells["Salary"].Value.ToString();
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtGender.Text = this.dgvSeller.CurrentRow.Cells["Gender"].Value.ToString();
-            this.txtGender.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtJoiningDate.Text = Convert.ToDateTime(this.dgvSeller.CurrentRow.Cells["JoiningDate"].Value).ToString("d");
-            this.txtJoiningDate.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cmbGender.Text = this.dgvSeller.CurrentRow.Cells["Gender"].Value.ToString();
+            this.cmbGender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dtpJoiningDate.Value = Convert.ToDateTime(this.dgvSeller.CurrentRow.Cells["JoiningDate"].Value);
+            this.dtpJoiningDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtPassword.Text = this.dgvSeller.CurrentRow.Cells["Password"].Value.ToString();
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
         }
@@ -185,5 +190,44 @@ namespace CareForPaws
 
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var query = "select * from UserInfo where U_ID = '" + this.txtID.Text + "';";
+            var ds = this.Da.ExecuteQuery(query);
+
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                var sql = @"update UserInfo
+                                set FullName = '" + this.txtFullName.Text + @"',
+                                Username = '" + this.txtUsername.Text + @"',
+                                Password = '" + this.txtPassword.Text + @"',
+                                DOB = '" + this.dtpDOB.Text + @"',
+                                Phone = '" + this.txtPhone.Text + @"',
+                                Gender = '" + this.cmbGender.Text + @"',
+                                Salary = " + this.txtSalary.Text + @",
+                                JoiningDate = '" + this.dtpJoiningDate.Text + @"'
+                                where U_ID = '" + this.txtID.Text + "';";
+                int count = this.Da.ExecuteDMLQuery(sql);
+
+                if (count == 1)
+                    MessageBox.Show("Data updated properly");
+                else
+                    MessageBox.Show("Data upgradation failed");
+            }
+
+            this.PopulateGridView();
+        }
+
+        private void TurnOffReadOnly() {
+
+            txtUsername.ReadOnly = false;
+            txtFullName.ReadOnly = false;
+            txtPassword.ReadOnly = false;
+            txtPhone.ReadOnly = false;
+            txtSalary.ReadOnly = false;
+
+        }
+
     }
 }

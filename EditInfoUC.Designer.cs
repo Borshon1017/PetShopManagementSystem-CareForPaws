@@ -1,6 +1,6 @@
 ﻿namespace CareForPaws
 {
-    partial class SearchSellerUC
+    partial class EditInfoUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchSellerUC));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditInfoUC));
             this.txtSearchByID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSearchByUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSeachByName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -55,27 +55,27 @@
             this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JoiningDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbGender = new Guna.UI.WinForms.GunaComboBox();
+            this.dtpJoiningDate = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.dtpDOB = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblSalaryEmpty = new System.Windows.Forms.Label();
             this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.txtJoiningDate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtGender = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtPhone = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtDOB = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSalary = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtFullName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtUsername = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnClear = new Guna.UI.WinForms.GunaButton();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
-            this.lblSalaryEmpty = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeller)).BeginInit();
@@ -94,6 +94,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSearchByID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtSearchByID.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSearchByID.StateCommon.Border.Rounding = 20;
             this.txtSearchByID.StateCommon.Border.Width = 1;
             this.txtSearchByID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -116,6 +117,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSearchByUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtSearchByUserName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSearchByUserName.StateCommon.Border.Rounding = 20;
             this.txtSearchByUserName.StateCommon.Border.Width = 1;
             this.txtSearchByUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -138,6 +140,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSeachByName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtSeachByName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSeachByName.StateCommon.Border.Rounding = 20;
             this.txtSeachByName.StateCommon.Border.Width = 1;
             this.txtSeachByName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -165,20 +168,20 @@
             this.dgvSeller.AllowUserToDeleteRows = false;
             this.dgvSeller.AllowUserToResizeColumns = false;
             this.dgvSeller.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSeller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSeller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvSeller.BackgroundColor = System.Drawing.Color.White;
             this.dgvSeller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSeller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSeller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSeller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dgvSeller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSeller.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.U_ID,
@@ -191,32 +194,33 @@
             this.Gender,
             this.Salary,
             this.JoiningDate});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSeller.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSeller.DefaultCellStyle = dataGridViewCellStyle38;
             this.dgvSeller.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvSeller.Location = new System.Drawing.Point(20, 176);
             this.dgvSeller.Name = "dgvSeller";
             this.dgvSeller.ReadOnly = true;
             this.dgvSeller.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSeller.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSeller.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            this.dgvSeller.RowHeadersVisible = false;
             this.dgvSeller.RowHeadersWidth = 15;
             this.dgvSeller.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSeller.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSeller.RowsDefaultCellStyle = dataGridViewCellStyle40;
             this.dgvSeller.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
             this.dgvSeller.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvSeller.RowTemplate.Height = 40;
@@ -230,12 +234,12 @@
             // U_ID
             // 
             this.U_ID.DataPropertyName = "U_ID";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.U_ID.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Black;
+            this.U_ID.DefaultCellStyle = dataGridViewCellStyle35;
             this.U_ID.HeaderText = "ID";
             this.U_ID.Name = "U_ID";
             this.U_ID.ReadOnly = true;
@@ -263,11 +267,11 @@
             // Username
             // 
             this.Username.DataPropertyName = "Username";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.Username.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
+            this.Username.DefaultCellStyle = dataGridViewCellStyle36;
             this.Username.HeaderText = "Username";
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
@@ -279,10 +283,10 @@
             // 
             this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FullName.DataPropertyName = "FullName";
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle37.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.Black;
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle37;
             this.FullName.HeaderText = "Full Name";
             this.FullName.Name = "FullName";
             this.FullName.ReadOnly = true;
@@ -332,6 +336,9 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cmbGender);
+            this.panel2.Controls.Add(this.dtpJoiningDate);
+            this.panel2.Controls.Add(this.dtpDOB);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
@@ -343,10 +350,7 @@
             this.panel2.Controls.Add(this.lblSalaryEmpty);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.gunaCirclePictureBox1);
-            this.panel2.Controls.Add(this.txtJoiningDate);
-            this.panel2.Controls.Add(this.txtGender);
             this.panel2.Controls.Add(this.txtPhone);
-            this.panel2.Controls.Add(this.txtDOB);
             this.panel2.Controls.Add(this.txtSalary);
             this.panel2.Controls.Add(this.txtFullName);
             this.panel2.Controls.Add(this.txtUsername);
@@ -355,6 +359,191 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(239, 473);
             this.panel2.TabIndex = 24;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.BackColor = System.Drawing.Color.Transparent;
+            this.cmbGender.BaseColor = System.Drawing.Color.White;
+            this.cmbGender.BorderColor = System.Drawing.Color.Black;
+            this.cmbGender.BorderSize = 1;
+            this.cmbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGender.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbGender.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGender.ForeColor = System.Drawing.Color.Gray;
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbGender.Location = new System.Drawing.Point(35, 344);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.OnHoverItemBaseColor = System.Drawing.Color.Gainsboro;
+            this.cmbGender.OnHoverItemForeColor = System.Drawing.Color.Black;
+            this.cmbGender.Radius = 12;
+            this.cmbGender.Size = new System.Drawing.Size(168, 30);
+            this.cmbGender.TabIndex = 27;
+            // 
+            // dtpJoiningDate
+            // 
+            this.dtpJoiningDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtpJoiningDate.BaseColor = System.Drawing.Color.White;
+            this.dtpJoiningDate.BorderColor = System.Drawing.Color.Black;
+            this.dtpJoiningDate.BorderSize = 1;
+            this.dtpJoiningDate.CustomFormat = "yyyy-MM-dd";
+            this.dtpJoiningDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpJoiningDate.FocusedColor = System.Drawing.Color.Black;
+            this.dtpJoiningDate.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpJoiningDate.ForeColor = System.Drawing.Color.Gray;
+            this.dtpJoiningDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpJoiningDate.Location = new System.Drawing.Point(35, 382);
+            this.dtpJoiningDate.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
+            this.dtpJoiningDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpJoiningDate.Name = "dtpJoiningDate";
+            this.dtpJoiningDate.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtpJoiningDate.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.dtpJoiningDate.OnHoverForeColor = System.Drawing.Color.Black;
+            this.dtpJoiningDate.OnPressedColor = System.Drawing.Color.Transparent;
+            this.dtpJoiningDate.Radius = 11;
+            this.dtpJoiningDate.Size = new System.Drawing.Size(168, 30);
+            this.dtpJoiningDate.TabIndex = 46;
+            this.dtpJoiningDate.Text = "12/22/2022";
+            this.dtpJoiningDate.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.dtpJoiningDate.Value = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
+            // 
+            // dtpDOB
+            // 
+            this.dtpDOB.BackColor = System.Drawing.Color.Transparent;
+            this.dtpDOB.BaseColor = System.Drawing.Color.White;
+            this.dtpDOB.BorderColor = System.Drawing.Color.Black;
+            this.dtpDOB.BorderSize = 1;
+            this.dtpDOB.CustomFormat = "yyyy-MM-dd";
+            this.dtpDOB.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpDOB.FocusedColor = System.Drawing.Color.Black;
+            this.dtpDOB.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDOB.ForeColor = System.Drawing.Color.Gray;
+            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDOB.Location = new System.Drawing.Point(35, 266);
+            this.dtpDOB.MaxDate = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
+            this.dtpDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtpDOB.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.dtpDOB.OnHoverForeColor = System.Drawing.Color.Black;
+            this.dtpDOB.OnPressedColor = System.Drawing.Color.Transparent;
+            this.dtpDOB.Radius = 11;
+            this.dtpDOB.Size = new System.Drawing.Size(168, 30);
+            this.dtpDOB.TabIndex = 45;
+            this.dtpDOB.Text = "12/22/2022";
+            this.dtpDOB.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.dtpDOB.Value = new System.DateTime(2022, 12, 22, 0, 0, 0, 0);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(10, 427);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 25);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "*";
+            this.label8.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(10, 387);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 25);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "*";
+            this.label4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(10, 350);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 25);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "*";
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(10, 311);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 25);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "*";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(10, 271);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 25);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "*";
+            this.label7.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(10, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 25);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "*";
+            this.label3.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(10, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 25);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "*";
+            this.label2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(10, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 25);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "*";
+            this.label1.Visible = false;
+            // 
+            // lblSalaryEmpty
+            // 
+            this.lblSalaryEmpty.AutoSize = true;
+            this.lblSalaryEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblSalaryEmpty.Location = new System.Drawing.Point(10, 111);
+            this.lblSalaryEmpty.Name = "lblSalaryEmpty";
+            this.lblSalaryEmpty.Size = new System.Drawing.Size(21, 25);
+            this.lblSalaryEmpty.TabIndex = 36;
+            this.lblSalaryEmpty.Text = "*";
+            this.lblSalaryEmpty.Visible = false;
             // 
             // txtPassword
             // 
@@ -368,6 +557,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPassword.StateCommon.Border.Rounding = 20;
             this.txtPassword.StateCommon.Border.Width = 1;
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -391,46 +581,6 @@
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             // 
-            // txtJoiningDate
-            // 
-            this.txtJoiningDate.Location = new System.Drawing.Point(35, 384);
-            this.txtJoiningDate.Name = "txtJoiningDate";
-            this.txtJoiningDate.ReadOnly = true;
-            this.txtJoiningDate.Size = new System.Drawing.Size(168, 34);
-            this.txtJoiningDate.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.txtJoiningDate.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.txtJoiningDate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtJoiningDate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtJoiningDate.StateCommon.Border.Rounding = 20;
-            this.txtJoiningDate.StateCommon.Border.Width = 1;
-            this.txtJoiningDate.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtJoiningDate.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJoiningDate.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtJoiningDate.TabIndex = 31;
-            this.txtJoiningDate.Text = "Joining Date";
-            // 
-            // txtGender
-            // 
-            this.txtGender.Location = new System.Drawing.Point(35, 344);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.ReadOnly = true;
-            this.txtGender.Size = new System.Drawing.Size(168, 34);
-            this.txtGender.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.txtGender.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.txtGender.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtGender.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtGender.StateCommon.Border.Rounding = 20;
-            this.txtGender.StateCommon.Border.Width = 1;
-            this.txtGender.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtGender.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGender.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtGender.TabIndex = 30;
-            this.txtGender.Text = "Gender";
-            // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(35, 304);
@@ -443,6 +593,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPhone.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPhone.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPhone.StateCommon.Border.Rounding = 20;
             this.txtPhone.StateCommon.Border.Width = 1;
             this.txtPhone.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -451,29 +602,9 @@
             this.txtPhone.TabIndex = 29;
             this.txtPhone.Text = "Phone Number";
             // 
-            // txtDOB
-            // 
-            this.txtDOB.Location = new System.Drawing.Point(35, 264);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.ReadOnly = true;
-            this.txtDOB.Size = new System.Drawing.Size(168, 34);
-            this.txtDOB.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.txtDOB.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.txtDOB.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtDOB.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtDOB.StateCommon.Border.Rounding = 20;
-            this.txtDOB.StateCommon.Border.Width = 1;
-            this.txtDOB.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtDOB.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDOB.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtDOB.TabIndex = 26;
-            this.txtDOB.Text = "Date Of Birth";
-            // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(35, 424);
+            this.txtSalary.Location = new System.Drawing.Point(35, 421);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.ReadOnly = true;
             this.txtSalary.Size = new System.Drawing.Size(168, 34);
@@ -483,6 +614,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSalary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtSalary.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSalary.StateCommon.Border.Rounding = 20;
             this.txtSalary.StateCommon.Border.Width = 1;
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -503,6 +635,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtFullName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtFullName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtFullName.StateCommon.Border.Rounding = 20;
             this.txtFullName.StateCommon.Border.Width = 1;
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -523,6 +656,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUsername.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtUsername.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtUsername.StateCommon.Border.Rounding = 20;
             this.txtUsername.StateCommon.Border.Width = 1;
             this.txtUsername.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -543,6 +677,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtID.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtID.StateCommon.Border.Rounding = 20;
             this.txtID.StateCommon.Border.Width = 1;
             this.txtID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -612,116 +747,9 @@
             this.btnSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSave.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnSave.UseTransfarantBackground = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lblSalaryEmpty
-            // 
-            this.lblSalaryEmpty.AutoSize = true;
-            this.lblSalaryEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalaryEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblSalaryEmpty.Location = new System.Drawing.Point(10, 111);
-            this.lblSalaryEmpty.Name = "lblSalaryEmpty";
-            this.lblSalaryEmpty.Size = new System.Drawing.Size(21, 25);
-            this.lblSalaryEmpty.TabIndex = 36;
-            this.lblSalaryEmpty.Text = "*";
-            this.lblSalaryEmpty.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(10, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 25);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "*";
-            this.label1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(10, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 25);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "*";
-            this.label2.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(10, 232);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 25);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "*";
-            this.label3.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(10, 392);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 25);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "*";
-            this.label4.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(10, 352);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 25);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "*";
-            this.label5.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(10, 311);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 25);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "*";
-            this.label6.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(10, 271);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 25);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "*";
-            this.label7.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(10, 432);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 25);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "*";
-            this.label8.Visible = false;
-            // 
-            // SearchSellerUC
+            // EditInfoUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -733,7 +761,7 @@
             this.Controls.Add(this.txtSearchByID);
             this.Controls.Add(this.txtSearchByUserName);
             this.Controls.Add(this.txtSeachByName);
-            this.Name = "SearchSellerUC";
+            this.Name = "EditInfoUC";
             this.Size = new System.Drawing.Size(652, 570);
             this.Load += new System.EventHandler(this.SearchSellerUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSetBindingSource)).EndInit();
@@ -756,10 +784,7 @@
         private CareForPawsDataSet careForPawsDataSet;
         private System.Windows.Forms.DataGridView dgvSeller;
         private System.Windows.Forms.Panel panel2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtJoiningDate;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGender;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPhone;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDOB;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSalary;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFullName;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUsername;
@@ -787,5 +812,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSalaryEmpty;
+        private Guna.UI.WinForms.GunaComboBox cmbGender;
+        private Guna.UI.WinForms.GunaDateTimePicker dtpJoiningDate;
+        private Guna.UI.WinForms.GunaDateTimePicker dtpDOB;
     }
 }

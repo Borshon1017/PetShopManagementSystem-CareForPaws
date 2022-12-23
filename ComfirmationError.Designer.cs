@@ -53,16 +53,16 @@
             this.WhitePanel.Controls.Add(this.lblComfirmationFail);
             this.WhitePanel.Location = new System.Drawing.Point(-1, 313);
             this.WhitePanel.Name = "WhitePanel";
-            this.WhitePanel.Size = new System.Drawing.Size(338, 71);
+            this.WhitePanel.Size = new System.Drawing.Size(338, 82);
             this.WhitePanel.TabIndex = 1;
             // 
             // lblComfirmationFail
             // 
             this.lblComfirmationFail.AutoSize = true;
-            this.lblComfirmationFail.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComfirmationFail.Location = new System.Drawing.Point(13, 17);
+            this.lblComfirmationFail.Font = new System.Drawing.Font("Segoe UI Symbol", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComfirmationFail.Location = new System.Drawing.Point(14, 12);
             this.lblComfirmationFail.Name = "lblComfirmationFail";
-            this.lblComfirmationFail.Size = new System.Drawing.Size(318, 54);
+            this.lblComfirmationFail.Size = new System.Drawing.Size(298, 60);
             this.lblComfirmationFail.TabIndex = 4;
             this.lblComfirmationFail.Text = "Password can not be Less than\r\n 4 characters";
             this.lblComfirmationFail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,10 +71,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 258);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(64, 254);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 27);
+            this.label1.Size = new System.Drawing.Size(197, 30);
             this.label1.TabIndex = 5;
             this.label1.Text = "Password Mismatch";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

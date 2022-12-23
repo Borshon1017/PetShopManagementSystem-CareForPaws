@@ -41,8 +41,8 @@ namespace CareForPaws
 
         private void btnSearchSeller_Click(object sender, EventArgs e)
         {
-            SearchSellerUC searchSellerUC = new SearchSellerUC();
-            this.AddUserControl(searchSellerUC);
+            EditInfoUC editInfoUC = new EditInfoUC();
+            this.AddUserControl(editInfoUC);
         }
     }
 }

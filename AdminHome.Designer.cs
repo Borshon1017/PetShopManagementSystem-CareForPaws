@@ -91,7 +91,7 @@
             // 
             // pnlUserOptionList
             // 
-            this.pnlUserOptionList.BackColor = System.Drawing.Color.White;
+            this.pnlUserOptionList.BackColor = System.Drawing.Color.Transparent;
             this.pnlUserOptionList.Controls.Add(this.btnLogout);
             this.pnlUserOptionList.Controls.Add(this.btnSettings);
             this.transUsercontrol.SetDecoration(this.pnlUserOptionList, Guna.UI.Animation.DecorationType.None);

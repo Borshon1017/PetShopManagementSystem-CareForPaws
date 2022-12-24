@@ -13,8 +13,17 @@ namespace CareForPaws
 
     public partial class AdminHome : Form
     {
-       
-        
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+
+                return cp;
+            }
+        }
+
 
         private string username;
         public void EnableDoubleBuffering()

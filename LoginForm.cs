@@ -12,15 +12,27 @@ namespace CareForPaws
 {
     public partial class LoginForm : Form
     {
-        
-   
-        
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+
+                return cp;
+            }
+        }
+
         private DataAccess Da { get; set; }
 
         public LoginForm()
         {
+
             InitializeComponent();
             this.Da = new DataAccess();
+
+
         }
 
         private void txtUserName_Enter(object sender, EventArgs e)

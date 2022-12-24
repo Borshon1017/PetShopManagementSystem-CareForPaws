@@ -16,6 +16,16 @@ namespace CareForPaws
 {
     public partial class AddSellerUC : UserControl
     {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+
+                return cp;
+            }
+        }
         public int totalFilled = 0;
         private DataAccess Da { get; set; }
         public AddSellerUC()

@@ -48,10 +48,10 @@
             // lblComfirmation
             // 
             this.lblComfirmation.AutoSize = true;
-            this.lblComfirmation.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComfirmation.Location = new System.Drawing.Point(38, 369);
+            this.lblComfirmation.Font = new System.Drawing.Font("Segoe UI Symbol", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComfirmation.Location = new System.Drawing.Point(51, 374);
             this.lblComfirmation.Name = "lblComfirmation";
-            this.lblComfirmation.Size = new System.Drawing.Size(254, 27);
+            this.lblComfirmation.Size = new System.Drawing.Size(237, 30);
             this.lblComfirmation.TabIndex = 3;
             this.lblComfirmation.Text = "Seller Added Sucessfully";
             this.lblComfirmation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

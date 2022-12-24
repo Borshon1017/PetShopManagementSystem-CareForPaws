@@ -256,10 +256,21 @@ namespace CareForPaws
                 lblPasswordError.Visible = true;
 
             }
+            
             else
             {
 
                 lblPasswordError.Visible = false;
+            }
+            if (string.IsNullOrEmpty(cmbGender.Text))
+            {
+                lblGender.Visible = true;
+            }
+            else
+            {
+                lblGender.Visible = false;
+
+
             }
 
             //    if (dtpDOB.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(dtpDOB.Text) == true)
@@ -295,7 +306,7 @@ namespace CareForPaws
                 new ComfirmationError("Username already exists", 15, 17).Show();
 
             }
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true)
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true || lblGender.Visible == true)
             {
                 return;
             }
@@ -320,7 +331,7 @@ namespace CareForPaws
             {
                 lblPhoneNumberEmpty.Visible = false;
             }
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true)
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true || lblGender.Visible == true)
             {
                 return;
             }
@@ -369,6 +380,11 @@ namespace CareForPaws
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbGender_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

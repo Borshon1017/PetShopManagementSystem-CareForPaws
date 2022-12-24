@@ -60,7 +60,7 @@
             this.dtpDOB = new Guna.UI.WinForms.GunaDateTimePicker();
             this.lblSalaryEmpty = new System.Windows.Forms.Label();
             this.lblJoiningDate = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
             this.lblPhoneNumberEmpty = new System.Windows.Forms.Label();
             this.lblDOBerror = new System.Windows.Forms.Label();
             this.lblFullNameEmpty = new System.Windows.Forms.Label();
@@ -338,7 +338,7 @@
             this.panel2.Controls.Add(this.dtpDOB);
             this.panel2.Controls.Add(this.lblSalaryEmpty);
             this.panel2.Controls.Add(this.lblJoiningDate);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblGender);
             this.panel2.Controls.Add(this.lblPhoneNumberEmpty);
             this.panel2.Controls.Add(this.lblDOBerror);
             this.panel2.Controls.Add(this.lblFullNameEmpty);
@@ -379,6 +379,7 @@
             this.cmbGender.Radius = 12;
             this.cmbGender.Size = new System.Drawing.Size(168, 30);
             this.cmbGender.TabIndex = 27;
+            this.cmbGender.SelectedIndexChanged += new System.EventHandler(this.cmbGender_SelectedIndexChanged);
             // 
             // dtpJoiningDate
             // 
@@ -459,17 +460,17 @@
             this.lblJoiningDate.Text = "*";
             this.lblJoiningDate.Visible = false;
             // 
-            // label5
+            // lblGender
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(10, 350);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 25);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "*";
-            this.label5.Visible = false;
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.ForeColor = System.Drawing.Color.Red;
+            this.lblGender.Location = new System.Drawing.Point(10, 350);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(21, 25);
+            this.lblGender.TabIndex = 42;
+            this.lblGender.Text = "*";
+            this.lblGender.Visible = false;
             // 
             // lblPhoneNumberEmpty
             // 
@@ -799,7 +800,7 @@
         private Guna.UI.WinForms.GunaButton btnSave;
         private System.Windows.Forms.Label lblSalaryEmpty;
         private System.Windows.Forms.Label lblJoiningDate;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblPhoneNumberEmpty;
         private System.Windows.Forms.Label lblDOBerror;
         private System.Windows.Forms.Label lblFullNameEmpty;

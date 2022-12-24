@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CareForPaws
 {
@@ -21,6 +22,21 @@ namespace CareForPaws
             this.Da = new DataAccess();
             this.PopulateGridView();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -143,12 +159,12 @@ namespace CareForPaws
             this.txtID.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtFullName.Text = this.dgvSeller.CurrentRow.Cells["FullName"].Value.ToString();
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtUsername.Text = this.dgvSeller.CurrentRow.Cells["Username"].Value.ToString();
-            this.txtUsername.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtUserName.Text = this.dgvSeller.CurrentRow.Cells["Username"].Value.ToString();
+            this.txtUserName.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDOB.Text = Convert.ToDateTime(this.dgvSeller.CurrentRow.Cells["DOB"].Value).ToString("d");
             this.txtDOB.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtPhone.Text = this.dgvSeller.CurrentRow.Cells["Phone"].Value.ToString();
-            this.txtPhone.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtPhoneNumber.Text = this.dgvSeller.CurrentRow.Cells["Phone"].Value.ToString();
+            this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSalary.Text = this.dgvSeller.CurrentRow.Cells["Salary"].Value.ToString();
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtGender.Text = this.dgvSeller.CurrentRow.Cells["Gender"].Value.ToString();
@@ -183,6 +199,153 @@ namespace CareForPaws
                 this.txtPassword.Text = "Password";
                 this.txtPassword.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
 
+            }
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            if (txtID.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtID.Text) == true)
+            {
+
+                lblIDError.Visible = true;
+
+            }
+            else
+            {
+
+                lblIDError.Visible = false;
+            }
+
+
+            if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
+            {
+
+               lblFullNameEmpty.Visible = true;
+
+            }
+            else
+            {
+
+              lblFullNameEmpty.Visible = false;
+            }
+            if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
+            {
+
+               lblUsernameEmpty.Visible = true;
+            }
+            else
+            {
+
+               lblUsernameEmpty.Visible = false;
+            }
+            if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
+            {
+          lblPhoneNumberEmpty.Visible = true;
+
+
+            }
+            else
+            {
+
+               lblPhoneNumberEmpty.Visible = false;
+            }
+            if (txtSalary.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtSalary.Text) == true)
+            {
+
+              lblSalaryEmpty.Visible = true;
+
+            }
+            else
+            {
+            lblSalaryEmpty.Visible = false;
+            }
+
+            if (txtPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPassword.Text) == true)
+            {
+
+                lblPasswordError.Visible = true;
+
+            }
+            else
+            {
+
+               lblPasswordError.Visible = false;
+            }
+
+            if (txtDOB.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtDOB.Text) == true)
+            {
+
+               lblDOBerror.Visible = true;
+
+            }
+            else
+            {
+
+                 lblDOBerror.Visible = false;
+            }
+
+
+            //Username Existance Check
+
+            var sql = "select * from UserInfo where username = '" + txtUserName + "';";
+            var ds = this.Da.ExecuteQuery(sql);
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                lblUsernameEmpty.Visible = true;
+                new ComfirmationError("Username already exists", 15, 17).Show();
+
+            }
+
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblIDError.Visible == true)
+            {
+                return;
+            }
+
+            if (txtPassword.Text.Length < 4 )
+            {
+
+                lblPasswordError.Visible = true;
+                new ComfirmationError().Show();
+            }
+            else
+            {
+                lblPasswordError.Visible = false;
+
+            }
+            if (txtPhoneNumber.Text.Length != 11)
+            {
+                lblPhoneNumberEmpty.Visible = true;
+                new ComfirmationError("Invalid Phone Number", 70, 19).Show();
+            }
+            else
+            {
+                lblPhoneNumberEmpty.Visible = false;
+            }
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true)
+            {
+                return;
+            }
+        }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
             }
         }
     }

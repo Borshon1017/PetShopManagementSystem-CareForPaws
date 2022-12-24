@@ -313,6 +313,7 @@ namespace CareForPaws
             {
                 lblUsernameEmpty.Visible = true;
                 new ComfirmationError("Username already exists", 15, 17).Show();
+                return;
 
             }
             if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true || lblGender.Visible == true)
@@ -325,6 +326,7 @@ namespace CareForPaws
 
                 lblPasswordError.Visible = true;
                 new ComfirmationError().Show();
+                return;
             }
             else
             {
@@ -399,6 +401,11 @@ namespace CareForPaws
         }
 
         private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFullName_TextChanged(object sender, EventArgs e)
         {
 
         }

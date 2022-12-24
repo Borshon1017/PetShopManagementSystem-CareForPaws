@@ -179,6 +179,7 @@ namespace CareForPaws
                 lblPasswordError.Visible = true;
 
                 new ComfirmationError("Password Mismatch", 68, 17).Show();
+                return;
 
             }
 
@@ -191,6 +192,7 @@ namespace CareForPaws
 
                 lblPasswordError.Visible = true;
                 new ComfirmationError().Show();
+                return;
             }
             else
             {
@@ -201,6 +203,7 @@ namespace CareForPaws
             {
                 lblPhoneNumberEmpty.Visible = true;
                 new ComfirmationError("Invalid Phone Number", 70, 19).Show();
+                return;
             }
             else
             {

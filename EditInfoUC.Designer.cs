@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditInfoUC));
             this.txtSearchByID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSearchByUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -165,20 +165,20 @@
             this.dgvSeller.AllowUserToDeleteRows = false;
             this.dgvSeller.AllowUserToResizeColumns = false;
             this.dgvSeller.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSeller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSeller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvSeller.BackgroundColor = System.Drawing.Color.White;
             this.dgvSeller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSeller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSeller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSeller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvSeller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSeller.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.U_ID,
@@ -191,33 +191,33 @@
             this.Gender,
             this.Salary,
             this.JoiningDate});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSeller.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSeller.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgvSeller.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvSeller.Location = new System.Drawing.Point(20, 176);
             this.dgvSeller.Name = "dgvSeller";
             this.dgvSeller.ReadOnly = true;
             this.dgvSeller.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSeller.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSeller.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgvSeller.RowHeadersVisible = false;
             this.dgvSeller.RowHeadersWidth = 15;
             this.dgvSeller.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSeller.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSeller.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvSeller.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
             this.dgvSeller.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvSeller.RowTemplate.Height = 40;
@@ -231,12 +231,12 @@
             // U_ID
             // 
             this.U_ID.DataPropertyName = "U_ID";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.U_ID.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            this.U_ID.DefaultCellStyle = dataGridViewCellStyle19;
             this.U_ID.HeaderText = "ID";
             this.U_ID.Name = "U_ID";
             this.U_ID.ReadOnly = true;
@@ -264,11 +264,11 @@
             // Username
             // 
             this.Username.DataPropertyName = "Username";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.Username.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            this.Username.DefaultCellStyle = dataGridViewCellStyle20;
             this.Username.HeaderText = "Username";
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
@@ -280,10 +280,10 @@
             // 
             this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FullName.DataPropertyName = "FullName";
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle21;
             this.FullName.HeaderText = "Full Name";
             this.FullName.Name = "FullName";
             this.FullName.ReadOnly = true;
@@ -639,6 +639,7 @@
             this.txtFullName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtFullName.TabIndex = 25;
             this.txtFullName.Text = "Full Name";
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // txtUserName
             // 

@@ -148,12 +148,12 @@ namespace CareForPaws
             this.txtID.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtFullName.Text = this.dgvSeller.CurrentRow.Cells["FullName"].Value.ToString();
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtUsername.Text = this.dgvSeller.CurrentRow.Cells["Username"].Value.ToString();
-            this.txtUsername.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtUserName.Text = this.dgvSeller.CurrentRow.Cells["Username"].Value.ToString();
+            this.txtUserName.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtpDOB.Value = Convert.ToDateTime(this.dgvSeller.CurrentRow.Cells["DOB"].Value);
             this.dtpDOB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtPhone.Text = this.dgvSeller.CurrentRow.Cells["Phone"].Value.ToString();
-            this.txtPhone.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtPhoneNumber.Text = this.dgvSeller.CurrentRow.Cells["Phone"].Value.ToString();
+            this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSalary.Text = this.dgvSeller.CurrentRow.Cells["Salary"].Value.ToString();
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.cmbGender.Text = this.dgvSeller.CurrentRow.Cells["Gender"].Value.ToString();
@@ -193,17 +193,151 @@ namespace CareForPaws
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            if (txtID.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtID.Text) == true)
+            {
+
+                lblIDError.Visible = true;
+
+            }
+            else
+            {
+
+                lblIDError.Visible = false;
+            }
+
+
+            if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
+            {
+
+                lblFullNameEmpty.Visible = true;
+
+            }
+            else
+            {
+
+                lblFullNameEmpty.Visible = false;
+            }
+            if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
+            {
+
+                lblUsernameEmpty.Visible = true;
+            }
+            else
+            {
+
+                lblUsernameEmpty.Visible = false;
+            }
+            if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
+            {
+                lblPhoneNumberEmpty.Visible = true;
+
+
+            }
+            else
+            {
+
+                lblPhoneNumberEmpty.Visible = false;
+            }
+            if (txtSalary.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtSalary.Text) == true)
+            {
+
+                lblSalaryEmpty.Visible = true;
+
+            }
+            else
+            {
+                lblSalaryEmpty.Visible = false;
+            }
+
+            if (txtPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPassword.Text) == true)
+            {
+
+                lblPasswordError.Visible = true;
+
+            }
+            else
+            {
+
+                lblPasswordError.Visible = false;
+            }
+
+            //    if (dtpDOB.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(dtpDOB.Text) == true)
+            //   {
+
+            //      lblDOBerror.Visible = true;
+
+            //   }
+            //    else
+            //  {
+
+            //       lblDOBerror.Visible = false;
+            //  }
+            // if (dtpJoiningDate.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(dtpJoiningDate.Text) == true)
+            //  {
+
+            //      lblDOBerror.Visible = true;
+            //
+            //        }
+            //       else
+            //       {
+
+            //         lblDOBerror.Visible = false;
+            //     }
+
+
+            //UserName Conflict Check
+            var sql = "select * from UserInfo where username = '" + txtUserName + "';";
+            var ds = this.Da.ExecuteQuery(sql);
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                lblUsernameEmpty.Visible = true;
+                new ComfirmationError("Username already exists", 15, 17).Show();
+
+            }
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true)
+            {
+                return;
+            }
+
+            if (txtPassword.Text.Length < 4)
+            {
+
+                lblPasswordError.Visible = true;
+                new ComfirmationError().Show();
+            }
+            else
+            {
+                lblPasswordError.Visible = false;
+
+            }
+            if (txtPhoneNumber.Text.Length != 11)
+            {
+                lblPhoneNumberEmpty.Visible = true;
+                new ComfirmationError("Invalid Phone Number", 70, 19).Show();
+            }
+            else
+            {
+                lblPhoneNumberEmpty.Visible = false;
+            }
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true)
+            {
+                return;
+            }
+
+
+
             var query = "select * from UserInfo where U_ID = '" + this.txtID.Text + "';";
-            var ds = this.Da.ExecuteQuery(query);
+           ds = this.Da.ExecuteQuery(query);
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                var sql = @"update UserInfo
+                 sql = @"update UserInfo
                                 set FullName = '" + this.txtFullName.Text + @"',
-                                Username = '" + this.txtUsername.Text + @"',
+                                Username = '" + this.txtUserName.Text + @"',
                                 Password = '" + this.txtPassword.Text + @"',
                                 DOB = '" + this.dtpDOB.Text + @"',
-                                Phone = '" + this.txtPhone.Text + @"',
+                                Phone = '" + this.txtPhoneNumber.Text + @"',
                                 Gender = '" + this.cmbGender.Text + @"',
                                 Salary = " + this.txtSalary.Text + @",
                                 JoiningDate = '" + this.dtpJoiningDate.Text + @"'
@@ -221,13 +355,22 @@ namespace CareForPaws
 
         private void TurnOffReadOnly() {
 
-            txtUsername.ReadOnly = false;
+            txtUserName.ReadOnly = false;
             txtFullName.ReadOnly = false;
             txtPassword.ReadOnly = false;
-            txtPhone.ReadOnly = false;
+            txtPhoneNumber.ReadOnly = false;
             txtSalary.ReadOnly = false;
 
         }
 
+        private void dtpDOB_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

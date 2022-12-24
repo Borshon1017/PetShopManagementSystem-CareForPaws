@@ -48,12 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.icoCrossPassword = new System.Windows.Forms.PictureBox();
-            this.icoCrossUsername = new System.Windows.Forms.PictureBox();
-            this.icoInvalidNumber = new System.Windows.Forms.PictureBox();
-            this.icoFullNameError = new System.Windows.Forms.PictureBox();
             this.lblFullNameEmpty = new System.Windows.Forms.Label();
-            this.icoSalaryError = new System.Windows.Forms.PictureBox();
             this.lblSalaryEmpty = new System.Windows.Forms.Label();
             this.lblUsernameEmpty = new System.Windows.Forms.Label();
             this.lblPhoneNumberEmpty = new System.Windows.Forms.Label();
@@ -62,11 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCrossPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCrossUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoInvalidNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoFullNameError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoSalaryError)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -397,46 +387,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // icoCrossPassword
-            // 
-            this.icoCrossPassword.Location = new System.Drawing.Point(591, 234);
-            this.icoCrossPassword.Name = "icoCrossPassword";
-            this.icoCrossPassword.Size = new System.Drawing.Size(22, 22);
-            this.icoCrossPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoCrossPassword.TabIndex = 26;
-            this.icoCrossPassword.TabStop = false;
-            this.icoCrossPassword.Visible = false;
-            // 
-            // icoCrossUsername
-            // 
-            this.icoCrossUsername.Location = new System.Drawing.Point(591, 85);
-            this.icoCrossUsername.Name = "icoCrossUsername";
-            this.icoCrossUsername.Size = new System.Drawing.Size(22, 22);
-            this.icoCrossUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoCrossUsername.TabIndex = 27;
-            this.icoCrossUsername.TabStop = false;
-            this.icoCrossUsername.Visible = false;
-            // 
-            // icoInvalidNumber
-            // 
-            this.icoInvalidNumber.Location = new System.Drawing.Point(591, 133);
-            this.icoInvalidNumber.Name = "icoInvalidNumber";
-            this.icoInvalidNumber.Size = new System.Drawing.Size(22, 22);
-            this.icoInvalidNumber.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoInvalidNumber.TabIndex = 31;
-            this.icoInvalidNumber.TabStop = false;
-            this.icoInvalidNumber.Visible = false;
-            // 
-            // icoFullNameError
-            // 
-            this.icoFullNameError.Location = new System.Drawing.Point(591, 35);
-            this.icoFullNameError.Name = "icoFullNameError";
-            this.icoFullNameError.Size = new System.Drawing.Size(22, 22);
-            this.icoFullNameError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoFullNameError.TabIndex = 32;
-            this.icoFullNameError.TabStop = false;
-            this.icoFullNameError.Visible = false;
-            // 
             // lblFullNameEmpty
             // 
             this.lblFullNameEmpty.AutoSize = true;
@@ -449,16 +399,6 @@
             this.lblFullNameEmpty.Text = "*";
             this.lblFullNameEmpty.Visible = false;
             this.lblFullNameEmpty.Click += new System.EventHandler(this.lblFullNameEmpty_Click);
-            // 
-            // icoSalaryError
-            // 
-            this.icoSalaryError.Location = new System.Drawing.Point(591, 183);
-            this.icoSalaryError.Name = "icoSalaryError";
-            this.icoSalaryError.Size = new System.Drawing.Size(22, 22);
-            this.icoSalaryError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoSalaryError.TabIndex = 34;
-            this.icoSalaryError.TabStop = false;
-            this.icoSalaryError.Visible = false;
             // 
             // lblSalaryEmpty
             // 
@@ -531,12 +471,7 @@
             this.Controls.Add(this.lblPhoneNumberEmpty);
             this.Controls.Add(this.lblUsernameEmpty);
             this.Controls.Add(this.lblSalaryEmpty);
-            this.Controls.Add(this.icoSalaryError);
             this.Controls.Add(this.lblFullNameEmpty);
-            this.Controls.Add(this.icoFullNameError);
-            this.Controls.Add(this.icoInvalidNumber);
-            this.Controls.Add(this.icoCrossUsername);
-            this.Controls.Add(this.icoCrossPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpJoiningDate);
@@ -560,11 +495,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCrossPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCrossUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoInvalidNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoFullNameError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoSalaryError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,12 +520,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox icoCrossPassword;
-        private System.Windows.Forms.PictureBox icoCrossUsername;
-        private System.Windows.Forms.PictureBox icoInvalidNumber;
-        private System.Windows.Forms.PictureBox icoFullNameError;
         private System.Windows.Forms.Label lblFullNameEmpty;
-        private System.Windows.Forms.PictureBox icoSalaryError;
         private System.Windows.Forms.Label lblSalaryEmpty;
         private System.Windows.Forms.Label lblUsernameEmpty;
         private System.Windows.Forms.Label lblPhoneNumberEmpty;

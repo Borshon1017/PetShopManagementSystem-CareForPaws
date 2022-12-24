@@ -33,7 +33,7 @@ namespace CareForPaws
 
 
 
-        private void PopulateGridView(string sql = "select * from UserInfo where Role = 'Seller';")
+        private void PopulateGridView(string sql = "select * from UserInfo where Role = 'Seller' and Status = 'Active';")
         {
             var ds = this.Da.ExecuteQuery(sql);
 
@@ -119,7 +119,7 @@ namespace CareForPaws
         private void txtSearchByID_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchByID.Text != "Search By ID" || string.IsNullOrEmpty(txtSearchByID.Text) == false || string.IsNullOrWhiteSpace(txtSearchByID.Text) == false) {
-                var sql = "select * from UserInfo where U_ID like '%" + this.txtSearchByID.Text + "%' and Role = 'Seller';";
+                var sql = "select * from UserInfo where U_ID like '%" + this.txtSearchByID.Text + "%' and Role = 'Seller' and Status = 'Active';";
                 this.PopulateGridView(sql);
             }
         }
@@ -127,7 +127,7 @@ namespace CareForPaws
         private void txtSearchByUserName_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchByUserName.Text != "Search By Username" || string.IsNullOrEmpty(txtSearchByUserName.Text) == false || string.IsNullOrWhiteSpace(txtSearchByUserName.Text) == false) {
-                var sql = "select * from UserInfo where Username like '%" + this.txtSearchByUserName.Text + "%' and Role = 'Seller';";
+                var sql = "select * from UserInfo where Username like '%" + this.txtSearchByUserName.Text + "%' and Role = 'Seller' and Status = 'Active';";
                 this.PopulateGridView(sql);
             }
         }
@@ -135,7 +135,7 @@ namespace CareForPaws
         private void txtSeachByName_TextChanged(object sender, EventArgs e)
         {
             if (txtSeachByName.Text != "Search By Full Name" || string.IsNullOrEmpty(txtSeachByName.Text) == false || string.IsNullOrWhiteSpace(txtSeachByName.Text) == false) {
-                var sql = "select * from UserInfo where FullName like '%" + this.txtSeachByName.Text + "%' and Role = 'Seller';";
+                var sql = "select * from UserInfo where FullName like '%" + this.txtSeachByName.Text + "%' and Role = 'Seller' and Status = 'Active';";
                 this.PopulateGridView(sql);
             }
         }
@@ -203,20 +203,7 @@ namespace CareForPaws
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (txtID.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtID.Text) == true)
-            {
-
-                lblIDError.Visible = true;
-
-            }
-            else
-            {
-
-                lblIDError.Visible = false;
-            }
-
-
-            if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
+            if (txtFullName.Text == "Full Name" || string.IsNullOrEmpty(txtFullName.Text) == true)
             {
 
                 lblFullNameEmpty.Visible = true;
@@ -227,7 +214,7 @@ namespace CareForPaws
 
                 lblFullNameEmpty.Visible = false;
             }
-            if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
+            if (txtUserName.Text == "Username" || string.IsNullOrEmpty(txtUserName.Text) == true)
             {
 
                 lblUsernameEmpty.Visible = true;
@@ -237,7 +224,7 @@ namespace CareForPaws
 
                 lblUsernameEmpty.Visible = false;
             }
-            if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
+            if (txtPhoneNumber.Text == "Phone Number" || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
             {
                 lblPhoneNumberEmpty.Visible = true;
 
@@ -248,7 +235,7 @@ namespace CareForPaws
 
                 lblPhoneNumberEmpty.Visible = false;
             }
-            if (txtSalary.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtSalary.Text) == true)
+            if (txtSalary.Text == "Salary" || string.IsNullOrEmpty(txtSalary.Text) == true)
             {
 
                 lblSalaryEmpty.Visible = true;
@@ -259,7 +246,7 @@ namespace CareForPaws
                 lblSalaryEmpty.Visible = false;
             }
 
-            if (txtPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPassword.Text) == true)
+            if (txtPassword.Text == "Password" || string.IsNullOrEmpty(txtPassword.Text) == true)
             {
 
                 lblPasswordError.Visible = true;
@@ -307,7 +294,7 @@ namespace CareForPaws
 
 
             //UserName Conflict Check
-            var sql = "select * from UserInfo where username = '" + txtUserName + "';";
+            var sql = "select * from UserInfo where username = '" + txtUserName + "' and Status = 'Active';";
             var ds = this.Da.ExecuteQuery(sql);
             if (ds.Tables[0].Rows.Count == 1)
             {
@@ -316,7 +303,7 @@ namespace CareForPaws
                 return;
 
             }
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true || lblGender.Visible == true)
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblGender.Visible == true)
             {
                 return;
             }
@@ -342,15 +329,15 @@ namespace CareForPaws
             //{
             //    lblPhoneNumberEmpty.Visible = false;
             //}
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true || lblGender.Visible == true)
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblGender.Visible == true)
             {
                 return;
             }
 
 
 
-            var query = "select * from UserInfo where U_ID = '" + this.txtID.Text + "';";
-           ds = this.Da.ExecuteQuery(query);
+            var query = "select * from UserInfo where U_ID = '" + this.txtID.Text + "' and Status = 'Active';";
+            ds = this.Da.ExecuteQuery(query);
 
             if (ds.Tables[0].Rows.Count == 1)
             {
@@ -406,6 +393,11 @@ namespace CareForPaws
         }
 
         private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblInvalidLogin_Click(object sender, EventArgs e)
         {
 
         }

@@ -54,5 +54,11 @@ namespace CareForPaws
             EditInfoUC editInfoUC = new EditInfoUC();
             this.AddUserControl(editInfoUC);
         }
+
+        private void btnDeleteSeller_Click(object sender, EventArgs e)
+        {
+            DeleteSellerUC deleteSellerUC = new DeleteSellerUC();
+            this.AddUserControl(deleteSellerUC);
+        }
     }
 }

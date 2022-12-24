@@ -88,6 +88,12 @@
     <Compile Include="ComfirmationError.Designer.cs">
       <DependentUpon>ComfirmationError.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteSellerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteSellerUC.Designer.cs">
+      <DependentUpon>DeleteSellerUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComfirmationError.resx">
       <DependentUpon>ComfirmationError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteSellerUC.resx">
+      <DependentUpon>DeleteSellerUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

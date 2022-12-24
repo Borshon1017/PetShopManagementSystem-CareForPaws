@@ -322,15 +322,15 @@ namespace CareForPaws
                 lblPasswordError.Visible = false;
 
             }
-            if (txtPhoneNumber.Text.Length != 11)
-            {
-                lblPhoneNumberEmpty.Visible = true;
-                new ComfirmationError("Invalid Phone Number", 70, 19).Show();
-            }
-            else
-            {
-                lblPhoneNumberEmpty.Visible = false;
-            }
+            //if (txtPhoneNumber.Text.Length != 14)
+            //{
+            //    lblPhoneNumberEmpty.Visible = true;
+            //    new ComfirmationError("Invalid Phone Number", 70, 19).Show();
+            //}
+            //else
+            //{
+            //    lblPhoneNumberEmpty.Visible = false;
+            //}
             if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblIDError.Visible == true || lblGender.Visible == true)
             {
                 return;
@@ -385,6 +385,11 @@ namespace CareForPaws
         }
 
         private void cmbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
         {
 
         }

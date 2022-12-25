@@ -141,8 +141,8 @@ namespace CareForPaws
         {
 
 
-            ConfirmationAsk logoutConfirmationObject = new ConfirmationAsk("Are you sure you want Logout", 12, 309);
-            ConfirmationAsk logouttest = new ConfirmationAsk("Are you sure you want Logout", 12, 309);
+            ConfirmationAsk logoutConfirmationObject = new ConfirmationAsk("Are you sure you want Logout?", 12, 309);
+           
             logoutConfirmationObject.ShowDialog();
            
            

@@ -23,7 +23,7 @@ namespace CareForPaws
                 return cp;
             }
         }
-
+        
         public static bool logoutConfirmation;
         private string username;
         public void EnableDoubleBuffering()
@@ -140,30 +140,40 @@ namespace CareForPaws
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
-            
+
             ConfirmationAsk logoutConfirmationObject = new ConfirmationAsk("Are you sure you want Logout", 12, 309);
-            logoutConfirmationObject.Show();
-            Logoutaction();
-
-
-
+            ConfirmationAsk logouttest = new ConfirmationAsk("Are you sure you want Logout", 12, 309);
+            logoutConfirmationObject.ShowDialog();
            
+           
+            
+            Logoutaction();
+            
+
+
+
+
+
         }
         void Logoutaction()
         {
             if (logoutConfirmation == false)
             {
+
+              
                
+
 
             }
             else if (logoutConfirmation == true)
             {
-
-                LoginForm a = new LoginForm();
-                a.Show();
+                new LoginForm().Show();
+                this.Close();
+                
+              
                 logoutConfirmation = false;
                 
-                this.Close();
+                
 
             }
         }

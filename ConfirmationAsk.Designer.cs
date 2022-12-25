@@ -136,6 +136,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "ConfirmationAsk";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConfirmationAsk_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

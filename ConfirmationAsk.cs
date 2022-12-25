@@ -33,7 +33,7 @@ namespace CareForPaws
             DeleteSellerUC.askStatic = true;
             AdminHome.logoutConfirmation = true;
 
-            if (DeleteSellerUC.askStatic = true || AdminHome.logoutConfirmation == true)
+            if (DeleteSellerUC.askStatic == true || AdminHome.logoutConfirmation == true)
             {
                 this.Close();
             }
@@ -49,6 +49,11 @@ namespace CareForPaws
      
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmationAsk_FormClosed(object sender, FormClosedEventArgs e)
         {
 
         }

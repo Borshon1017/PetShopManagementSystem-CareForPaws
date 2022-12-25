@@ -12,6 +12,7 @@ namespace CareForPaws
 {
     public partial class DeleteSellerUC : UserControl
     {
+        public static bool askStatic = false;
         private DataAccess Da { get; set; }
         public DeleteSellerUC()
         {
@@ -135,17 +136,50 @@ namespace CareForPaws
         {
             if (dgvSeller.Columns[e.ColumnIndex].Name.Equals("DeleteButton"))
             {
-                var sql = "update UserInfo set Status = 'Inactive' where U_ID  = '" + this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString() + "' and Role = 'Seller';";
-                this.Da.ExecuteDMLQuery(sql);
-                this.PopulateGridView();
+                
+                ConfirmationAsk ask = new ConfirmationAsk();
+                
+                if (askStatic == true)
+                {
+                    var sql = "update UserInfo set Status = 'Inactive' where U_ID  = '" + this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString() + "' and Role = 'Seller';";
+                    this.Da.ExecuteDMLQuery(sql);
+                    this.PopulateGridView();
+                }
+                else if (askStatic == false)
+                {
+                    return;
+                }
+
+
             }
         }
 
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
-            var sql = "update UserInfo set Status = 'Inactive' where Role = 'Seller';";
-            this.Da.ExecuteDMLQuery(sql);
-            this.PopulateGridView();
+            
+            ConfirmationAsk ask = new ConfirmationAsk();
+            ask.Show();
+           
+            
+
+            if (DeleteSellerUC.askStatic == true)
+            {
+                var sql = "update UserInfo set Status = 'Inactive' where Role = 'Seller';";
+                this.Da.ExecuteDMLQuery(sql);
+                this.PopulateGridView();
+                DeleteSellerUC.askStatic = false;
+            }
+            else if (DeleteSellerUC.askStatic == false)
+            {
+                DeleteSellerUC.askStatic = false;
+                return;
+            }
+
+        }
+
+        private void dgvSeller_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

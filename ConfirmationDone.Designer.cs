@@ -1,6 +1,6 @@
 ﻿namespace CareForPaws
 {
-    partial class Comfirmation
+    partial class ConfirmationDone
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comfirmation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmationDone));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblComfirmation = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();

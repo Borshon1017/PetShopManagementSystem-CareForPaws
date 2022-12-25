@@ -23,8 +23,8 @@ namespace CareForPaws
                 return cp;
             }
         }
-
-
+        
+        public static bool logoutConfirmation;
         private string username;
         public void EnableDoubleBuffering()
         {
@@ -135,6 +135,47 @@ namespace CareForPaws
         private void addSellerUC1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+
+            ConfirmationAsk logoutConfirmationObject = new ConfirmationAsk("Are you sure you want Logout?", 12, 309);
+           
+            logoutConfirmationObject.ShowDialog();
+           
+           
+            
+            Logoutaction();
+            
+
+
+
+
+
+        }
+        void Logoutaction()
+        {
+            if (logoutConfirmation == false)
+            {
+
+              
+               
+
+
+            }
+            else if (logoutConfirmation == true)
+            {
+                new LoginForm().Show();
+                this.Close();
+                
+              
+                logoutConfirmation = false;
+                
+                
+
+            }
         }
     }
 }

@@ -81,7 +81,13 @@ namespace CareForPaws
 
 
             //Exceptions
-            if (txtFullName.Text == "Full Name" || string.IsNullOrEmpty(txtFullName.Text) == true)
+            if (rdbMale.Checked==false && rdbFemale.Checked == false)
+            {
+                lblGenderSelectMale.Visible= true;
+                lblGenderSelectFemale.Visible = true;
+            }
+
+            if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
             {
 
                 lblFullNameEmpty.Visible = true;
@@ -92,7 +98,7 @@ namespace CareForPaws
 
                 lblFullNameEmpty.Visible = false;
             }
-            if (txtUserName.Text == "Username" || string.IsNullOrEmpty(txtUserName.Text) == true)
+            if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
             {
 
                 lblUsernameEmpty.Visible= true;
@@ -102,7 +108,7 @@ namespace CareForPaws
 
                 lblUsernameEmpty.Visible =false;
             }
-            if (txtPhoneNumber.Text == "Phone Number" || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
+            if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
             {
                 lblPhoneNumberEmpty.Visible= true;
 
@@ -113,7 +119,7 @@ namespace CareForPaws
 
                 lblPhoneNumberEmpty.Visible = false;
             }
-            if (txtSalary.Text == "Salary" || string.IsNullOrEmpty(txtSalary.Text) == true)
+            if (txtSalary.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtSalary.Text) == true)
             {
 
                 lblSalaryEmpty.Visible = true;
@@ -125,7 +131,7 @@ namespace CareForPaws
                 lblSalaryEmpty.Visible = false;
             }
 
-            if (txtPassword.Text == "Password" || string.IsNullOrEmpty(txtPassword.Text) == true)
+            if (txtPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPassword.Text) == true)
             {
 
                 lblPasswordError.Visible = true;
@@ -136,7 +142,7 @@ namespace CareForPaws
 
                 lblPasswordError.Visible = false;
             }
-            if (txtConfirmPassword.Text == "Confirm Password" || string.IsNullOrEmpty(txtConfirmPassword.Text) == true)
+            if (txtConfirmPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtConfirmPassword.Text) == true)
             {
 
                 lblComfirmPasswordError.Visible = true;
@@ -162,12 +168,12 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count == 1)
             {
                 lblUsernameEmpty.Visible = true;
-                new ComfirmationError("Username already exists", 15, 17).Show();
+                new ConfirmationError("Username already exists", 15, 17).Show();
 
             }
-           
 
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true)
+
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true || lblGenderSelectMale.Visible == true || lblGenderSelectFemale.Visible == true)
             {
                 return;
             }
@@ -178,7 +184,7 @@ namespace CareForPaws
             {
                 lblPasswordError.Visible = true;
 
-                new ComfirmationError("Password Mismatch", 68, 17).Show();
+                new ConfirmationError("Password Mismatch", 68, 17).Show();
                 return;
 
             }
@@ -191,7 +197,7 @@ namespace CareForPaws
             {
 
                 lblPasswordError.Visible = true;
-                new ComfirmationError().Show();
+                new ConfirmationError().Show();
                 return;
             }
             else
@@ -202,14 +208,14 @@ namespace CareForPaws
             if (txtPhoneNumber.Text.Length != 11)
             {
                 lblPhoneNumberEmpty.Visible = true;
-                new ComfirmationError("Invalid Phone Number", 70, 19).Show();
+                new ConfirmationError("Invalid Phone Number", 70, 19).Show();
                 return;
             }
             else
             {
                 lblPhoneNumberEmpty.Visible = false;
             }
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true)
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true || lblGenderSelectMale.Visible==true || lblGenderSelectFemale.Visible == true)
             {
                 return;
             }
@@ -221,7 +227,7 @@ namespace CareForPaws
             sql = "insert into UserInfo values ('" + UID + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
             ds = this.Da.ExecuteQuery(sql);
 
-            new Comfirmation("Seller Added Sucessfully",38, 369).Show();
+            new ConfirmationDone("Seller Added Sucessfully",38, 369).Show();
             
 
         }
@@ -466,6 +472,21 @@ namespace CareForPaws
         private void lblFullNameEmpty_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblGenderSelectMale_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbMale_CheckedChanged(object sender, EventArgs e)
+        {
+            lblGenderSelectMale.Visible = false;
+        }
+
+        private void rdbFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            lblGenderSelectFemale.Visible = false;
         }
     }
 }

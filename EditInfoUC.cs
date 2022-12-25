@@ -299,7 +299,7 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count == 1)
             {
                 lblUsernameEmpty.Visible = true;
-                new ComfirmationError("Username already exists", 15, 17).Show();
+                new ConfirmationError("Username already exists", 15, 17).Show();
                 return;
 
             }
@@ -312,7 +312,7 @@ namespace CareForPaws
             {
 
                 lblPasswordError.Visible = true;
-                new ComfirmationError().Show();
+                new ConfirmationError().Show();
                 return;
             }
             else
@@ -400,6 +400,23 @@ namespace CareForPaws
         private void lblInvalidLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "ID";
+            this.txtID.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtFullName.Text = "Full Name";
+            this.txtFullName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+           
+            txtSalary.Text = "Salary";
+            this.txtSalary.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtPassword.Text = "Password";
+            this.txtPassword.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtPhoneNumber.Text = "Phone Number";
+            this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtUserName.Text = "Username";
+            this.txtUserName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
         }
     }
 }

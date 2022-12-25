@@ -4,14 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CareForPaws
 {
-    public partial class Comfirmation : Form
+    public partial class ConfirmationError : Form
     {
         protected override CreateParams CreateParams
         {
@@ -24,23 +23,21 @@ namespace CareForPaws
             }
         }
         private System.Windows.Forms.Timer tmr;
-        
-
-        public Comfirmation(string message, int x, int y)
+        public ConfirmationError()
         {
             InitializeComponent();
-           lblComfirmation.Location = new Point(x, y);
-            lblComfirmation.Text = message;
+        }
+        public ConfirmationError(string message, int x, int y)
+        {
+            InitializeComponent();
+            lblComfirmationFail.Location = new Point(x, y);
+            lblComfirmationFail.Text = message;
             tmr = new System.Windows.Forms.Timer();
             tmr.Tick += delegate {
                 this.Close();
             };
-            tmr.Interval = (int)TimeSpan.FromSeconds(2).TotalMilliseconds;
+            tmr.Interval = (int)TimeSpan.FromSeconds(3).TotalMilliseconds;
             tmr.Start();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -49,7 +46,7 @@ namespace CareForPaws
 
         }
 
-        private void lblComfirmation_Click(object sender, EventArgs e)
+        private void lblComfirmationFail_Click(object sender, EventArgs e)
         {
 
         }

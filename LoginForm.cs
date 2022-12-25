@@ -140,7 +140,7 @@ namespace CareForPaws
             {
                 if (ds.Tables[0].Rows[0][7].ToString() == "Admin" && ds.Tables[0].Rows[0][10].ToString() == "Active")
                 {
-
+                    
                     new AdminHome(this.txtUserName.Text).Show();
                     this.Hide();
 

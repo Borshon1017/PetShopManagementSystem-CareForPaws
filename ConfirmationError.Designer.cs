@@ -1,6 +1,6 @@
 ﻿namespace CareForPaws
 {
-    partial class ComfirmationError
+    partial class ConfirmationError
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComfirmationError));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmationError));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.WhitePanel = new System.Windows.Forms.Panel();
             this.lblComfirmationFail = new System.Windows.Forms.Label();

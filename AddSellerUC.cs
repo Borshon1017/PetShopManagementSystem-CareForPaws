@@ -221,7 +221,7 @@ namespace CareForPaws
             sql = "insert into UserInfo values ('" + UID + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
             ds = this.Da.ExecuteQuery(sql);
 
-            new Comfirmation("Seller Added Sucessfully",38, 369).Show();
+            new ComfirmationDone("Seller Added Sucessfully",38, 369).Show();
             
 
         }

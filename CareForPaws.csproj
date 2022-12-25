@@ -76,11 +76,11 @@
       <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
-    <Compile Include="Comfirmation.cs">
+    <Compile Include="ComfirmationDone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Comfirmation.Designer.cs">
-      <DependentUpon>Comfirmation.cs</DependentUpon>
+    <Compile Include="ComfirmationDone.Designer.cs">
+      <DependentUpon>ComfirmationDone.cs</DependentUpon>
     </Compile>
     <Compile Include="ComfirmationError.cs">
       <SubType>Form</SubType>
@@ -93,6 +93,12 @@
     </Compile>
     <Compile Include="DeleteSellerUC.Designer.cs">
       <DependentUpon>DeleteSellerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComfirmationAsk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComfirmationAsk.Designer.cs">
+      <DependentUpon>ComfirmationAsk.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -132,8 +138,11 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Comfirmation.resx">
-      <DependentUpon>Comfirmation.cs</DependentUpon>
+    <EmbeddedResource Include="ComfirmationAsk.resx">
+      <DependentUpon>ComfirmationAsk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComfirmationDone.resx">
+      <DependentUpon>ComfirmationDone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComfirmationError.resx">
       <DependentUpon>ComfirmationError.cs</DependentUpon>

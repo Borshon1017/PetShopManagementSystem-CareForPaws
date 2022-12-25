@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CareForPaws
 {
-    public partial class Comfirmation : Form
+    public partial class ComfirmationDone : Form
     {
         protected override CreateParams CreateParams
         {
@@ -26,7 +26,7 @@ namespace CareForPaws
         private System.Windows.Forms.Timer tmr;
         
 
-        public Comfirmation(string message, int x, int y)
+        public ComfirmationDone(string message, int x, int y)
         {
             InitializeComponent();
            lblComfirmation.Location = new Point(x, y);

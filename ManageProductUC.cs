@@ -22,9 +22,44 @@ namespace CareForPaws
                 return cp;
             }
         }
+
+        private void AddUserControl(UserControl userControl)
+        {
+
+            userControl.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(userControl);
+            userControl.BringToFront();
+
+        }
         public ManageProductUC()
         {
             InitializeComponent();
         }
+
+        private void ManageProductUC_Load(object sender, EventArgs e)
+        {
+            AddCategoryUC addCategoryUC = new AddCategoryUC();
+            this.AddUserControl(addCategoryUC);
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            AddCategoryUC addCategoryUC = new AddCategoryUC();
+            this.AddUserControl(addCategoryUC);
+        }
+
+        private void btnUpdateCategory_Click(object sender, EventArgs e)
+        {
+            UpdateCategoryUC updateCategoryUC = new UpdateCategoryUC();
+            this.AddUserControl(updateCategoryUC);
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            AddProductUC addProductUC = new AddProductUC();
+            this.AddUserControl(addProductUC);
+        }
     }
+    
 }

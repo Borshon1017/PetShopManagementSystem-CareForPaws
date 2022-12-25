@@ -233,7 +233,7 @@
             this.btnSalesHistory.ForeColor = System.Drawing.Color.White;
             this.btnSalesHistory.Image = null;
             this.btnSalesHistory.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSalesHistory.Location = new System.Drawing.Point(26, 396);
+            this.btnSalesHistory.Location = new System.Drawing.Point(26, 408);
             this.btnSalesHistory.Name = "btnSalesHistory";
             this.btnSalesHistory.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnSalesHistory.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -264,7 +264,7 @@
             this.btnManageProduct.ForeColor = System.Drawing.Color.White;
             this.btnManageProduct.Image = null;
             this.btnManageProduct.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnManageProduct.Location = new System.Drawing.Point(26, 305);
+            this.btnManageProduct.Location = new System.Drawing.Point(26, 344);
             this.btnManageProduct.Name = "btnManageProduct";
             this.btnManageProduct.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnManageProduct.OnHoverBorderColor = System.Drawing.Color.Black;

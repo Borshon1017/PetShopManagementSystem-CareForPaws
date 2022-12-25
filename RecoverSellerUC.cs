@@ -10,28 +10,22 @@ using System.Windows.Forms;
 
 namespace CareForPaws
 {
-    public partial class DeleteSellerUC : UserControl
+    public partial class RecoverSellerUC : UserControl
     {
         private DataAccess Da { get; set; }
-        public DeleteSellerUC()
+        public RecoverSellerUC()
         {
             InitializeComponent();
             this.Da = new DataAccess();
             this.PopulateGridView();
         }
 
-        
-        private void PopulateGridView(string sql = "select * from UserInfo where Role = 'Seller' and Status = 'Active';")
+        private void PopulateGridView(string sql = "select * from UserInfo where Role = 'Seller' and Status = 'Inactive';")
         {
             var ds = this.Da.ExecuteQuery(sql);
 
             this.dgvSeller.AutoGenerateColumns = false;
             this.dgvSeller.DataSource = ds.Tables[0];
-        }
-
-        private void DeleteSellerUC_Load(object sender, EventArgs e)
-        {
-            this.dgvSeller.ClearSelection();
         }
 
         private void txtSearchByID_Enter(object sender, EventArgs e)
@@ -104,11 +98,16 @@ namespace CareForPaws
             }
         }
 
+        private void RecoverSellerUC_Load(object sender, EventArgs e)
+        {
+            this.dgvSeller.ClearSelection();
+        }
+
         private void txtSearchByID_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchByID.Text != "Search By ID" || string.IsNullOrEmpty(txtSearchByID.Text) == false || string.IsNullOrWhiteSpace(txtSearchByID.Text) == false)
             {
-                var sql = "select * from UserInfo where U_ID like '%" + this.txtSearchByID.Text + "%' and Role = 'Seller' and Status = 'Active';";
+                var sql = "select * from UserInfo where U_ID like '%" + this.txtSearchByID.Text + "%' and Role = 'Seller' and Status = 'Inactive';";
                 this.PopulateGridView(sql);
             }
         }
@@ -117,7 +116,7 @@ namespace CareForPaws
         {
             if (txtSearchByUserName.Text != "Search By Username" || string.IsNullOrEmpty(txtSearchByUserName.Text) == false || string.IsNullOrWhiteSpace(txtSearchByUserName.Text) == false)
             {
-                var sql = "select * from UserInfo where Username like '%" + this.txtSearchByUserName.Text + "%' and Role = 'Seller' and Status = 'Active';";
+                var sql = "select * from UserInfo where Username like '%" + this.txtSearchByUserName.Text + "%' and Role = 'Seller' and Status = 'Inactive';";
                 this.PopulateGridView(sql);
             }
         }
@@ -126,16 +125,16 @@ namespace CareForPaws
         {
             if (txtSeachByName.Text != "Search By Full Name" || string.IsNullOrEmpty(txtSeachByName.Text) == false || string.IsNullOrWhiteSpace(txtSeachByName.Text) == false)
             {
-                var sql = "select * from UserInfo where FullName like '%" + this.txtSeachByName.Text + "%' and Role = 'Seller' and Status = 'Active';";
+                var sql = "select * from UserInfo where FullName like '%" + this.txtSeachByName.Text + "%' and Role = 'Seller' and Status = 'Inactive';";
                 this.PopulateGridView(sql);
             }
         }
 
         private void dgvSeller_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvSeller.Columns[e.ColumnIndex].Name.Equals("DeleteButton"))
+            if (dgvSeller.Columns[e.ColumnIndex].Name.Equals("RecoverButton"))
             {
-                var sql = "update UserInfo set Status = 'Inactive' where U_ID  = '" + this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString() + "' and Role = 'Seller';";
+                var sql = "update UserInfo set Status = 'Active' where U_ID  = '" + this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString() + "' and Role = 'Seller';";
                 this.Da.ExecuteDMLQuery(sql);
                 this.PopulateGridView();
             }
@@ -143,7 +142,7 @@ namespace CareForPaws
 
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
-            var sql = "update UserInfo set Status = 'Inactive' where Role = 'Seller';";
+            var sql = "update UserInfo set Status = 'Active' where Role = 'Seller';";
             this.Da.ExecuteDMLQuery(sql);
             this.PopulateGridView();
         }

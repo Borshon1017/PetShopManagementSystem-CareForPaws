@@ -81,7 +81,7 @@ namespace CareForPaws
 
 
             //Exceptions
-            if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
+            if (txtFullName.Text == "Full Name" || string.IsNullOrEmpty(txtFullName.Text) == true)
             {
 
                 lblFullNameEmpty.Visible = true;
@@ -92,7 +92,7 @@ namespace CareForPaws
 
                 lblFullNameEmpty.Visible = false;
             }
-            if (txtUserName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtUserName.Text) == true)
+            if (txtUserName.Text == "Username" || string.IsNullOrEmpty(txtUserName.Text) == true)
             {
 
                 lblUsernameEmpty.Visible= true;
@@ -102,7 +102,7 @@ namespace CareForPaws
 
                 lblUsernameEmpty.Visible =false;
             }
-            if (txtPhoneNumber.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
+            if (txtPhoneNumber.Text == "Phone Number" || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
             {
                 lblPhoneNumberEmpty.Visible= true;
 
@@ -113,7 +113,7 @@ namespace CareForPaws
 
                 lblPhoneNumberEmpty.Visible = false;
             }
-            if (txtSalary.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtSalary.Text) == true)
+            if (txtSalary.Text == "Salary" || string.IsNullOrEmpty(txtSalary.Text) == true)
             {
 
                 lblSalaryEmpty.Visible = true;
@@ -125,7 +125,7 @@ namespace CareForPaws
                 lblSalaryEmpty.Visible = false;
             }
 
-            if (txtPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtPassword.Text) == true)
+            if (txtPassword.Text == "Password" || string.IsNullOrEmpty(txtPassword.Text) == true)
             {
 
                 lblPasswordError.Visible = true;
@@ -136,7 +136,7 @@ namespace CareForPaws
 
                 lblPasswordError.Visible = false;
             }
-            if (txtConfirmPassword.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtConfirmPassword.Text) == true)
+            if (txtConfirmPassword.Text == "Confirm Password" || string.IsNullOrEmpty(txtConfirmPassword.Text) == true)
             {
 
                 lblComfirmPasswordError.Visible = true;

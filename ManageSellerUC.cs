@@ -60,5 +60,21 @@ namespace CareForPaws
             DeleteSellerUC deleteSellerUC = new DeleteSellerUC();
             this.AddUserControl(deleteSellerUC);
         }
+
+        private void btnSellerList_Click(object sender, EventArgs e)
+        {
+            RecoverSellerUC recoverSellerUC = new RecoverSellerUC();
+            this.AddUserControl(recoverSellerUC);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -58,6 +58,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCategoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddCategoryUC.Designer.cs">
+      <DependentUpon>AddCategoryUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProductUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddProductUC.Designer.cs">
+      <DependentUpon>AddProductUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSellerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,12 +132,36 @@
     <Compile Include="EditInfoUC.Designer.cs">
       <DependentUpon>EditInfoUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecoverSellerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecoverSellerUC.Designer.cs">
+      <DependentUpon>RecoverSellerUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="SellerHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SellerHome.Designer.cs">
       <DependentUpon>SellerHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateCategoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateCategoryUC.Designer.cs">
+      <DependentUpon>UpdateCategoryUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateProductUC.Designer.cs">
+      <DependentUpon>UpdateProductUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCategoryUC.resx">
+      <DependentUpon>AddCategoryUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProductUC.resx">
+      <DependentUpon>AddProductUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSellerUC.resx">
       <DependentUpon>AddSellerUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,8 +198,14 @@
     <EmbeddedResource Include="EditInfoUC.resx">
       <DependentUpon>EditInfoUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecoverSellerUC.resx">
+      <DependentUpon>RecoverSellerUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SellerHome.resx">
       <DependentUpon>SellerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCategoryUC.resx">
+      <DependentUpon>UpdateCategoryUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CareForPawsDataSet.xsc">
       <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>

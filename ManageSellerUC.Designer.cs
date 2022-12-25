@@ -48,6 +48,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(652, 55);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnEditInfo
             // 
@@ -90,7 +91,8 @@
             this.btnSellerList.ShadowDecoration.Parent = this.btnSellerList;
             this.btnSellerList.Size = new System.Drawing.Size(163, 53);
             this.btnSellerList.TabIndex = 4;
-            this.btnSellerList.Text = "Seller List";
+            this.btnSellerList.Text = "Recover";
+            this.btnSellerList.Click += new System.EventHandler(this.btnSellerList_Click);
             // 
             // btnDeleteSeller
             // 
@@ -143,6 +145,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(652, 570);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // ManageSellerUC
             // 

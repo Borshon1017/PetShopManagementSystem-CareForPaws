@@ -401,5 +401,22 @@ namespace CareForPaws
         {
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "ID";
+            this.txtID.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtFullName.Text = "Full Name";
+            this.txtFullName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+           
+            txtSalary.Text = "Salary";
+            this.txtSalary.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtPassword.Text = "Password";
+            this.txtPassword.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtPhoneNumber.Text = "Phone Number";
+            this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtUserName.Text = "Username";
+            this.txtUserName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+        }
     }
 }

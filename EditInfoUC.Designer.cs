@@ -700,6 +700,7 @@
             this.btnClear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnClear.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnClear.UseTransfarantBackground = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 

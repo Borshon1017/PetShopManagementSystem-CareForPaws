@@ -140,9 +140,8 @@ namespace CareForPaws
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
-            //new ConfirmationAsk("Are you sure you want Logout", 12, 309).Show();
+            
             ConfirmationAsk logoutConfirmationObject = new ConfirmationAsk("Are you sure you want Logout", 12, 309);
-            //ConfirmationAsk logoutConfirmationObject= new ConfirmationAsk("Are you sure you want Logout",12,309);
             logoutConfirmationObject.Show();
             Logoutaction();
 
@@ -154,6 +153,7 @@ namespace CareForPaws
         {
             if (logoutConfirmation == false)
             {
+               
 
             }
             else if (logoutConfirmation == true)

@@ -18,11 +18,12 @@ namespace CareForPaws
             
             InitializeComponent();
         }
-        public ConfirmationAsk(string message, int x, int y)
+        public ConfirmationAsk(string msg, int x, int y)
         {
-            lblComfirmationFail.Text = message;
-            lblComfirmationFail.Location = new Point(x, y);
+            
             InitializeComponent();
+            lblComfirmationFail.Text = msg;
+            lblComfirmationFail.Location = new Point(x, y);
         }
 
 
@@ -31,10 +32,12 @@ namespace CareForPaws
         {
             DeleteSellerUC.askStatic = true;
             AdminHome.logoutConfirmation = true;
-           
 
-            this.Close();
-        }
+            if (DeleteSellerUC.askStatic = true || AdminHome.logoutConfirmation == true)
+            {
+                this.Close();
+            }
+            }
 
         private void btnNo_Click(object sender, EventArgs e)
         {

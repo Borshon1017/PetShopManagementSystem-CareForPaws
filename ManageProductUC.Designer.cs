@@ -133,6 +133,7 @@
             this.btnAddProduct.Size = new System.Drawing.Size(163, 53);
             this.btnAddProduct.TabIndex = 1;
             this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // panel2
             // 

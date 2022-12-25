@@ -139,6 +139,8 @@ namespace CareForPaws
                 var sql = "update UserInfo set Status = 'Inactive' where U_ID  = '" + this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString() + "' and Role = 'Seller';";
                 this.Da.ExecuteDMLQuery(sql);
                 this.PopulateGridView();
+                ComfirmationAsk ask = new ComfirmationAsk();
+
             }
         }
 
@@ -147,6 +149,11 @@ namespace CareForPaws
             var sql = "update UserInfo set Status = 'Inactive' where Role = 'Seller';";
             this.Da.ExecuteDMLQuery(sql);
             this.PopulateGridView();
+        }
+
+        private void dgvSeller_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

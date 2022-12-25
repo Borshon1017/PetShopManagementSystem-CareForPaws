@@ -12,17 +12,21 @@ namespace CareForPaws
 {
     public partial class ComfirmationAsk : Form
     {
+        private bool ask;
         public ComfirmationAsk()
         {
+            
             InitializeComponent();
         }
 
-        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
-        {
+      
 
+        private void btnYes_Click(object sender, EventArgs e)
+        {
+            
         }
 
-        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
+        private void btnNo_Click(object sender, EventArgs e)
         {
 
         }

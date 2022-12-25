@@ -81,6 +81,12 @@ namespace CareForPaws
 
 
             //Exceptions
+            if (rdbMale.Checked==false && rdbFemale.Checked == false)
+            {
+                lblGenderSelectMale.Visible= true;
+                lblGenderSelectFemale.Visible = true;
+            }
+
             if (txtFullName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtFullName.Text) == true)
             {
 
@@ -165,9 +171,9 @@ namespace CareForPaws
                 new ConfirmationError("Username already exists", 15, 17).Show();
 
             }
-           
 
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true)
+
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true || lblGenderSelectMale.Visible == true || lblGenderSelectFemale.Visible == true)
             {
                 return;
             }
@@ -209,7 +215,7 @@ namespace CareForPaws
             {
                 lblPhoneNumberEmpty.Visible = false;
             }
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true)
+            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblComfirmPasswordError.Visible == true || lblGenderSelectMale.Visible==true || lblGenderSelectFemale.Visible == true)
             {
                 return;
             }
@@ -466,6 +472,21 @@ namespace CareForPaws
         private void lblFullNameEmpty_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblGenderSelectMale_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbMale_CheckedChanged(object sender, EventArgs e)
+        {
+            lblGenderSelectMale.Visible = false;
+        }
+
+        private void rdbFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            lblGenderSelectFemale.Visible = false;
         }
     }
 }

@@ -54,6 +54,8 @@
             this.lblPhoneNumberEmpty = new System.Windows.Forms.Label();
             this.lblPasswordError = new System.Windows.Forms.Label();
             this.lblComfirmPasswordError = new System.Windows.Forms.Label();
+            this.lblGenderSelectMale = new System.Windows.Forms.Label();
+            this.lblGenderSelectFemale = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoFemale)).BeginInit();
@@ -105,6 +107,7 @@
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(20, 20);
             this.rdbMale.TabIndex = 7;
+            this.rdbMale.CheckedChanged += new System.EventHandler(this.rdbMale_CheckedChanged);
             // 
             // rdbFemale
             // 
@@ -116,6 +119,7 @@
             this.rdbFemale.Name = "rdbFemale";
             this.rdbFemale.Size = new System.Drawing.Size(20, 20);
             this.rdbFemale.TabIndex = 8;
+            this.rdbFemale.CheckedChanged += new System.EventHandler(this.rdbFemale_CheckedChanged);
             // 
             // icoMale
             // 
@@ -461,11 +465,38 @@
             this.lblComfirmPasswordError.Text = "*";
             this.lblComfirmPasswordError.Visible = false;
             // 
+            // lblGenderSelectMale
+            // 
+            this.lblGenderSelectMale.AutoSize = true;
+            this.lblGenderSelectMale.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderSelectMale.ForeColor = System.Drawing.Color.Red;
+            this.lblGenderSelectMale.Location = new System.Drawing.Point(293, 393);
+            this.lblGenderSelectMale.Name = "lblGenderSelectMale";
+            this.lblGenderSelectMale.Size = new System.Drawing.Size(21, 25);
+            this.lblGenderSelectMale.TabIndex = 40;
+            this.lblGenderSelectMale.Text = "*";
+            this.lblGenderSelectMale.Visible = false;
+            this.lblGenderSelectMale.Click += new System.EventHandler(this.lblGenderSelectMale_Click);
+            // 
+            // lblGenderSelectFemale
+            // 
+            this.lblGenderSelectFemale.AutoSize = true;
+            this.lblGenderSelectFemale.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderSelectFemale.ForeColor = System.Drawing.Color.Red;
+            this.lblGenderSelectFemale.Location = new System.Drawing.Point(452, 393);
+            this.lblGenderSelectFemale.Name = "lblGenderSelectFemale";
+            this.lblGenderSelectFemale.Size = new System.Drawing.Size(21, 25);
+            this.lblGenderSelectFemale.TabIndex = 41;
+            this.lblGenderSelectFemale.Text = "*";
+            this.lblGenderSelectFemale.Visible = false;
+            // 
             // AddSellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lblGenderSelectFemale);
+            this.Controls.Add(this.lblGenderSelectMale);
             this.Controls.Add(this.lblComfirmPasswordError);
             this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.lblPhoneNumberEmpty);
@@ -526,5 +557,7 @@
         private System.Windows.Forms.Label lblPhoneNumberEmpty;
         private System.Windows.Forms.Label lblPasswordError;
         private System.Windows.Forms.Label lblComfirmPasswordError;
+        private System.Windows.Forms.Label lblGenderSelectMale;
+        private System.Windows.Forms.Label lblGenderSelectFemale;
     }
 }

@@ -12,29 +12,37 @@ namespace CareForPaws
 {
     public partial class ConfirmationAsk : Form
     {
-        private bool ask;
+        
         public ConfirmationAsk()
         {
             
             InitializeComponent();
         }
+        public ConfirmationAsk(string message, int x, int y)
+        {
+            lblComfirmationFail.Text = message;
+            lblComfirmationFail.Location = new Point(x, y);
+            InitializeComponent();
+        }
 
-      
+
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            ask=true;
+            DeleteSellerUC.askStatic = true;
+            AdminHome.logoutConfirmation = true;
+
             this.Close();
         }
 
         private void btnNo_Click(object sender, EventArgs e)
         {
-            ask=false;
+            AdminHome.logoutConfirmation = false;
+            DeleteSellerUC.askStatic = false;
             this.Close();
         }
 
-        public bool getAsk()
-        { return ask; }
+     
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

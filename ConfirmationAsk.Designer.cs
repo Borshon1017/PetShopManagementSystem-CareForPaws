@@ -124,7 +124,7 @@
             this.btnNo.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
-            // ComfirmationAsk
+            // ConfirmationAsk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +134,7 @@
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.lblComfirmationFail);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "ComfirmationAsk";
+            this.Name = "ConfirmationAsk";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

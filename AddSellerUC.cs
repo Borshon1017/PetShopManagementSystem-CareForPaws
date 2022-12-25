@@ -162,7 +162,7 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count == 1)
             {
                 lblUsernameEmpty.Visible = true;
-                new ComfirmationError("Username already exists", 15, 17).Show();
+                new ConfirmationError("Username already exists", 15, 17).Show();
 
             }
            
@@ -178,7 +178,7 @@ namespace CareForPaws
             {
                 lblPasswordError.Visible = true;
 
-                new ComfirmationError("Password Mismatch", 68, 17).Show();
+                new ConfirmationError("Password Mismatch", 68, 17).Show();
                 return;
 
             }
@@ -191,7 +191,7 @@ namespace CareForPaws
             {
 
                 lblPasswordError.Visible = true;
-                new ComfirmationError().Show();
+                new ConfirmationError().Show();
                 return;
             }
             else
@@ -202,7 +202,7 @@ namespace CareForPaws
             if (txtPhoneNumber.Text.Length != 11)
             {
                 lblPhoneNumberEmpty.Visible = true;
-                new ComfirmationError("Invalid Phone Number", 70, 19).Show();
+                new ConfirmationError("Invalid Phone Number", 70, 19).Show();
                 return;
             }
             else
@@ -221,7 +221,7 @@ namespace CareForPaws
             sql = "insert into UserInfo values ('" + UID + "', '" + fullName + "', '" + userName + "', '" + password + "', '" + dateofbirth + "', '" + phoneNumber + "', '" + gender + "', '" + role + "', " + salary + ", '" + joiningdate + "', 'Active')  ;";
             ds = this.Da.ExecuteQuery(sql);
 
-            new ComfirmationDone("Seller Added Sucessfully",38, 369).Show();
+            new ConfirmationDone("Seller Added Sucessfully",38, 369).Show();
             
 
         }

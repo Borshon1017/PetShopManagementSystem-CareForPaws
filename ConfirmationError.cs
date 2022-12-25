@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CareForPaws
 {
-    public partial class ComfirmationError : Form
+    public partial class ConfirmationError : Form
     {
         protected override CreateParams CreateParams
         {
@@ -23,11 +23,11 @@ namespace CareForPaws
             }
         }
         private System.Windows.Forms.Timer tmr;
-        public ComfirmationError()
+        public ConfirmationError()
         {
             InitializeComponent();
         }
-        public ComfirmationError(string message, int x, int y)
+        public ConfirmationError(string message, int x, int y)
         {
             InitializeComponent();
             lblComfirmationFail.Location = new Point(x, y);

@@ -1,6 +1,6 @@
 ﻿namespace CareForPaws
 {
-    partial class ComfirmationAsk
+    partial class ConfirmationAsk
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComfirmationAsk));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmationAsk));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblComfirmationFail = new System.Windows.Forms.Label();
             this.btnYes = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -45,6 +45,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblComfirmationFail
             // 

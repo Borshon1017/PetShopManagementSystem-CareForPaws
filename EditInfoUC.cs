@@ -299,7 +299,7 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count == 1)
             {
                 lblUsernameEmpty.Visible = true;
-                new ComfirmationError("Username already exists", 15, 17).Show();
+                new ConfirmationError("Username already exists", 15, 17).Show();
                 return;
 
             }
@@ -312,7 +312,7 @@ namespace CareForPaws
             {
 
                 lblPasswordError.Visible = true;
-                new ComfirmationError().Show();
+                new ConfirmationError().Show();
                 return;
             }
             else

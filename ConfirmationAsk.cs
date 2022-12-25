@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CareForPaws
 {
-    public partial class ComfirmationAsk : Form
+    public partial class ConfirmationAsk : Form
     {
         private bool ask;
-        public ComfirmationAsk()
+        public ConfirmationAsk()
         {
             
             InitializeComponent();
@@ -23,10 +23,20 @@ namespace CareForPaws
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            
+            ask=true;
+            this.Close();
         }
 
         private void btnNo_Click(object sender, EventArgs e)
+        {
+            ask=false;
+            this.Close();
+        }
+
+        public bool getAsk()
+        { return ask; }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

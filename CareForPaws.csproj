@@ -76,17 +76,17 @@
       <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
-    <Compile Include="ComfirmationDone.cs">
+    <Compile Include="ConfirmationDone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComfirmationDone.Designer.cs">
-      <DependentUpon>ComfirmationDone.cs</DependentUpon>
+    <Compile Include="ConfirmationDone.Designer.cs">
+      <DependentUpon>ConfirmationDone.cs</DependentUpon>
     </Compile>
-    <Compile Include="ComfirmationError.cs">
+    <Compile Include="ConfirmationError.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComfirmationError.Designer.cs">
-      <DependentUpon>ComfirmationError.cs</DependentUpon>
+    <Compile Include="ConfirmationError.Designer.cs">
+      <DependentUpon>ConfirmationError.cs</DependentUpon>
     </Compile>
     <Compile Include="DeleteSellerUC.cs">
       <SubType>UserControl</SubType>
@@ -94,11 +94,11 @@
     <Compile Include="DeleteSellerUC.Designer.cs">
       <DependentUpon>DeleteSellerUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="ComfirmationAsk.cs">
+    <Compile Include="ConfirmationAsk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComfirmationAsk.Designer.cs">
-      <DependentUpon>ComfirmationAsk.cs</DependentUpon>
+    <Compile Include="ConfirmationAsk.Designer.cs">
+      <DependentUpon>ConfirmationAsk.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -138,14 +138,14 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComfirmationAsk.resx">
-      <DependentUpon>ComfirmationAsk.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmationAsk.resx">
+      <DependentUpon>ConfirmationAsk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComfirmationDone.resx">
-      <DependentUpon>ComfirmationDone.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmationDone.resx">
+      <DependentUpon>ConfirmationDone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComfirmationError.resx">
-      <DependentUpon>ComfirmationError.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmationError.resx">
+      <DependentUpon>ConfirmationError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteSellerUC.resx">
       <DependentUpon>DeleteSellerUC.cs</DependentUpon>

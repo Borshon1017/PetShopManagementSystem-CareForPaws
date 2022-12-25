@@ -158,7 +158,7 @@ namespace CareForPaws
         {
             bool askComfirmation;
             ConfirmationAsk ask = new ConfirmationAsk();
-            ask.ComfirmationAsk().Show();
+           
             askComfirmation = ask.getAsk();
 
             if (askComfirmation == true)

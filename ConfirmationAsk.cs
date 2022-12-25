@@ -31,6 +31,7 @@ namespace CareForPaws
         {
             DeleteSellerUC.askStatic = true;
             AdminHome.logoutConfirmation = true;
+           
 
             this.Close();
         }

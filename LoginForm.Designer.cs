@@ -259,6 +259,7 @@
             this.btnLoginBlack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLoginBlack.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnLoginBlack.UseTransfarantBackground = true;
+            this.btnLoginBlack.Click += new System.EventHandler(this.btnLoginBlack_Click);
             // 
             // LoginForm
             // 

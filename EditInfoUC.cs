@@ -334,7 +334,16 @@ namespace CareForPaws
                 return;
             }
 
+            ConfirmationAsk updateinfo = new ConfirmationAsk("   Save current changes?", 12, 309);
 
+            updateinfo.ShowDialog();
+            if (AdminHome.updateSellerConfirmation == true)
+            {
+            }
+            else if (AdminHome.updateSellerConfirmation == false)
+            {
+                return;
+            }
 
             var query = "select * from UserInfo where U_ID = '" + this.txtID.Text + "' and Status = 'Active';";
             ds = this.Da.ExecuteQuery(query);

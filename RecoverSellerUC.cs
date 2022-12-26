@@ -142,9 +142,24 @@ namespace CareForPaws
 
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
+            ConfirmationAsk recoverAll = new ConfirmationAsk("Are you sure you want to recover all?", 12, 309);
+
+            recoverAll.ShowDialog();
+            recoverAllMethod();
+
             var sql = "update UserInfo set Status = 'Active' where Role = 'Seller';";
             this.Da.ExecuteDMLQuery(sql);
             this.PopulateGridView();
+        }
+        public void recoverAllMethod()
+        {
+            if (AdminHome.recoverAllConfirmation == true)
+            { 
+            }
+            else if ( AdminHome.recoverAllConfirmation == false )
+            {
+                return; 
+            }
         }
     }
 }

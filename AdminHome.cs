@@ -25,6 +25,8 @@ namespace CareForPaws
         }
         
         public static bool logoutConfirmation;
+        public static bool recoverAllConfirmation;
+        public static bool updateSellerConfirmation;
         private string username;
         public void EnableDoubleBuffering()
         {

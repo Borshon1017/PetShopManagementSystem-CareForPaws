@@ -136,23 +136,12 @@ namespace CareForPaws
         {
             if (dgvSeller.Columns[e.ColumnIndex].Name.Equals("DeleteButton"))
             {
-                
-                ConfirmationAsk ask = new ConfirmationAsk();
-                
-                if (askStatic == true)
-                {
-                    var sql = "update UserInfo set Status = 'Inactive' where U_ID  = '" + this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString() + "' and Role = 'Seller';";
-                    this.Da.ExecuteDMLQuery(sql);
-                    this.PopulateGridView();
-                }
-                else if (askStatic == false)
-                {
-                    return;
-                }
-
-
+                var sql = "update UserInfo set Status = 'Inactive' where U_ID  = '" + this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString() + "' and Role = 'Seller';";
+                this.Da.ExecuteDMLQuery(sql);
+                this.PopulateGridView();
             }
         }
+
 
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {

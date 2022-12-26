@@ -63,6 +63,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 625);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
@@ -215,6 +216,7 @@
             this.btnSalesHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSalesHistory.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnSalesHistory.UseTransfarantBackground = true;
+            this.btnSalesHistory.Click += new System.EventHandler(this.btnSalesHistory_Click);
             // 
             // btnManageProduct
             // 
@@ -335,6 +337,7 @@
             this.btnSettings.TabIndex = 0;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // AdminHome
             // 

@@ -36,7 +36,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlUserOptionList = new System.Windows.Forms.Panel();
             this.btnLogout = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnSettings = new Guna.UI.WinForms.GunaAdvenceButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnUserProfile = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lblUsername = new Guna.UI.WinForms.GunaLabel();
@@ -44,6 +43,7 @@
             this.btnManageProduct = new Guna.UI.WinForms.GunaButton();
             this.btnManageSeller = new Guna.UI.WinForms.GunaButton();
             this.transUsercontrol = new Guna.UI.WinForms.GunaTransition(this.components);
+            this.btnSettings = new Guna.UI.WinForms.GunaAdvenceButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlUserOptionList.SuspendLayout();
@@ -136,40 +136,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.AnimationHoverSpeed = 0.07F;
-            this.btnSettings.AnimationSpeed = 0.03F;
-            this.btnSettings.BackColor = System.Drawing.Color.White;
-            this.btnSettings.BaseColor = System.Drawing.Color.Transparent;
-            this.btnSettings.BorderColor = System.Drawing.Color.Black;
-            this.btnSettings.BorderSize = 1;
-            this.btnSettings.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnSettings.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnSettings.CheckedForeColor = System.Drawing.Color.White;
-            this.btnSettings.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.CheckedImage")));
-            this.btnSettings.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.transUsercontrol.SetDecoration(this.btnSettings, Guna.UI.Animation.DecorationType.None);
-            this.btnSettings.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSettings.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSettings.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.Black;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSettings.LineColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(-1, 1);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
-            this.btnSettings.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSettings.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnSettings.OnHoverImage = null;
-            this.btnSettings.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSettings.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSettings.Size = new System.Drawing.Size(279, 55);
-            this.btnSettings.TabIndex = 0;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -335,6 +301,40 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.transUsercontrol.DefaultAnimation = animation1;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.AnimationHoverSpeed = 0.07F;
+            this.btnSettings.AnimationSpeed = 0.03F;
+            this.btnSettings.BackColor = System.Drawing.Color.White;
+            this.btnSettings.BaseColor = System.Drawing.Color.Transparent;
+            this.btnSettings.BorderColor = System.Drawing.Color.Black;
+            this.btnSettings.BorderSize = 1;
+            this.btnSettings.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnSettings.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnSettings.CheckedForeColor = System.Drawing.Color.White;
+            this.btnSettings.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.CheckedImage")));
+            this.btnSettings.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.transUsercontrol.SetDecoration(this.btnSettings, Guna.UI.Animation.DecorationType.None);
+            this.btnSettings.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSettings.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.Black;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSettings.LineColor = System.Drawing.Color.White;
+            this.btnSettings.Location = new System.Drawing.Point(-1, 1);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
+            this.btnSettings.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSettings.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnSettings.OnHoverImage = null;
+            this.btnSettings.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnSettings.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSettings.Size = new System.Drawing.Size(279, 55);
+            this.btnSettings.TabIndex = 0;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             // 
             // AdminHome
             // 

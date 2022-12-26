@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLoginGuna = new Guna.UI.WinForms.GunaButton();
             this.btnVisible = new System.Windows.Forms.Button();
             this.btnInvisible = new System.Windows.Forms.Button();
             this.iconPassword = new System.Windows.Forms.PictureBox();
@@ -42,6 +41,7 @@
             this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pnlTitleBar = new Guna.UI.WinForms.GunaPanel();
             this.gunaGradientCircleButton1 = new Guna.UI.WinForms.GunaGradientCircleButton();
+            this.btnLoginBlack = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).BeginInit();
@@ -66,7 +66,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnLoginGuna);
+            this.panel2.Controls.Add(this.btnLoginBlack);
             this.panel2.Controls.Add(this.btnVisible);
             this.panel2.Controls.Add(this.btnInvisible);
             this.panel2.Controls.Add(this.iconPassword);
@@ -78,32 +78,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(434, 312);
             this.panel2.TabIndex = 0;
-            // 
-            // btnLoginGuna
-            // 
-            this.btnLoginGuna.AnimationHoverSpeed = 0.07F;
-            this.btnLoginGuna.AnimationSpeed = 0.03F;
-            this.btnLoginGuna.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnLoginGuna.BorderColor = System.Drawing.Color.Black;
-            this.btnLoginGuna.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLoginGuna.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLoginGuna.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginGuna.ForeColor = System.Drawing.Color.White;
-            this.btnLoginGuna.Image = ((System.Drawing.Image)(resources.GetObject("btnLoginGuna.Image")));
-            this.btnLoginGuna.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLoginGuna.Location = new System.Drawing.Point(133, 219);
-            this.btnLoginGuna.Name = "btnLoginGuna";
-            this.btnLoginGuna.OnHoverBaseColor = System.Drawing.Color.SteelBlue;
-            this.btnLoginGuna.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLoginGuna.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLoginGuna.OnHoverImage = null;
-            this.btnLoginGuna.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLoginGuna.Size = new System.Drawing.Size(160, 42);
-            this.btnLoginGuna.TabIndex = 9;
-            this.btnLoginGuna.Text = "Login";
-            this.btnLoginGuna.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnLoginGuna.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
-            this.btnLoginGuna.Click += new System.EventHandler(this.btnLoginGuna_Click);
             // 
             // btnVisible
             // 
@@ -254,6 +228,38 @@
             this.gunaGradientCircleButton1.Text = "X";
             this.gunaGradientCircleButton1.Click += new System.EventHandler(this.gunaGradientCircleButton1_Click);
             // 
+            // btnLoginBlack
+            // 
+            this.btnLoginBlack.AnimationHoverSpeed = 0.07F;
+            this.btnLoginBlack.AnimationSpeed = 0.03F;
+            this.btnLoginBlack.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoginBlack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLoginBlack.BaseColor = System.Drawing.Color.Black;
+            this.btnLoginBlack.BorderColor = System.Drawing.Color.White;
+            this.btnLoginBlack.BorderSize = 1;
+            this.btnLoginBlack.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLoginBlack.Enabled = false;
+            this.btnLoginBlack.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLoginBlack.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginBlack.ForeColor = System.Drawing.Color.White;
+            this.btnLoginBlack.Image = null;
+            this.btnLoginBlack.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLoginBlack.Location = new System.Drawing.Point(152, 217);
+            this.btnLoginBlack.Name = "btnLoginBlack";
+            this.btnLoginBlack.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
+            this.btnLoginBlack.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLoginBlack.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnLoginBlack.OnHoverImage = null;
+            this.btnLoginBlack.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLoginBlack.OnPressedDepth = 20;
+            this.btnLoginBlack.Radius = 22;
+            this.btnLoginBlack.Size = new System.Drawing.Size(125, 47);
+            this.btnLoginBlack.TabIndex = 15;
+            this.btnLoginBlack.Text = "Login";
+            this.btnLoginBlack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLoginBlack.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnLoginBlack.UseTransfarantBackground = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -285,9 +291,9 @@
         private System.Windows.Forms.PictureBox iconPassword;
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button btnInvisible;
-        private Guna.UI.WinForms.GunaButton btnLoginGuna;
         private Guna.UI.WinForms.GunaPanel pnlTitleBar;
         private Guna.UI.WinForms.GunaGradientCircleButton gunaGradientCircleButton1;
+        private Guna.UI.WinForms.GunaButton btnLoginBlack;
     }
 }
 

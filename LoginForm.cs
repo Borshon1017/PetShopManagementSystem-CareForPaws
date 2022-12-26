@@ -174,5 +174,10 @@ namespace CareForPaws
         {
             
         }
+
+        private void gunaGradientCircleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

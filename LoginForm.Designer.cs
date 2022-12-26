@@ -40,15 +40,19 @@
             this.lblInvalidLogin = new System.Windows.Forms.Label();
             this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.pnlTitleBar = new Guna.UI.WinForms.GunaPanel();
+            this.gunaGradientCircleButton1 = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconUser)).BeginInit();
+            this.pnlTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.pnlTitleBar);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -213,6 +217,43 @@
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
             this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave_1);
             // 
+            // pnlTitleBar
+            // 
+            this.pnlTitleBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlTitleBar.Controls.Add(this.gunaGradientCircleButton1);
+            this.pnlTitleBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitleBar.Name = "pnlTitleBar";
+            this.pnlTitleBar.Size = new System.Drawing.Size(930, 40);
+            this.pnlTitleBar.TabIndex = 1;
+            // 
+            // gunaGradientCircleButton1
+            // 
+            this.gunaGradientCircleButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientCircleButton1.AnimationSpeed = 0.03F;
+            this.gunaGradientCircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientCircleButton1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientCircleButton1.BaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientCircleButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientCircleButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientCircleButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaGradientCircleButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientCircleButton1.Image = null;
+            this.gunaGradientCircleButton1.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaGradientCircleButton1.Location = new System.Drawing.Point(889, 8);
+            this.gunaGradientCircleButton1.Name = "gunaGradientCircleButton1";
+            this.gunaGradientCircleButton1.OnHoverBaseColor1 = System.Drawing.Color.Gray;
+            this.gunaGradientCircleButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientCircleButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientCircleButton1.OnHoverImage = null;
+            this.gunaGradientCircleButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientCircleButton1.Size = new System.Drawing.Size(29, 27);
+            this.gunaGradientCircleButton1.TabIndex = 0;
+            this.gunaGradientCircleButton1.Text = "X";
+            this.gunaGradientCircleButton1.Click += new System.EventHandler(this.gunaGradientCircleButton1_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -228,6 +269,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconUser)).EndInit();
+            this.pnlTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -244,6 +286,8 @@
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button btnInvisible;
         private Guna.UI.WinForms.GunaButton btnLoginGuna;
+        private Guna.UI.WinForms.GunaPanel pnlTitleBar;
+        private Guna.UI.WinForms.GunaGradientCircleButton gunaGradientCircleButton1;
     }
 }
 

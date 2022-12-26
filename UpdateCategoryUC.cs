@@ -126,7 +126,7 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count == 1)
             {
                 lblCategoryNameEmpty.Visible = true;
-                new ComfirmationError("Category already exists", 15, 17).Show();
+                new ConfirmationError("Category already exists", 15, 17).Show();
                 return;
 
             }

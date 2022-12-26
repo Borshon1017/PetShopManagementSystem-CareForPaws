@@ -133,7 +133,7 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count >= 1)
             {
                 lblProductNameEmpty.Visible = true;
-                new ComfirmationError("Product already exists", 15, 17).Show();
+                new ConfirmationError("Product already exists", 15, 17).Show();
                 return;
             }
 
@@ -141,7 +141,7 @@ namespace CareForPaws
             sql = "insert into ProductInfo values ('" + PID + "', '" + productName + "', '" + brand + "', '" + category + "', " + quantity + ")  ;";
             ds = this.Da.ExecuteQuery(sql);
 
-            new Comfirmation("Product Added Sucessfully", 38, 369).Show();
+            new ConfirmationDone("Product Added Sucessfully", 38, 369).Show();
 
 
         }

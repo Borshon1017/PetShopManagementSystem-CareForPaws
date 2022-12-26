@@ -62,14 +62,14 @@ namespace CareForPaws
             if (ds.Tables[0].Rows.Count == 1)
             {
                 lblCategoryNameEmpty.Visible = true;
-                new ComfirmationError("Category already exists", 15, 17).Show();
+                new ConfirmationError("Category already exists", 15, 17).Show();
                 return;
             }
             lblCategoryNameEmpty.Visible = false;
             sql = "insert into CategoryInfo values ('" + CID + "', '" + categoryName + "')  ;";
             ds = this.Da.ExecuteQuery(sql);
 
-            new Comfirmation("Category Added Sucessfully", 38, 369).Show();
+            new ConfirmationDone("Category Added Sucessfully", 38, 369).Show();
         }
 
         private string AutoId()

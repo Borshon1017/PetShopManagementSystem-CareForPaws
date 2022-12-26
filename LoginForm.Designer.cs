@@ -209,6 +209,7 @@
             this.gunaGradientCircleButton1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gunaGradientCircleButton1.BaseColor2 = System.Drawing.Color.White;
             this.gunaGradientCircleButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientCircleButton1.BorderSize = 2;
             this.gunaGradientCircleButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaGradientCircleButton1.FocusedColor = System.Drawing.Color.Empty;
             this.gunaGradientCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -222,10 +223,11 @@
             this.gunaGradientCircleButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaGradientCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaGradientCircleButton1.OnHoverImage = null;
-            this.gunaGradientCircleButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientCircleButton1.Size = new System.Drawing.Size(29, 27);
+            this.gunaGradientCircleButton1.OnPressedColor = System.Drawing.Color.IndianRed;
+            this.gunaGradientCircleButton1.Size = new System.Drawing.Size(30, 30);
             this.gunaGradientCircleButton1.TabIndex = 0;
             this.gunaGradientCircleButton1.Text = "X";
+            this.gunaGradientCircleButton1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.gunaGradientCircleButton1.Click += new System.EventHandler(this.gunaGradientCircleButton1_Click);
             // 
             // btnLoginBlack

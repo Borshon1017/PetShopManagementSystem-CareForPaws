@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerHome));
+            this.kryptonContextMenu1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
             this.SuspendLayout();
             // 
             // SellerHome
@@ -47,5 +48,7 @@
         }
 
         #endregion
+
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu kryptonContextMenu1;
     }
 }

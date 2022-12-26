@@ -150,6 +150,7 @@ namespace CareForPaws
             var sql = "update UserInfo set Status = 'Active' where Role = 'Seller';";
             this.Da.ExecuteDMLQuery(sql);
             this.PopulateGridView();
+            AdminHome.recoverAllConfirmation = false;
         }
         public void recoverAllMethod()
         {

@@ -194,6 +194,7 @@
             this.txtFullName.Text = "Full Name";
             this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged_1);
             this.txtFullName.Enter += new System.EventHandler(this.txtFullName_Enter);
+            this.txtFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFullName_KeyPress);
             this.txtFullName.Leave += new System.EventHandler(this.txtFullName_Leave);
             // 
             // txtUserName

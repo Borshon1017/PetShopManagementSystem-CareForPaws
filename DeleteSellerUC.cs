@@ -158,7 +158,7 @@ namespace CareForPaws
         {
             
             ConfirmationAsk ask = new ConfirmationAsk();
-            ask.Show();
+            ask.ShowDialog();
            
             
 

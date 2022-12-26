@@ -60,6 +60,12 @@ namespace CareForPaws
             AddProductUC addProductUC = new AddProductUC();
             this.AddUserControl(addProductUC);
         }
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            UpdateProductUC updateProductUC = new UpdateProductUC();
+            this.AddUserControl(updateProductUC);
+        }
     }
     
 }

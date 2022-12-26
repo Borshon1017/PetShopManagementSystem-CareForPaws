@@ -69,6 +69,7 @@
             this.btnUpdateProduct.Size = new System.Drawing.Size(163, 53);
             this.btnUpdateProduct.TabIndex = 4;
             this.btnUpdateProduct.Text = "Update Product";
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // btnAddProduct
             // 

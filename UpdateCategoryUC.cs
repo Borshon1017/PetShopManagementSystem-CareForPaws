@@ -99,6 +99,7 @@ namespace CareForPaws
 
         private void dgvCategory_DoubleClick(object sender, EventArgs e)
         {
+            if (this.dgvCategory.SelectedRows.Count == 0) { return; }
             this.txtCategoryName.ReadOnly = false;
             this.txtID.Text = this.dgvCategory.CurrentRow.Cells["C_ID"].Value.ToString();
             this.txtID.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
@@ -120,28 +121,12 @@ namespace CareForPaws
             }
 
 
-            //CategoryName Conflict Check
-            var sql = "select * from CategoryInfo where CategoryName = '" + this.txtCategoryName.Text + "';";
-            var ds = this.Da.ExecuteQuery(sql);
-            if (ds.Tables[0].Rows.Count == 1)
-            {
-                lblCategoryNameEmpty.Visible = true;
-                new ConfirmationError("Category already exists", 15, 17).Show();
-                return;
-
-            }
-            if (lblCategoryNameEmpty.Visible == true)
-            {
-                return;
-            }
-
-
             var query = "select * from CategoryInfo where C_ID = '" + this.txtID.Text + "';";
-            ds = this.Da.ExecuteQuery(query);
+            var ds = this.Da.ExecuteQuery(query);
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                sql = @"update CategoryInfo
+                var sql = @"update CategoryInfo
                                 set CategoryName = '" + this.txtCategoryName.Text + @"'
                                 where C_ID = '" + this.txtID.Text + "';";
                 int count = this.Da.ExecuteDMLQuery(sql);
@@ -155,5 +140,16 @@ namespace CareForPaws
             this.PopulateGridView();
         }
 
+        private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCategory.Columns[e.ColumnIndex].Name.Equals("DeleteButton"))
+            {
+                var sql = "delete from ProductInfo where C_ID = '" + this.dgvCategory.CurrentRow.Cells["C_ID"].Value.ToString() + "' ;";
+                this.Da.ExecuteDMLQuery(sql);
+                sql = "delete from CategoryInfo where C_ID = '" + this.dgvCategory.CurrentRow.Cells["C_ID"].Value.ToString() + "' ;";
+                this.Da.ExecuteDMLQuery(sql);
+                this.PopulateGridView();
+            }
+        }
     }
 }

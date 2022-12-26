@@ -40,8 +40,8 @@
             this.txtSearchByCategoryName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblMessage = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCategoryNameEmpty = new System.Windows.Forms.Label();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.txtCategoryName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnClear = new Guna.UI.WinForms.GunaButton();
@@ -49,8 +49,9 @@
             this.dgvCategory = new System.Windows.Forms.DataGridView();
             this.C_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,14 +113,24 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblCategoryNameEmpty);
-            this.panel2.Controls.Add(this.gunaCirclePictureBox1);
             this.panel2.Controls.Add(this.txtCategoryName);
             this.panel2.Controls.Add(this.txtID);
             this.panel2.Location = new System.Drawing.Point(384, 167);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(239, 194);
             this.panel2.TabIndex = 29;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(75, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
             // 
             // lblCategoryNameEmpty
             // 
@@ -132,19 +143,6 @@
             this.lblCategoryNameEmpty.TabIndex = 37;
             this.lblCategoryNameEmpty.Text = "*";
             this.lblCategoryNameEmpty.Visible = false;
-            // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox1.Image")));
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(75, 11);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(85, 85);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 32;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             // 
             // txtCategoryName
             // 
@@ -273,7 +271,8 @@
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C_ID,
-            this.CategoryName});
+            this.CategoryName,
+            this.DeleteButton});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -308,6 +307,7 @@
             this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategory.Size = new System.Drawing.Size(333, 386);
             this.dgvCategory.TabIndex = 32;
+            this.dgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellClick);
             this.dgvCategory.DoubleClick += new System.EventHandler(this.dgvCategory_DoubleClick);
             // 
             // C_ID
@@ -340,6 +340,16 @@
             this.CategoryName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.CategoryName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // DeleteButton
+            // 
+            this.DeleteButton.HeaderText = "";
+            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
+            this.DeleteButton.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.ReadOnly = true;
+            this.DeleteButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DeleteButton.Width = 40;
+            // 
             // UpdateCategoryUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,7 +367,7 @@
             this.Load += new System.EventHandler(this.UpdateCategoryUC_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -371,13 +381,14 @@
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblCategoryNameEmpty;
-        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtCategoryName;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtID;
         private Guna.UI.WinForms.GunaButton btnClear;
         private Guna.UI.WinForms.GunaButton btnSave;
         private System.Windows.Forms.DataGridView dgvCategory;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
+        private System.Windows.Forms.DataGridViewImageColumn DeleteButton;
     }
 }

@@ -216,6 +216,9 @@
     <EmbeddedResource Include="UpdateCategoryUC.resx">
       <DependentUpon>UpdateCategoryUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProductUC.resx">
+      <DependentUpon>UpdateProductUC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="CareForPawsDataSet.xsc">
       <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
     </None>

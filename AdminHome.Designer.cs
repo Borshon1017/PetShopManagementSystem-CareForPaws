@@ -69,7 +69,7 @@
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.transUsercontrol.SetDecoration(this.panel3, Guna.UI.Animation.DecorationType.None);
-            this.panel3.Location = new System.Drawing.Point(277, -1);
+            this.panel3.Location = new System.Drawing.Point(277, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(652, 625);
             this.panel3.TabIndex = 1;
@@ -234,7 +234,7 @@
             this.btnSalesHistory.ForeColor = System.Drawing.Color.White;
             this.btnSalesHistory.Image = null;
             this.btnSalesHistory.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSalesHistory.Location = new System.Drawing.Point(26, 408);
+            this.btnSalesHistory.Location = new System.Drawing.Point(25, 356);
             this.btnSalesHistory.Name = "btnSalesHistory";
             this.btnSalesHistory.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnSalesHistory.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -265,7 +265,7 @@
             this.btnManageProduct.ForeColor = System.Drawing.Color.White;
             this.btnManageProduct.Image = null;
             this.btnManageProduct.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnManageProduct.Location = new System.Drawing.Point(26, 344);
+            this.btnManageProduct.Location = new System.Drawing.Point(25, 292);
             this.btnManageProduct.Name = "btnManageProduct";
             this.btnManageProduct.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnManageProduct.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -298,7 +298,7 @@
             this.btnManageSeller.ForeColor = System.Drawing.Color.White;
             this.btnManageSeller.Image = null;
             this.btnManageSeller.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnManageSeller.Location = new System.Drawing.Point(26, 216);
+            this.btnManageSeller.Location = new System.Drawing.Point(25, 228);
             this.btnManageSeller.Name = "btnManageSeller";
             this.btnManageSeller.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnManageSeller.OnHoverBorderColor = System.Drawing.Color.Black;

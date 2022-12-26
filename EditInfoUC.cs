@@ -152,6 +152,7 @@ namespace CareForPaws
 
         private void dgvSeller_DoubleClick(object sender, EventArgs e)
         {
+            if (this.dgvSeller.SelectedRows.Count == 0) { return; }
             this.TurnOffReadOnly();
             this.txtID.Text = this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString();
             this.txtID.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
@@ -213,16 +214,6 @@ namespace CareForPaws
             {
 
                 lblFullNameEmpty.Visible = false;
-            }
-            if (txtUserName.Text == "Username" || string.IsNullOrEmpty(txtUserName.Text) == true)
-            {
-
-                lblUsernameEmpty.Visible = true;
-            }
-            else
-            {
-
-                lblUsernameEmpty.Visible = false;
             }
             if (txtPhoneNumber.Text == "Phone Number" || string.IsNullOrEmpty(txtPhoneNumber.Text) == true)
             {
@@ -294,16 +285,8 @@ namespace CareForPaws
 
 
             //UserName Conflict Check
-            var sql = "select * from UserInfo where username = '" + txtUserName + "' and Status = 'Active';";
-            var ds = this.Da.ExecuteQuery(sql);
-            if (ds.Tables[0].Rows.Count == 1)
-            {
-                lblUsernameEmpty.Visible = true;
-                new ConfirmationError("Username already exists", 15, 17).Show();
-                return;
-
-            }
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblGender.Visible == true)
+           
+            if (lblFullNameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblGender.Visible == true)
             {
                 return;
             }
@@ -329,7 +312,7 @@ namespace CareForPaws
             //{
             //    lblPhoneNumberEmpty.Visible = false;
             //}
-            if (lblFullNameEmpty.Visible == true || lblUsernameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblGender.Visible == true)
+            if (lblFullNameEmpty.Visible == true || lblPhoneNumberEmpty.Visible == true || lblSalaryEmpty.Visible == true || lblPasswordError.Visible == true || lblJoiningDate.Visible == true || lblDOBerror.Visible == true || lblGender.Visible == true)
             {
                 return;
             }
@@ -346,13 +329,12 @@ namespace CareForPaws
             }
 
             var query = "select * from UserInfo where U_ID = '" + this.txtID.Text + "' and Status = 'Active';";
-            ds = this.Da.ExecuteQuery(query);
+            var ds = this.Da.ExecuteQuery(query);
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                 sql = @"update UserInfo
+                 var sql = @"update UserInfo
                                 set FullName = '" + this.txtFullName.Text + @"',
-                                Username = '" + this.txtUserName.Text + @"',
                                 Password = '" + this.txtPassword.Text + @"',
                                 DOB = '" + this.dtpDOB.Text + @"',
                                 Phone = '" + this.txtPhoneNumber.Text + @"',
@@ -373,7 +355,6 @@ namespace CareForPaws
 
         private void TurnOffReadOnly() {
 
-            txtUserName.ReadOnly = false;
             txtFullName.ReadOnly = false;
             txtPassword.ReadOnly = false;
             txtPhoneNumber.ReadOnly = false;

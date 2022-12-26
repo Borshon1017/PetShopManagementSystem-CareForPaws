@@ -34,6 +34,7 @@ namespace CareForPaws
             AdminHome.logoutConfirmation = true;
             AdminHome.recoverAllConfirmation= true;
             AdminHome.updateSellerConfirmation= true;
+            SellerHome.logoutConfirmation= true;
 
             if (DeleteSellerUC.askStatic == true || AdminHome.logoutConfirmation == true)
             {
@@ -47,6 +48,7 @@ namespace CareForPaws
             DeleteSellerUC.askStatic = false;
             AdminHome.recoverAllConfirmation = false;
             AdminHome.updateSellerConfirmation = false;
+            SellerHome.logoutConfirmation = false;
             this.Close();
         }
 

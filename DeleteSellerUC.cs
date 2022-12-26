@@ -142,6 +142,7 @@ namespace CareForPaws
             }
         }
 
+
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
             

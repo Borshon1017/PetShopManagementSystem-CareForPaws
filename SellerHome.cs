@@ -12,6 +12,8 @@ namespace CareForPaws
 {
     public partial class SellerHome : Form
     {
+
+        public static bool logoutConfirmation;
         protected override CreateParams CreateParams
         {
             get
@@ -22,14 +24,47 @@ namespace CareForPaws
                 return cp;
             }
         }
-        public SellerHome()
+        private string username;
+        public SellerHome(string username)
+
         {
+            this.username = username;
             InitializeComponent();
+            lblUsername.Text = username;
         }
 
-        private void btnCreateOrder_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
+            ConfirmationAsk logoutConfirmationObject = new ConfirmationAsk("Are you sure you want Logout?", 12, 309);
 
+            logoutConfirmationObject.ShowDialog();
+
+
+
+            Logoutaction();
+        }
+        void Logoutaction()
+        {
+            if (logoutConfirmation == false)
+            {
+
+
+
+
+
+            }
+            else if (logoutConfirmation == true)
+            {
+                new LoginForm().Show();
+                this.Close();
+
+
+                logoutConfirmation = false;
+
+
+
+            }
         }
     }
 }
+

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLoginGuna = new Guna.UI.WinForms.GunaButton();
             this.btnVisible = new System.Windows.Forms.Button();
             this.btnInvisible = new System.Windows.Forms.Button();
             this.iconPassword = new System.Windows.Forms.PictureBox();
@@ -40,15 +39,21 @@
             this.lblInvalidLogin = new System.Windows.Forms.Label();
             this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.pnlTitleBar = new Guna.UI.WinForms.GunaPanel();
+            this.btnClose = new Guna.UI.WinForms.GunaGradientCircleButton();
+            this.btnLoginBlack = new Guna.UI.WinForms.GunaButton();
+            this.btnMinimize = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconUser)).BeginInit();
+            this.pnlTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.pnlTitleBar);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -62,7 +67,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnLoginGuna);
+            this.panel2.Controls.Add(this.btnLoginBlack);
             this.panel2.Controls.Add(this.btnVisible);
             this.panel2.Controls.Add(this.btnInvisible);
             this.panel2.Controls.Add(this.iconPassword);
@@ -74,32 +79,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(434, 312);
             this.panel2.TabIndex = 0;
-            // 
-            // btnLoginGuna
-            // 
-            this.btnLoginGuna.AnimationHoverSpeed = 0.07F;
-            this.btnLoginGuna.AnimationSpeed = 0.03F;
-            this.btnLoginGuna.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnLoginGuna.BorderColor = System.Drawing.Color.Black;
-            this.btnLoginGuna.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLoginGuna.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLoginGuna.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginGuna.ForeColor = System.Drawing.Color.White;
-            this.btnLoginGuna.Image = ((System.Drawing.Image)(resources.GetObject("btnLoginGuna.Image")));
-            this.btnLoginGuna.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLoginGuna.Location = new System.Drawing.Point(133, 219);
-            this.btnLoginGuna.Name = "btnLoginGuna";
-            this.btnLoginGuna.OnHoverBaseColor = System.Drawing.Color.SteelBlue;
-            this.btnLoginGuna.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLoginGuna.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLoginGuna.OnHoverImage = null;
-            this.btnLoginGuna.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLoginGuna.Size = new System.Drawing.Size(160, 42);
-            this.btnLoginGuna.TabIndex = 9;
-            this.btnLoginGuna.Text = "Login";
-            this.btnLoginGuna.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnLoginGuna.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
-            this.btnLoginGuna.Click += new System.EventHandler(this.btnLoginGuna_Click);
             // 
             // btnVisible
             // 
@@ -213,6 +192,107 @@
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
             this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave_1);
             // 
+            // pnlTitleBar
+            // 
+            this.pnlTitleBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
+            this.pnlTitleBar.Controls.Add(this.btnClose);
+            this.pnlTitleBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitleBar.Name = "pnlTitleBar";
+            this.pnlTitleBar.Size = new System.Drawing.Size(930, 40);
+            this.pnlTitleBar.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.AnimationHoverSpeed = 0.07F;
+            this.btnClose.AnimationSpeed = 0.03F;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClose.BaseColor2 = System.Drawing.Color.White;
+            this.btnClose.BorderColor = System.Drawing.Color.Black;
+            this.btnClose.BorderSize = 2;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClose.FocusedColor = System.Drawing.Color.Empty;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Image = null;
+            this.btnClose.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnClose.Location = new System.Drawing.Point(889, 8);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverBaseColor1 = System.Drawing.Color.Gray;
+            this.btnClose.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClose.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnClose.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnClose.OnHoverImage = null;
+            this.btnClose.OnPressedColor = System.Drawing.Color.IndianRed;
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "X";
+            this.btnClose.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnClose.Click += new System.EventHandler(this.gunaGradientCircleButton1_Click);
+            // 
+            // btnLoginBlack
+            // 
+            this.btnLoginBlack.AnimationHoverSpeed = 0.07F;
+            this.btnLoginBlack.AnimationSpeed = 0.03F;
+            this.btnLoginBlack.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoginBlack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLoginBlack.BaseColor = System.Drawing.Color.Black;
+            this.btnLoginBlack.BorderColor = System.Drawing.Color.White;
+            this.btnLoginBlack.BorderSize = 1;
+            this.btnLoginBlack.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLoginBlack.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLoginBlack.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginBlack.ForeColor = System.Drawing.Color.White;
+            this.btnLoginBlack.Image = null;
+            this.btnLoginBlack.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLoginBlack.Location = new System.Drawing.Point(152, 217);
+            this.btnLoginBlack.Name = "btnLoginBlack";
+            this.btnLoginBlack.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
+            this.btnLoginBlack.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLoginBlack.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnLoginBlack.OnHoverImage = null;
+            this.btnLoginBlack.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLoginBlack.OnPressedDepth = 20;
+            this.btnLoginBlack.Radius = 22;
+            this.btnLoginBlack.Size = new System.Drawing.Size(125, 47);
+            this.btnLoginBlack.TabIndex = 15;
+            this.btnLoginBlack.Text = "Login";
+            this.btnLoginBlack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLoginBlack.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnLoginBlack.UseTransfarantBackground = true;
+            this.btnLoginBlack.Click += new System.EventHandler(this.btnLoginBlack_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.AnimationHoverSpeed = 0.07F;
+            this.btnMinimize.AnimationSpeed = 0.03F;
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMinimize.BaseColor2 = System.Drawing.Color.White;
+            this.btnMinimize.BorderColor = System.Drawing.Color.Black;
+            this.btnMinimize.BorderSize = 2;
+            this.btnMinimize.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnMinimize.FocusedColor = System.Drawing.Color.Empty;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.Black;
+            this.btnMinimize.Image = null;
+            this.btnMinimize.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnMinimize.Location = new System.Drawing.Point(850, 8);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.OnHoverBaseColor1 = System.Drawing.Color.Gray;
+            this.btnMinimize.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMinimize.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnMinimize.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnMinimize.OnHoverImage = null;
+            this.btnMinimize.OnPressedColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimize.TabIndex = 1;
+            this.btnMinimize.Text = "-";
+            this.btnMinimize.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnMinimize.Click += new System.EventHandler(this.gunaGradientCircleButton2_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -228,6 +308,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconUser)).EndInit();
+            this.pnlTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -243,7 +324,10 @@
         private System.Windows.Forms.PictureBox iconPassword;
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button btnInvisible;
-        private Guna.UI.WinForms.GunaButton btnLoginGuna;
+        private Guna.UI.WinForms.GunaPanel pnlTitleBar;
+        private Guna.UI.WinForms.GunaGradientCircleButton btnClose;
+        private Guna.UI.WinForms.GunaButton btnLoginBlack;
+        private Guna.UI.WinForms.GunaGradientCircleButton btnMinimize;
     }
 }
 

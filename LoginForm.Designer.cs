@@ -40,8 +40,9 @@
             this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pnlTitleBar = new Guna.UI.WinForms.GunaPanel();
-            this.gunaGradientCircleButton1 = new Guna.UI.WinForms.GunaGradientCircleButton();
+            this.btnClose = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.btnLoginBlack = new Guna.UI.WinForms.GunaButton();
+            this.btnMinimize = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPassword)).BeginInit();
@@ -194,41 +195,42 @@
             // pnlTitleBar
             // 
             this.pnlTitleBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnlTitleBar.Controls.Add(this.gunaGradientCircleButton1);
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
+            this.pnlTitleBar.Controls.Add(this.btnClose);
             this.pnlTitleBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
             this.pnlTitleBar.Size = new System.Drawing.Size(930, 40);
             this.pnlTitleBar.TabIndex = 1;
             // 
-            // gunaGradientCircleButton1
+            // btnClose
             // 
-            this.gunaGradientCircleButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientCircleButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientCircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientCircleButton1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaGradientCircleButton1.BaseColor2 = System.Drawing.Color.White;
-            this.gunaGradientCircleButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientCircleButton1.BorderSize = 2;
-            this.gunaGradientCircleButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientCircleButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientCircleButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientCircleButton1.Image = null;
-            this.gunaGradientCircleButton1.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaGradientCircleButton1.Location = new System.Drawing.Point(889, 8);
-            this.gunaGradientCircleButton1.Name = "gunaGradientCircleButton1";
-            this.gunaGradientCircleButton1.OnHoverBaseColor1 = System.Drawing.Color.Gray;
-            this.gunaGradientCircleButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaGradientCircleButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientCircleButton1.OnHoverImage = null;
-            this.gunaGradientCircleButton1.OnPressedColor = System.Drawing.Color.IndianRed;
-            this.gunaGradientCircleButton1.Size = new System.Drawing.Size(30, 30);
-            this.gunaGradientCircleButton1.TabIndex = 0;
-            this.gunaGradientCircleButton1.Text = "X";
-            this.gunaGradientCircleButton1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
-            this.gunaGradientCircleButton1.Click += new System.EventHandler(this.gunaGradientCircleButton1_Click);
+            this.btnClose.AnimationHoverSpeed = 0.07F;
+            this.btnClose.AnimationSpeed = 0.03F;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClose.BaseColor2 = System.Drawing.Color.White;
+            this.btnClose.BorderColor = System.Drawing.Color.Black;
+            this.btnClose.BorderSize = 2;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClose.FocusedColor = System.Drawing.Color.Empty;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Image = null;
+            this.btnClose.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnClose.Location = new System.Drawing.Point(889, 8);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverBaseColor1 = System.Drawing.Color.Gray;
+            this.btnClose.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClose.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnClose.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnClose.OnHoverImage = null;
+            this.btnClose.OnPressedColor = System.Drawing.Color.IndianRed;
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "X";
+            this.btnClose.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnClose.Click += new System.EventHandler(this.gunaGradientCircleButton1_Click);
             // 
             // btnLoginBlack
             // 
@@ -262,6 +264,35 @@
             this.btnLoginBlack.UseTransfarantBackground = true;
             this.btnLoginBlack.Click += new System.EventHandler(this.btnLoginBlack_Click);
             // 
+            // btnMinimize
+            // 
+            this.btnMinimize.AnimationHoverSpeed = 0.07F;
+            this.btnMinimize.AnimationSpeed = 0.03F;
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMinimize.BaseColor2 = System.Drawing.Color.White;
+            this.btnMinimize.BorderColor = System.Drawing.Color.Black;
+            this.btnMinimize.BorderSize = 2;
+            this.btnMinimize.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnMinimize.FocusedColor = System.Drawing.Color.Empty;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.Black;
+            this.btnMinimize.Image = null;
+            this.btnMinimize.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnMinimize.Location = new System.Drawing.Point(850, 8);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.OnHoverBaseColor1 = System.Drawing.Color.Gray;
+            this.btnMinimize.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMinimize.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnMinimize.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnMinimize.OnHoverImage = null;
+            this.btnMinimize.OnPressedColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimize.TabIndex = 1;
+            this.btnMinimize.Text = "-";
+            this.btnMinimize.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.btnMinimize.Click += new System.EventHandler(this.gunaGradientCircleButton2_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -294,8 +325,9 @@
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button btnInvisible;
         private Guna.UI.WinForms.GunaPanel pnlTitleBar;
-        private Guna.UI.WinForms.GunaGradientCircleButton gunaGradientCircleButton1;
+        private Guna.UI.WinForms.GunaGradientCircleButton btnClose;
         private Guna.UI.WinForms.GunaButton btnLoginBlack;
+        private Guna.UI.WinForms.GunaGradientCircleButton btnMinimize;
     }
 }
 

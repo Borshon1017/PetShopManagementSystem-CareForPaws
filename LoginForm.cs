@@ -182,5 +182,11 @@ namespace CareForPaws
             }
 
         }
+
+        private void gunaGradientCircleButton2_Click(object sender, EventArgs e)
+        {
+           
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -238,7 +238,6 @@
             this.btnLoginBlack.BorderColor = System.Drawing.Color.White;
             this.btnLoginBlack.BorderSize = 1;
             this.btnLoginBlack.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLoginBlack.Enabled = false;
             this.btnLoginBlack.FocusedColor = System.Drawing.Color.Empty;
             this.btnLoginBlack.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginBlack.ForeColor = System.Drawing.Color.White;

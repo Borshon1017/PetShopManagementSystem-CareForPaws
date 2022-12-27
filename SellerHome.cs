@@ -122,6 +122,12 @@ namespace CareForPaws
             SellerTransactionHistory sellerTransactionHistory = new SellerTransactionHistory(username, password);
             this.AddUserControl(sellerTransactionHistory);
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            SellerSettings sellerSettings = new SellerSettings(username, password);
+            sellerSettings.Show();
+        }
     }
 }
 

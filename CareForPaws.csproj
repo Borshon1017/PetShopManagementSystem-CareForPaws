@@ -131,11 +131,11 @@
     <Compile Include="ConfirmationAsk.Designer.cs">
       <DependentUpon>ConfirmationAsk.cs</DependentUpon>
     </Compile>
-    <Compile Include="SellerSetting.cs">
+    <Compile Include="SellerSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SellerSetting.Designer.cs">
-      <DependentUpon>SellerSetting.cs</DependentUpon>
+    <Compile Include="SellerSettings.Designer.cs">
+      <DependentUpon>SellerSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -229,8 +229,8 @@
     <EmbeddedResource Include="DeleteSellerUC.resx">
       <DependentUpon>DeleteSellerUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SellerSetting.resx">
-      <DependentUpon>SellerSetting.cs</DependentUpon>
+    <EmbeddedResource Include="SellerSettings.resx">
+      <DependentUpon>SellerSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

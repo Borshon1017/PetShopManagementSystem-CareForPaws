@@ -163,6 +163,14 @@ namespace CareForPaws
             {
                 lblQuantityEmpty.Visible = false;
             }
+            if (txtPrice.Text == "Price" || string.IsNullOrEmpty(txtPrice.Text) == true)
+            {
+                lblPriceEmpty.Visible = true;
+            }
+            else
+            {
+                lblPriceEmpty.Visible = false;
+            }
             if (cmbCategory.SelectedIndex == -1)
             {
                 lblCategoryEmpty.Visible = true;
@@ -171,10 +179,23 @@ namespace CareForPaws
             {
                 lblCategoryEmpty.Visible = false;
             }
+            try
+            {
+                if (string.IsNullOrEmpty(txtPrice.Text) == true || txtPrice.Text == "Price" || Double.Parse(txtPrice.Text) <= 0)
+                {
+                    lblPriceEmpty.Visible = true;
+                    new ConfirmationError("Price can not be empty or zero", 20, 23).Show();
+                }
 
-            
+            }
+            catch (Exception a)
+            {
+                new ConfirmationError(a.Message, 20, 23).Show();
+            }
+           
 
-            if (lblBrandEmpty.Visible == true || lblCategoryEmpty.Visible == true || lblQuantityEmpty.Visible == true)
+
+            if (lblPriceEmpty.Visible == true || lblBrandEmpty.Visible == true || lblCategoryEmpty.Visible == true || lblQuantityEmpty.Visible == true)
             {
                 return;
             }
@@ -190,7 +211,8 @@ namespace CareForPaws
                 var sql = @"update ProductInfo
                                 set Brand = '" + this.txtBrand.Text + @"',
                                 C_ID = '" + cID + @"',
-                                Quantity = " + this.txtQuantity.Text + @"
+                                Quantity = " + this.txtQuantity.Text + @",
+                                Price = " + this.txtPrice.Text + @"
                                 where P_ID = '" + this.txtID.Text + "';";
                 int count = this.Da.ExecuteDMLQuery(sql);
 
@@ -253,6 +275,7 @@ namespace CareForPaws
             this.PopulatecmbCategory();
             this.txtBrand.ReadOnly = false;
             this.txtQuantity.ReadOnly = false;
+            this.txtPrice.ReadOnly = false;
             this.txtID.Text = this.dgvProduct.CurrentRow.Cells["P_ID"].Value.ToString();
             this.txtID.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtBrand.Text = this.dgvProduct.CurrentRow.Cells["Brand"].Value.ToString();
@@ -261,6 +284,8 @@ namespace CareForPaws
             this.txtProductName.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtQuantity.Text = this.dgvProduct.CurrentRow.Cells["Quantity"].Value.ToString();
             this.txtQuantity.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtPrice.Text = this.dgvProduct.CurrentRow.Cells["Price"].Value.ToString();
+            this.txtPrice.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
             this.cmbCategory.Text = this.dgvProduct.CurrentRow.Cells["CategoryName"].Value.ToString();
             this.cmbCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
         }
@@ -284,6 +309,33 @@ namespace CareForPaws
         }
 
         private void addSellerUC1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_Enter(object sender, EventArgs e)
+        {
+            if (this.txtQuantity.Text == "Price")
+            {
+
+                this.txtQuantity.Text = "";
+                this.txtQuantity.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+
+            }
+        }
+
+        private void txtPrice_Leave(object sender, EventArgs e)
+        {
+            if (this.txtQuantity.Text == "")
+            {
+
+                this.txtQuantity.Text = "Price";
+                this.txtQuantity.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+
+            }
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
         {
 
         }

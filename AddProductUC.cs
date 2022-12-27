@@ -89,24 +89,33 @@ namespace CareForPaws
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            if (txtProductName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtProductName.Text) == true)
+            if (string.IsNullOrEmpty(txtProductName.Text) == true || txtProductName.Text == "Product Name")
             {
                 lblProductNameEmpty.Visible = true;
             }
             else {
                 lblProductNameEmpty.Visible = false;
             }
-            if (txtBrand.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtBrand.Text) == true) {
+            if (string.IsNullOrEmpty(txtBrand.Text) == true || txtBrand.Text == "Brand") {
                 lblBrandEmpty.Visible = true;
             }
             else {
                 lblBrandEmpty.Visible = false;
             }
-            if (txtQuantity.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtQuantity.Text) == true) {
+            if (string.IsNullOrEmpty(txtQuantity.Text) == true || txtQuantity.Text == "Quantity") {
                 lblQuantityEmpty.Visible = true;
             }
             else {
                 lblQuantityEmpty.Visible = false;
+            }
+            if (string.IsNullOrEmpty(txtPrice.Text) == true || txtPrice.Text == "Price" || Int32.Parse(txtPrice.Text) <= 0 )
+            {
+                    lblPriceEmpty.Visible = true;
+                    new ConfirmationError("Price can not be empty or zero", 20, 23).Show();
+            }
+            else if(Int32.Parse(txtPrice.Text) > 0)
+            {
+                lblPriceEmpty.Visible = false;
             }
             if (cmbCategory.SelectedIndex == -1) {
                 lblCategoryEmpty.Visible = true;
@@ -114,16 +123,20 @@ namespace CareForPaws
             else {
                 lblCategoryEmpty.Visible = false;
             }
+           
 
-            if (lblProductNameEmpty.Visible == true || lblBrandEmpty.Visible == true || lblCategoryEmpty.Visible == true || lblQuantityEmpty.Visible == true)
+            if (lblPriceEmpty.Visible == true || lblProductNameEmpty.Visible == true || lblBrandEmpty.Visible == true || lblCategoryEmpty.Visible == true || lblQuantityEmpty.Visible == true )
             {
                 return;
+               
+                
             }
 
             string PID = "P-" + this.AutoId();
             string productName = txtProductName.Text;
             string brand = this.txtBrand.Text;
             int quantity = Convert.ToInt32(this.txtQuantity.Text);
+            int price = Convert.ToInt32(this.txtPrice.Text);
             string ctg = cmbCategory.Text;
             string[] ctgID = ctg.Split(' ');
             string category = ctgID[0];
@@ -138,7 +151,7 @@ namespace CareForPaws
             }
 
 
-            sql = "insert into ProductInfo values ('" + PID + "', '" + productName + "', '" + brand + "', '" + category + "', " + quantity + ")  ;";
+            sql = "insert into ProductInfo values ('" + PID + "', '" + productName + "', '" + brand + "', '" + category + "', " + quantity + ", " + price + ");";
             ds = this.Da.ExecuteQuery(sql);
 
             new ConfirmationDone("Product Added Sucessfully", 38, 369).Show();
@@ -191,7 +204,7 @@ namespace CareForPaws
 
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -205,6 +218,7 @@ namespace CareForPaws
             this.txtBrand.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
             txtQuantity.Text = "Quantity";
             this.txtQuantity.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            this.cmbCategory.SelectedIndex = -1;
 
         }
 
@@ -226,6 +240,46 @@ namespace CareForPaws
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblCategoryEmpty.Visible = false;
+        }
+
+        private void txtPrice_Enter(object sender, EventArgs e)
+        {
+            if (this.txtPrice.Text == "Price")
+            {
+
+                this.txtPrice.Text = "";
+                this.txtPrice.StateCommon.Content.Color1 = System.Drawing.SystemColors.ActiveCaptionText;
+
+            }
+        }
+
+        private void txtPrice_Leave(object sender, EventArgs e)
+        {
+            if (this.txtPrice.Text == "")
+            {
+
+                this.txtPrice.Text = "Price";
+                this.txtPrice.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+
+            }
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            lblPriceEmpty.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

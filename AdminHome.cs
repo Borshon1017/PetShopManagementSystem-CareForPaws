@@ -27,6 +27,7 @@ namespace CareForPaws
         public static bool logoutConfirmation;
         public static bool recoverAllConfirmation;
         public static bool updateSellerConfirmation;
+        public static bool adminExit;
         private string username;
         public void EnableDoubleBuffering()
         {
@@ -90,29 +91,7 @@ namespace CareForPaws
             this.DoubleBuffered = true;
         }
 
-        private void icoUserProfile_Click(object sender, EventArgs e)
-        {
-            if (pnlUserOptionList.Visible == false)
-            {
-                transUsercontrol.ShowSync(pnlUserOptionList);
-            }
-            else if (pnlUserOptionList.Visible == true)
-            {
-                transUsercontrol.HideSync(pnlUserOptionList);
-            }
-        }
-
-        private void btnUserProfile_Click(object sender, EventArgs e)
-        {
-            if (pnlUserOptionList.Visible == false)
-            {
-                transUsercontrol.ShowSync(pnlUserOptionList);
-            }
-            else if (pnlUserOptionList.Visible == true)
-            {
-                transUsercontrol.HideSync(pnlUserOptionList);
-            }
-        }
+       
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
@@ -187,12 +166,48 @@ namespace CareForPaws
 
         private void btnSalesHistory_Click(object sender, EventArgs e)
         {
-
+            AdminTransactionHistory adminTransactionHistory = new AdminTransactionHistory();
+            this.AddUserControl(adminTransactionHistory);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUserProfile_Click(object sender, EventArgs e)
+        {
+            if (pnlUserOptionlist.Visible == false)
+            {
+                
+                guna2Transition1.ShowSync(pnlUserOptionlist);
+               
+
+            }
+            else
+            {
+               
+                guna2Transition1.HideSync(pnlUserOptionlist);
+            }
+
+        }
+
+        private void pnlUserList_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new ConfirmationAsk("Do you want to close this application?", 12, 309).ShowDialog();
+            if (adminExit == true)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+            else if (adminExit == false)
+            {
+                return;
+            }
         }
     }
 }

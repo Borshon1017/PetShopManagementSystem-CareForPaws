@@ -31,6 +31,7 @@ namespace CareForPaws
         private void btnYes_Click(object sender, EventArgs e)
         {
             DeleteSellerUC.askStatic = true;
+            DeleteSellerUC.askStaticSingle = true;
             AdminHome.logoutConfirmation = true;
             AdminHome.recoverAllConfirmation= true;
             AdminHome.updateSellerConfirmation= true;
@@ -39,10 +40,15 @@ namespace CareForPaws
             UpdateProductUC.updateProductConfirmation = true;
             UpdateCategoryUC.updateCategoryConfirmation=true;
             UpdateCategoryUC.deleteCategoryConfirmation = true;
+            RecoverSellerUC.recover = true;
+            RecoverSellerUC.recoverSingle = true;
+            AdminHome.adminExit=true;
+            SellerHome.sellerExit = true;
+            
 
 
 
-                this.Close();
+            this.Close();
             
             }
 
@@ -50,13 +56,19 @@ namespace CareForPaws
         {
             AdminHome.logoutConfirmation = false;
             DeleteSellerUC.askStatic = false;
+            DeleteSellerUC.askStaticSingle = false;
             AdminHome.recoverAllConfirmation = false;
             AdminHome.updateSellerConfirmation = false;
             SellerHome.logoutConfirmation = false;
             AddCategoryUC.categoryAddConfirmation = false;
             UpdateProductUC.updateProductConfirmation = false ;
             UpdateCategoryUC.updateCategoryConfirmation = false;
-            UpdateCategoryUC.deleteCategoryConfirmation = false; ;
+            UpdateCategoryUC.deleteCategoryConfirmation = false;
+            RecoverSellerUC.recover = false;
+            RecoverSellerUC.recoverSingle = false;
+            AdminHome.adminExit = false;
+            SellerHome.sellerExit = false;
+
             this.Close();
         }
 

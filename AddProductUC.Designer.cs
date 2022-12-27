@@ -41,6 +41,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbCategory = new Guna.UI.WinForms.GunaComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
+            this.txtPrice = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblPriceEmpty = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             this.lblQuantityEmpty.AutoSize = true;
             this.lblQuantityEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantityEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblQuantityEmpty.Location = new System.Drawing.Point(166, 384);
+            this.lblQuantityEmpty.Location = new System.Drawing.Point(166, 359);
             this.lblQuantityEmpty.Name = "lblQuantityEmpty";
             this.lblQuantityEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblQuantityEmpty.TabIndex = 60;
@@ -61,7 +63,7 @@
             this.lblBrandEmpty.AutoSize = true;
             this.lblBrandEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrandEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblBrandEmpty.Location = new System.Drawing.Point(166, 342);
+            this.lblBrandEmpty.Location = new System.Drawing.Point(166, 320);
             this.lblBrandEmpty.Name = "lblBrandEmpty";
             this.lblBrandEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblBrandEmpty.TabIndex = 59;
@@ -73,7 +75,7 @@
             this.lblCategoryEmpty.AutoSize = true;
             this.lblCategoryEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoryEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblCategoryEmpty.Location = new System.Drawing.Point(166, 448);
+            this.lblCategoryEmpty.Location = new System.Drawing.Point(166, 461);
             this.lblCategoryEmpty.Name = "lblCategoryEmpty";
             this.lblCategoryEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblCategoryEmpty.TabIndex = 58;
@@ -85,7 +87,7 @@
             this.lblProductNameEmpty.AutoSize = true;
             this.lblProductNameEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductNameEmpty.ForeColor = System.Drawing.Color.Red;
-            this.lblProductNameEmpty.Location = new System.Drawing.Point(166, 297);
+            this.lblProductNameEmpty.Location = new System.Drawing.Point(166, 278);
             this.lblProductNameEmpty.Name = "lblProductNameEmpty";
             this.lblProductNameEmpty.Size = new System.Drawing.Size(21, 25);
             this.lblProductNameEmpty.TabIndex = 57;
@@ -107,7 +109,7 @@
             this.btnClearAll.ForeColor = System.Drawing.Color.White;
             this.btnClearAll.Image = null;
             this.btnClearAll.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnClearAll.Location = new System.Drawing.Point(194, 494);
+            this.btnClearAll.Location = new System.Drawing.Point(194, 505);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnClearAll.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -126,7 +128,7 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(194, 377);
+            this.txtQuantity.Location = new System.Drawing.Point(194, 352);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(264, 34);
             this.txtQuantity.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -149,7 +151,7 @@
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(194, 334);
+            this.txtBrand.Location = new System.Drawing.Point(194, 312);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(264, 34);
             this.txtBrand.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -171,7 +173,7 @@
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(194, 291);
+            this.txtProductName.Location = new System.Drawing.Point(194, 272);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(264, 34);
             this.txtProductName.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -206,7 +208,7 @@
             this.btnAddProduct.ForeColor = System.Drawing.Color.White;
             this.btnAddProduct.Image = null;
             this.btnAddProduct.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddProduct.Location = new System.Drawing.Point(333, 494);
+            this.btnAddProduct.Location = new System.Drawing.Point(333, 505);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnAddProduct.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -226,12 +228,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(222, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(222, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(208, 239);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cmbCategory
             // 
@@ -245,7 +248,7 @@
             this.cmbCategory.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategory.ForeColor = System.Drawing.Color.Black;
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(194, 443);
+            this.cmbCategory.Location = new System.Drawing.Point(194, 456);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.OnHoverItemBaseColor = System.Drawing.Color.Gainsboro;
             this.cmbCategory.OnHoverItemForeColor = System.Drawing.Color.Black;
@@ -258,17 +261,54 @@
             // 
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(196, 418);
+            this.lblCategory.Location = new System.Drawing.Point(196, 431);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(72, 20);
             this.lblCategory.TabIndex = 62;
             this.lblCategory.Text = "Category:";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(194, 392);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(264, 34);
+            this.txtPrice.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.txtPrice.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.txtPrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPrice.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPrice.StateCommon.Border.Rounding = 20;
+            this.txtPrice.StateCommon.Border.Width = 1;
+            this.txtPrice.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtPrice.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtPrice.TabIndex = 63;
+            this.txtPrice.Text = "Price";
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
+            this.txtPrice.Enter += new System.EventHandler(this.txtPrice_Enter);
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
+            // 
+            // lblPriceEmpty
+            // 
+            this.lblPriceEmpty.AutoSize = true;
+            this.lblPriceEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblPriceEmpty.Location = new System.Drawing.Point(166, 399);
+            this.lblPriceEmpty.Name = "lblPriceEmpty";
+            this.lblPriceEmpty.Size = new System.Drawing.Size(21, 25);
+            this.lblPriceEmpty.TabIndex = 64;
+            this.lblPriceEmpty.Text = "*";
+            this.lblPriceEmpty.Visible = false;
             // 
             // AddProductUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lblPriceEmpty);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.lblQuantityEmpty);
@@ -302,5 +342,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaComboBox cmbCategory;
         private System.Windows.Forms.Label lblCategory;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPrice;
+        private System.Windows.Forms.Label lblPriceEmpty;
     }
 }

@@ -66,7 +66,7 @@ namespace CareForPaws
             string password = txtPassword.Text;
             string reenterpassword = txtConfirmPassword.Text;
             string gender = "null";
-            string role = "seller";
+            string role = "Seller";
             string salary = txtSalary.Text;
 
             if (rdbFemale.Checked == true)
@@ -446,7 +446,7 @@ namespace CareForPaws
 
         private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
             {
                 e.Handled = true;
             }
@@ -454,7 +454,7 @@ namespace CareForPaws
 
         private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
             {
                 e.Handled = true;
             }

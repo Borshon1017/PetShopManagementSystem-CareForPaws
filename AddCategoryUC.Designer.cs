@@ -78,7 +78,6 @@
             this.btnAddCategory.BorderColor = System.Drawing.Color.White;
             this.btnAddCategory.BorderSize = 1;
             this.btnAddCategory.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAddCategory.Enabled = false;
             this.btnAddCategory.FocusedColor = System.Drawing.Color.Empty;
             this.btnAddCategory.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCategory.ForeColor = System.Drawing.Color.White;

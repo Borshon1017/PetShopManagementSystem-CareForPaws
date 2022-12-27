@@ -31,18 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditInfoUC));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditInfoUC));
             this.txtSearchByID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSearchByUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSeachByName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.careForPawsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.careForPawsDataSet = new CareForPaws.CareForPawsDataSet();
             this.dgvSeller = new System.Windows.Forms.DataGridView();
             this.U_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,7 +69,6 @@
             this.btnSave = new Guna.UI.WinForms.GunaButton();
             this.lblMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeller)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
@@ -92,7 +85,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSearchByID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSearchByID.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSearchByID.StateCommon.Border.Rounding = 20;
             this.txtSearchByID.StateCommon.Border.Width = 1;
             this.txtSearchByID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -115,7 +107,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSearchByUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSearchByUserName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSearchByUserName.StateCommon.Border.Rounding = 20;
             this.txtSearchByUserName.StateCommon.Border.Width = 1;
             this.txtSearchByUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -138,7 +129,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSeachByName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSeachByName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSeachByName.StateCommon.Border.Rounding = 20;
             this.txtSeachByName.StateCommon.Border.Width = 1;
             this.txtSeachByName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -152,13 +142,10 @@
             // 
             // careForPawsDataSetBindingSource
             // 
-            this.careForPawsDataSetBindingSource.DataSource = this.careForPawsDataSet;
             this.careForPawsDataSetBindingSource.Position = 0;
             // 
             // careForPawsDataSet
             // 
-            this.careForPawsDataSet.DataSetName = "CareForPawsDataSet";
-            this.careForPawsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgvSeller
             // 
@@ -166,11 +153,9 @@
             this.dgvSeller.AllowUserToDeleteRows = false;
             this.dgvSeller.AllowUserToResizeColumns = false;
             this.dgvSeller.AllowUserToResizeRows = false;
-
             this.dgvSeller.BackgroundColor = System.Drawing.Color.White;
             this.dgvSeller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSeller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-
             this.dgvSeller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSeller.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.U_ID,
@@ -182,17 +167,14 @@
             this.Gender,
             this.Salary,
             this.JoiningDate});
-            
             this.dgvSeller.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvSeller.Location = new System.Drawing.Point(20, 209);
             this.dgvSeller.Name = "dgvSeller";
             this.dgvSeller.ReadOnly = true;
             this.dgvSeller.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-           
             this.dgvSeller.RowHeadersVisible = false;
             this.dgvSeller.RowHeadersWidth = 15;
             this.dgvSeller.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            
             this.dgvSeller.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
             this.dgvSeller.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvSeller.RowTemplate.Height = 40;
@@ -202,6 +184,98 @@
             this.dgvSeller.TabIndex = 21;
             this.dgvSeller.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSeller_CellContentClick);
             this.dgvSeller.DoubleClick += new System.EventHandler(this.dgvSeller_DoubleClick);
+            // 
+            // U_ID
+            // 
+            this.U_ID.DataPropertyName = "U_ID";
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.U_ID.DefaultCellStyle = dataGridViewCellStyle1;
+            this.U_ID.HeaderText = "ID";
+            this.U_ID.Name = "U_ID";
+            this.U_ID.ReadOnly = true;
+            this.U_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.U_ID.Width = 80;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Visible = false;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.Username.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            this.Username.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Username.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Username.Width = 120;
+            // 
+            // FullName
+            // 
+            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullName.DataPropertyName = "FullName";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FullName.HeaderText = "FullName";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FullName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DOB
+            // 
+            this.DOB.DataPropertyName = "DOB";
+            this.DOB.HeaderText = "DOB";
+            this.DOB.Name = "DOB";
+            this.DOB.ReadOnly = true;
+            this.DOB.Visible = false;
+            // 
+            // Phone
+            // 
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            this.Phone.Visible = false;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            this.Gender.Visible = false;
+            // 
+            // Salary
+            // 
+            this.Salary.DataPropertyName = "Salary";
+            this.Salary.HeaderText = "Salary";
+            this.Salary.Name = "Salary";
+            this.Salary.ReadOnly = true;
+            this.Salary.Visible = false;
+            // 
+            // JoiningDate
+            // 
+            this.JoiningDate.DataPropertyName = "JoiningDate";
+            this.JoiningDate.HeaderText = "JoiningDate";
+            this.JoiningDate.Name = "JoiningDate";
+            this.JoiningDate.ReadOnly = true;
+            this.JoiningDate.Visible = false;
             // 
             // panel2
             // 
@@ -403,7 +477,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtPassword.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPassword.StateCommon.Border.Rounding = 20;
             this.txtPassword.StateCommon.Border.Width = 1;
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -439,7 +512,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPhoneNumber.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtPhoneNumber.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtPhoneNumber.StateCommon.Border.Rounding = 20;
             this.txtPhoneNumber.StateCommon.Border.Width = 1;
             this.txtPhoneNumber.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -448,6 +520,7 @@
             this.txtPhoneNumber.TabIndex = 29;
             this.txtPhoneNumber.Text = "Phone Number";
             this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // txtSalary
             // 
@@ -461,7 +534,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSalary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSalary.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSalary.StateCommon.Border.Rounding = 20;
             this.txtSalary.StateCommon.Border.Width = 1;
             this.txtSalary.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -482,7 +554,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtFullName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtFullName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtFullName.StateCommon.Border.Rounding = 20;
             this.txtFullName.StateCommon.Border.Width = 1;
             this.txtFullName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -504,7 +575,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUserName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtUserName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtUserName.StateCommon.Border.Rounding = 20;
             this.txtUserName.StateCommon.Border.Width = 1;
             this.txtUserName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -526,7 +596,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtID.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtID.StateCommon.Border.Rounding = 20;
             this.txtID.StateCommon.Border.Width = 1;
             this.txtID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -603,11 +672,11 @@
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblMessage.Location = new System.Drawing.Point(15, 178);
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblMessage.Location = new System.Drawing.Point(37, 180);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(343, 16);
+            this.lblMessage.Size = new System.Drawing.Size(328, 15);
             this.lblMessage.TabIndex = 27;
             this.lblMessage.Text = "[ Double Click On The Desired Row To Load Up Information ]";
             this.lblMessage.Click += new System.EventHandler(this.lblInvalidLogin_Click);
@@ -629,7 +698,6 @@
             this.Size = new System.Drawing.Size(652, 570);
             this.Load += new System.EventHandler(this.SearchSellerUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.careForPawsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeller)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -645,7 +713,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearchByUserName;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSeachByName;
         private System.Windows.Forms.BindingSource careForPawsDataSetBindingSource;
-        private CareForPawsDataSet careForPawsDataSet;
         private System.Windows.Forms.DataGridView dgvSeller;
         private System.Windows.Forms.Panel panel2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPhoneNumber;

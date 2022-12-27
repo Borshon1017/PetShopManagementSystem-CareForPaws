@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHome));
-            Guna.UI.Animation.Animation animation2 = new Guna.UI.Animation.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlUserOptionList = new System.Windows.Forms.Panel();
+            this.pnlUserOptionlist = new System.Windows.Forms.Panel();
             this.btnLogout = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnSettings = new Guna.UI.WinForms.GunaAdvenceButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnUserProfile = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lblUsername = new Guna.UI.WinForms.GunaLabel();
             this.btnSalesHistory = new Guna.UI.WinForms.GunaButton();
             this.btnManageProduct = new Guna.UI.WinForms.GunaButton();
             this.btnManageSeller = new Guna.UI.WinForms.GunaButton();
-            this.transUsercontrol = new Guna.UI.WinForms.GunaTransition(this.components);
+            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.pnlUserOptionList.SuspendLayout();
+            this.pnlUserOptionlist.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,7 +57,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.transUsercontrol.SetDecoration(this.panel1, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -69,7 +69,7 @@
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.transUsercontrol.SetDecoration(this.panel3, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.panel3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel3.Location = new System.Drawing.Point(277, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(652, 625);
@@ -78,30 +78,30 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pnlUserOptionList);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pnlUserOptionlist);
             this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
             this.panel2.Controls.Add(this.btnSalesHistory);
             this.panel2.Controls.Add(this.btnManageProduct);
             this.panel2.Controls.Add(this.btnManageSeller);
-            this.transUsercontrol.SetDecoration(this.panel2, Guna.UI.Animation.DecorationType.None);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Transition1.SetDecoration(this.panel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(278, 624);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // pnlUserOptionList
+            // pnlUserOptionlist
             // 
-            this.pnlUserOptionList.BackColor = System.Drawing.Color.Transparent;
-            this.pnlUserOptionList.Controls.Add(this.btnLogout);
-            this.pnlUserOptionList.Controls.Add(this.btnSettings);
-            this.transUsercontrol.SetDecoration(this.pnlUserOptionList, Guna.UI.Animation.DecorationType.None);
-            this.pnlUserOptionList.Location = new System.Drawing.Point(0, 47);
-            this.pnlUserOptionList.Name = "pnlUserOptionList";
-            this.pnlUserOptionList.Size = new System.Drawing.Size(278, 110);
-            this.pnlUserOptionList.TabIndex = 18;
-            this.pnlUserOptionList.Visible = false;
-            this.pnlUserOptionList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlUserOptionList_Paint);
+            this.pnlUserOptionlist.BackColor = System.Drawing.Color.Transparent;
+            this.pnlUserOptionlist.Controls.Add(this.btnLogout);
+            this.guna2Transition1.SetDecoration(this.pnlUserOptionlist, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pnlUserOptionlist.Location = new System.Drawing.Point(0, 82);
+            this.pnlUserOptionlist.Name = "pnlUserOptionlist";
+            this.pnlUserOptionlist.Size = new System.Drawing.Size(278, 55);
+            this.pnlUserOptionlist.TabIndex = 18;
+            this.pnlUserOptionlist.Visible = false;
+            this.pnlUserOptionlist.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlUserOptionList_Paint);
             // 
             // btnLogout
             // 
@@ -116,7 +116,7 @@
             this.btnLogout.CheckedForeColor = System.Drawing.Color.White;
             this.btnLogout.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.CheckedImage")));
             this.btnLogout.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.transUsercontrol.SetDecoration(this.btnLogout, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.btnLogout, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnLogout.FocusedColor = System.Drawing.Color.Empty;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,13 +124,13 @@
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageSize = new System.Drawing.Size(20, 20);
             this.btnLogout.LineColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(-1, 55);
+            this.btnLogout.Location = new System.Drawing.Point(-1, 0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
             this.btnLogout.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnLogout.OnHoverForeColor = System.Drawing.Color.Black;
             this.btnLogout.OnHoverImage = null;
-            this.btnLogout.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnLogout.OnHoverLineColor = System.Drawing.Color.Gainsboro;
             this.btnLogout.OnPressedColor = System.Drawing.Color.Black;
             this.btnLogout.Size = new System.Drawing.Size(279, 55);
             this.btnLogout.TabIndex = 1;
@@ -138,46 +138,11 @@
             this.btnLogout.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnSettings
-            // 
-            this.btnSettings.AnimationHoverSpeed = 0.07F;
-            this.btnSettings.AnimationSpeed = 0.03F;
-            this.btnSettings.BackColor = System.Drawing.Color.White;
-            this.btnSettings.BaseColor = System.Drawing.Color.Transparent;
-            this.btnSettings.BorderColor = System.Drawing.Color.Black;
-            this.btnSettings.BorderSize = 1;
-            this.btnSettings.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnSettings.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnSettings.CheckedForeColor = System.Drawing.Color.White;
-            this.btnSettings.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.CheckedImage")));
-            this.btnSettings.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.transUsercontrol.SetDecoration(this.btnSettings, Guna.UI.Animation.DecorationType.None);
-            this.btnSettings.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSettings.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSettings.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.Black;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSettings.LineColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(-1, 1);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
-            this.btnSettings.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSettings.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnSettings.OnHoverImage = null;
-            this.btnSettings.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSettings.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSettings.Size = new System.Drawing.Size(279, 55);
-            this.btnSettings.TabIndex = 0;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.btnUserProfile);
             this.guna2CustomGradientPanel1.Controls.Add(this.lblUsername);
-            this.transUsercontrol.SetDecoration(this.guna2CustomGradientPanel1, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Transparent;
@@ -185,7 +150,7 @@
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(-1, 1);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(279, 47);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(279, 82);
             this.guna2CustomGradientPanel1.TabIndex = 17;
             this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
@@ -195,26 +160,26 @@
             this.btnUserProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnUserProfile.CheckedState.Parent = this.btnUserProfile;
             this.btnUserProfile.CustomImages.Parent = this.btnUserProfile;
-            this.transUsercontrol.SetDecoration(this.btnUserProfile, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.btnUserProfile, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnUserProfile.FillColor = System.Drawing.Color.Transparent;
             this.btnUserProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUserProfile.ForeColor = System.Drawing.Color.White;
             this.btnUserProfile.HoverState.Parent = this.btnUserProfile;
-            this.btnUserProfile.Location = new System.Drawing.Point(4, -2);
+            this.btnUserProfile.Location = new System.Drawing.Point(9, 8);
             this.btnUserProfile.Name = "btnUserProfile";
             this.btnUserProfile.PressedColor = System.Drawing.Color.Gainsboro;
             this.btnUserProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnUserProfile.ShadowDecoration.Parent = this.btnUserProfile;
-            this.btnUserProfile.Size = new System.Drawing.Size(50, 49);
+            this.btnUserProfile.Size = new System.Drawing.Size(65, 65);
             this.btnUserProfile.TabIndex = 18;
             this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.transUsercontrol.SetDecoration(this.lblUsername, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.lblUsername, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUsername.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(55, 8);
+            this.lblUsername.Location = new System.Drawing.Point(89, 27);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(113, 27);
             this.lblUsername.TabIndex = 17;
@@ -229,7 +194,7 @@
             this.btnSalesHistory.BaseColor = System.Drawing.Color.Black;
             this.btnSalesHistory.BorderColor = System.Drawing.Color.White;
             this.btnSalesHistory.BorderSize = 1;
-            this.transUsercontrol.SetDecoration(this.btnSalesHistory, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.btnSalesHistory, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnSalesHistory.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSalesHistory.FocusedColor = System.Drawing.Color.Empty;
             this.btnSalesHistory.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,7 +212,7 @@
             this.btnSalesHistory.Radius = 22;
             this.btnSalesHistory.Size = new System.Drawing.Size(225, 58);
             this.btnSalesHistory.TabIndex = 15;
-            this.btnSalesHistory.Text = "Sales History";
+            this.btnSalesHistory.Text = "Transaction History";
             this.btnSalesHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSalesHistory.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnSalesHistory.UseTransfarantBackground = true;
@@ -261,7 +226,7 @@
             this.btnManageProduct.BaseColor = System.Drawing.Color.Black;
             this.btnManageProduct.BorderColor = System.Drawing.Color.White;
             this.btnManageProduct.BorderSize = 1;
-            this.transUsercontrol.SetDecoration(this.btnManageProduct, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.btnManageProduct, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnManageProduct.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnManageProduct.FocusedColor = System.Drawing.Color.Empty;
             this.btnManageProduct.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,7 +259,7 @@
             this.btnManageSeller.BaseColor = System.Drawing.Color.Black;
             this.btnManageSeller.BorderColor = System.Drawing.Color.White;
             this.btnManageSeller.BorderSize = 1;
-            this.transUsercontrol.SetDecoration(this.btnManageSeller, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.btnManageSeller, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnManageSeller.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnManageSeller.FocusedColor = System.Drawing.Color.Empty;
             this.btnManageSeller.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,26 +283,40 @@
             this.btnManageSeller.UseTransfarantBackground = true;
             this.btnManageSeller.Click += new System.EventHandler(this.btnManageSeller_Click);
             // 
-            // transUsercontrol
+            // guna2Transition1
             // 
-            this.transUsercontrol.AnimationType = Guna.UI.Animation.AnimationType.HorizSlide;
-            this.transUsercontrol.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.transUsercontrol.DefaultAnimation = animation2;
+            this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
+            this.guna2Transition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.IndianRed;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.guna2Transition1.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 568);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AdminHome
             // 
@@ -345,16 +324,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 625);
             this.Controls.Add(this.panel1);
-            this.transUsercontrol.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminHome";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.pnlUserOptionList.ResumeLayout(false);
+            this.pnlUserOptionlist.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,10 +349,10 @@
         private Guna.UI.WinForms.GunaButton btnManageSeller;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI.WinForms.GunaLabel lblUsername;
-        private Guna.UI.WinForms.GunaTransition transUsercontrol;
-        private System.Windows.Forms.Panel pnlUserOptionList;
+        private System.Windows.Forms.Panel pnlUserOptionlist;
         private Guna.UI2.WinForms.Guna2CircleButton btnUserProfile;
+        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI.WinForms.GunaAdvenceButton btnLogout;
-        private Guna.UI.WinForms.GunaAdvenceButton btnSettings;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

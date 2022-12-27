@@ -40,6 +40,7 @@
             this.txtSearchByProductName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.P_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +51,8 @@
             this.btnClear = new Guna.UI.WinForms.GunaButton();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblPriceEmpty = new System.Windows.Forms.Label();
+            this.txtPrice = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblQuantityEmpty = new System.Windows.Forms.Label();
             this.lblCategoryEmpty = new System.Windows.Forms.Label();
             this.lblBrandEmpty = new System.Windows.Forms.Label();
@@ -60,7 +63,6 @@
             this.txtProductName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.addSellerUC1 = new CareForPaws.AddSellerUC();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,6 +135,7 @@
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.P_ID,
+            this.Price,
             this.ProductName,
             this.Brand,
             this.CategoryName,
@@ -191,6 +194,14 @@
             this.P_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.P_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.P_ID.Width = 60;
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Visible = false;
             // 
             // ProductName
             // 
@@ -332,6 +343,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblPriceEmpty);
+            this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.lblQuantityEmpty);
             this.panel2.Controls.Add(this.lblCategoryEmpty);
             this.panel2.Controls.Add(this.lblBrandEmpty);
@@ -342,10 +355,45 @@
             this.panel2.Controls.Add(this.txtProductName);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtID);
-            this.panel2.Location = new System.Drawing.Point(388, 68);
+            this.panel2.Location = new System.Drawing.Point(388, 30);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 377);
+            this.panel2.Size = new System.Drawing.Size(239, 421);
             this.panel2.TabIndex = 35;
+            // 
+            // lblPriceEmpty
+            // 
+            this.lblPriceEmpty.AutoSize = true;
+            this.lblPriceEmpty.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblPriceEmpty.Location = new System.Drawing.Point(9, 371);
+            this.lblPriceEmpty.Name = "lblPriceEmpty";
+            this.lblPriceEmpty.Size = new System.Drawing.Size(21, 25);
+            this.lblPriceEmpty.TabIndex = 70;
+            this.lblPriceEmpty.Text = "*";
+            this.lblPriceEmpty.Visible = false;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(35, 364);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(168, 34);
+            this.txtPrice.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.txtPrice.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.txtPrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPrice.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPrice.StateCommon.Border.Rounding = 20;
+            this.txtPrice.StateCommon.Border.Width = 1;
+            this.txtPrice.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtPrice.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtPrice.TabIndex = 69;
+            this.txtPrice.Text = "Price";
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
+            this.txtPrice.Enter += new System.EventHandler(this.txtPrice_Enter);
+            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
             // lblQuantityEmpty
             // 
@@ -511,20 +559,11 @@
             this.txtID.TabIndex = 23;
             this.txtID.Text = "ID";
             // 
-            // addSellerUC1
-            // 
-            this.addSellerUC1.BackColor = System.Drawing.Color.Transparent;
-            this.addSellerUC1.Location = new System.Drawing.Point(0, 0);
-            this.addSellerUC1.Name = "addSellerUC1";
-            this.addSellerUC1.Size = new System.Drawing.Size(652, 570);
-            this.addSellerUC1.TabIndex = 38;
-            this.addSellerUC1.Load += new System.EventHandler(this.addSellerUC1_Load);
-            // 
             // UpdateProductUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.addSellerUC1);
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel2);
@@ -563,13 +602,15 @@
         private System.Windows.Forms.Label lblQuantityEmpty;
         private System.Windows.Forms.Label lblCategoryEmpty;
         private System.Windows.Forms.Label lblBrandEmpty;
+        private System.Windows.Forms.Label lblPriceEmpty;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn P_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Brand;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewImageColumn DeleteButton;
-        private AddSellerUC addSellerUC1;
     }
 }

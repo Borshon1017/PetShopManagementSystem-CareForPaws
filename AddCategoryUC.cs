@@ -82,6 +82,8 @@ namespace CareForPaws
             ds = this.Da.ExecuteQuery(sql);
 
             new ConfirmationDone("Category Added Sucessfully", 38, 369).Show();
+            this.txtCategoryName.Text = "Category Name";
+            this.txtCategoryName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
         }
 
         private string AutoId()

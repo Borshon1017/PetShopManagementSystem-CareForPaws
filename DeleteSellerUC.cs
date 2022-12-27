@@ -13,6 +13,7 @@ namespace CareForPaws
     public partial class DeleteSellerUC : UserControl
     {
         public static bool askStatic = false;
+        public static bool askStaticSingle;
         private DataAccess Da { get; set; }
         public DeleteSellerUC()
         {
@@ -136,6 +137,16 @@ namespace CareForPaws
         {
             if (dgvSeller.Columns[e.ColumnIndex].Name.Equals("DeleteButton"))
             {
+                new ConfirmationAsk("Are you sure you want to delete?", 12, 309).ShowDialog();
+                if (askStaticSingle==true)
+                {
+                    askStaticSingle = false;
+                }
+                else if (askStaticSingle == false)
+                {
+                    return;
+                }
+
                 var sql = "update UserInfo set Status = 'Inactive' where U_ID  = '" + this.dgvSeller.CurrentRow.Cells["U_ID"].Value.ToString() + "' and Role = 'Seller';";
                 this.Da.ExecuteDMLQuery(sql);
                 this.PopulateGridView();

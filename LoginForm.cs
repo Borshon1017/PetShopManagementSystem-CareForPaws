@@ -12,7 +12,7 @@ namespace CareForPaws
 {
     public partial class LoginForm : Form
     {
-
+        
         protected override CreateParams CreateParams
         {
             get
@@ -171,7 +171,7 @@ namespace CareForPaws
                 else if (ds.Tables[0].Rows[0][7].ToString() == "Seller" && ds.Tables[0].Rows[0][10].ToString() == "Active")
                 {
 
-                    new SellerHome(this.txtUserName.Text).Show();
+                    new SellerHome(this.txtUserName.Text, this.txtPassword.Text).Show();
                     this.Hide();
 
                 }

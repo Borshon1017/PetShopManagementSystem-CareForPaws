@@ -408,5 +408,10 @@ namespace CareForPaws
             txtUserName.Text = "Username";
             this.txtUserName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
         }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
     }
 }

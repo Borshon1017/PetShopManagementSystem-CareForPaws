@@ -82,10 +82,29 @@
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="CareForPawsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
+    <Compile Include="AdminTransactionHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminTransactionHistory.Designer.cs">
+      <DependentUpon>AdminTransactionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmationBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmationBilling.Designer.cs">
+      <DependentUpon>ConfirmationBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateOrderUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateOrderUC.Designer.cs">
+      <DependentUpon>CreateOrderUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerInfo.Designer.cs">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="ConfirmationDone.cs">
@@ -111,6 +130,12 @@
     </Compile>
     <Compile Include="ConfirmationAsk.Designer.cs">
       <DependentUpon>ConfirmationAsk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerSetting.Designer.cs">
+      <DependentUpon>SellerSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -150,6 +175,12 @@
     <Compile Include="SellerHome.Designer.cs">
       <DependentUpon>SellerHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellerTransactionHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SellerTransactionHistory.Designer.cs">
+      <DependentUpon>SellerTransactionHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateCategoryUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,8 +205,14 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminTransactionHistory.resx">
+      <DependentUpon>AdminTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmationAsk.resx">
       <DependentUpon>ConfirmationAsk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmationBilling.resx">
+      <DependentUpon>ConfirmationBilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmationDone.resx">
       <DependentUpon>ConfirmationDone.cs</DependentUpon>
@@ -183,8 +220,17 @@
     <EmbeddedResource Include="ConfirmationError.resx">
       <DependentUpon>ConfirmationError.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateOrderUC.resx">
+      <DependentUpon>CreateOrderUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteSellerUC.resx">
       <DependentUpon>DeleteSellerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerSetting.resx">
+      <DependentUpon>SellerSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -213,23 +259,15 @@
     <EmbeddedResource Include="SellerHome.resx">
       <DependentUpon>SellerHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SellerTransactionHistory.resx">
+      <DependentUpon>SellerTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateCategoryUC.resx">
       <DependentUpon>UpdateCategoryUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateProductUC.resx">
       <DependentUpon>UpdateProductUC.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CareForPawsDataSet.xsc">
-      <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CareForPawsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CareForPawsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CareForPawsDataSet.xss">
-      <DependentUpon>CareForPawsDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

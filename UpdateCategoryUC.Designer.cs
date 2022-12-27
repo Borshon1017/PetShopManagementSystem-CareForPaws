@@ -66,7 +66,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSearchByID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSearchByID.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSearchByID.StateCommon.Border.Rounding = 20;
             this.txtSearchByID.StateCommon.Border.Width = 1;
             this.txtSearchByID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -89,7 +88,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSearchByCategoryName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSearchByCategoryName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtSearchByCategoryName.StateCommon.Border.Rounding = 20;
             this.txtSearchByCategoryName.StateCommon.Border.Width = 1;
             this.txtSearchByCategoryName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -158,7 +156,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtCategoryName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtCategoryName.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtCategoryName.StateCommon.Border.Rounding = 20;
             this.txtCategoryName.StateCommon.Border.Width = 1;
             this.txtCategoryName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
@@ -180,7 +177,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtID.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtID.StateCommon.Border.Rounding = 20;
             this.txtID.StateCommon.Border.Width = 1;
             this.txtID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;

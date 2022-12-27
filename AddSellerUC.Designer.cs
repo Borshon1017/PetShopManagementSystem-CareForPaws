@@ -521,7 +521,6 @@
             this.Controls.Add(this.rdbMale);
             this.Controls.Add(this.dtpSellerDOB);
             this.Controls.Add(this.pictureBox1);
-            this.DoubleBuffered = true;
             this.Name = "AddSellerUC";
             this.Size = new System.Drawing.Size(652, 570);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

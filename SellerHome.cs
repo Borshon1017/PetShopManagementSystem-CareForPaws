@@ -30,41 +30,9 @@ namespace CareForPaws
         {
             this.username = username;
             InitializeComponent();
-            lblUsername.Text = username;
+           
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            ConfirmationAsk logoutConfirmationObject = new ConfirmationAsk("Are you sure you want Logout?", 12, 309);
-
-            logoutConfirmationObject.ShowDialog();
-
-
-
-            Logoutaction();
-        }
-        void Logoutaction()
-        {
-            if (logoutConfirmation == false)
-            {
-
-
-
-
-
-            }
-            else if (logoutConfirmation == true)
-            {
-                new LoginForm().Show();
-                this.Close();
-
-
-                logoutConfirmation = false;
-
-
-
-            }
-        }
     }
 }
 

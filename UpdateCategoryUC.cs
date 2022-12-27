@@ -13,6 +13,8 @@ namespace CareForPaws
     public partial class UpdateCategoryUC : UserControl
     {
         private DataAccess Da { get; set; }
+        public static bool updateCategoryConfirmation;
+        public static bool deleteCategoryConfirmation;
         public UpdateCategoryUC()
         {
             InitializeComponent();
@@ -123,6 +125,15 @@ namespace CareForPaws
 
             var query = "select * from CategoryInfo where C_ID = '" + this.txtID.Text + "';";
             var ds = this.Da.ExecuteQuery(query);
+            new ConfirmationAsk("Are you sure you want to update the following category?", 12, 309).ShowDialog();
+            if (updateCategoryConfirmation == true)
+            {
+
+            }
+            else
+            {
+                return;
+            }
 
             if (ds.Tables[0].Rows.Count == 1)
             {
@@ -132,9 +143,10 @@ namespace CareForPaws
                 int count = this.Da.ExecuteDMLQuery(sql);
 
                 if (count == 1)
-                    MessageBox.Show("Data updated properly");
+                    new ConfirmationDone("Data updated properly", 51, 374);
+                    
                 else
-                    MessageBox.Show("Data upgradation failed");
+                    new ConfirmationError("Failed to update", 14, 12);
             }
 
             this.PopulateGridView();
@@ -144,6 +156,15 @@ namespace CareForPaws
         {
             if (dgvCategory.Columns[e.ColumnIndex].Name.Equals("DeleteButton"))
             {
+                //
+                new ConfirmationAsk("Are you sure you want to delete the following category?", 12, 309).ShowDialog();
+                if (deleteCategoryConfirmation == true)
+                {
+                }
+                else if (deleteCategoryConfirmation == false)
+                {
+                    return;
+                }
                 var sql = "delete from ProductInfo where C_ID = '" + this.dgvCategory.CurrentRow.Cells["C_ID"].Value.ToString() + "' ;";
                 this.Da.ExecuteDMLQuery(sql);
                 sql = "delete from CategoryInfo where C_ID = '" + this.dgvCategory.CurrentRow.Cells["C_ID"].Value.ToString() + "' ;";

@@ -122,6 +122,7 @@
             this.btnClearAll.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnClearAll.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btnClearAll.UseTransfarantBackground = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // txtQuantity
             // 
@@ -141,6 +142,7 @@
             this.txtQuantity.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtQuantity.TabIndex = 52;
             this.txtQuantity.Text = "Quantity";
+            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             this.txtQuantity.Enter += new System.EventHandler(this.txtQuantity_Enter);
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             this.txtQuantity.Leave += new System.EventHandler(this.txtQuantity_Leave);
@@ -163,6 +165,7 @@
             this.txtBrand.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtBrand.TabIndex = 48;
             this.txtBrand.Text = "Brand";
+            this.txtBrand.TextChanged += new System.EventHandler(this.txtBrand_TextChanged);
             this.txtBrand.Enter += new System.EventHandler(this.txtBrand_Enter);
             this.txtBrand.Leave += new System.EventHandler(this.txtBrand_Leave);
             // 
@@ -184,6 +187,7 @@
             this.txtProductName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtProductName.TabIndex = 47;
             this.txtProductName.Text = "Product Name";
+            this.txtProductName.TextChanged += new System.EventHandler(this.txtProductName_TextChanged);
             this.txtProductName.Enter += new System.EventHandler(this.txtProductName_Enter);
             this.txtProductName.Leave += new System.EventHandler(this.txtProductName_Leave);
             // 
@@ -248,6 +252,7 @@
             this.cmbCategory.Radius = 12;
             this.cmbCategory.Size = new System.Drawing.Size(264, 30);
             this.cmbCategory.TabIndex = 61;
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
             // 
             // lblCategory
             // 

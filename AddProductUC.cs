@@ -89,20 +89,20 @@ namespace CareForPaws
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            if (txtProductName.Text == "Product Name" || string.IsNullOrEmpty(txtProductName.Text) == true)
+            if (txtProductName.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtProductName.Text) == true)
             {
                 lblProductNameEmpty.Visible = true;
             }
             else {
                 lblProductNameEmpty.Visible = false;
             }
-            if (txtBrand.Text == "Brand" || string.IsNullOrEmpty(txtBrand.Text) == true) {
+            if (txtBrand.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtBrand.Text) == true) {
                 lblBrandEmpty.Visible = true;
             }
             else {
                 lblBrandEmpty.Visible = false;
             }
-            if (txtQuantity.Text == "Quantity" || string.IsNullOrEmpty(txtQuantity.Text) == true) {
+            if (txtQuantity.StateCommon.Content.Color1 == Color.Gray || string.IsNullOrEmpty(txtQuantity.Text) == true) {
                 lblQuantityEmpty.Visible = true;
             }
             else {
@@ -195,6 +195,37 @@ namespace CareForPaws
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            txtProductName.Text = "Product Name";
+            this.txtProductName.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtBrand.Text = "Brand";
+            this.txtBrand.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            txtQuantity.Text = "Quantity";
+            this.txtQuantity.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+
+        }
+
+        private void txtProductName_TextChanged(object sender, EventArgs e)
+        {
+            lblProductNameEmpty.Visible = false;
+        }
+
+        private void txtBrand_TextChanged(object sender, EventArgs e)
+        {
+            lblBrandEmpty.Visible = false;
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+            lblQuantityEmpty.Visible = false;
+        }
+
+        private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblCategoryEmpty.Visible = false;
         }
     }
 }

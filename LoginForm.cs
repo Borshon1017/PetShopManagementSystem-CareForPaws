@@ -73,7 +73,7 @@ namespace CareForPaws
         {
             if (this.txtPassword.Text == "")
             {
-
+                ///
                 this.txtPassword.Text = "Password";
                 this.txtPassword.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
 
@@ -187,6 +187,11 @@ namespace CareForPaws
         {
            
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+            ///
         }
     }
 }

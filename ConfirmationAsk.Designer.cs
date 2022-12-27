@@ -52,10 +52,11 @@
             this.lblComfirmationFail.AutoSize = true;
             this.lblComfirmationFail.Font = new System.Drawing.Font("Segoe UI Symbol", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComfirmationFail.Location = new System.Drawing.Point(12, 309);
+            this.lblComfirmationFail.MaximumSize = new System.Drawing.Size(348, 0);
             this.lblComfirmationFail.Name = "lblComfirmationFail";
-            this.lblComfirmationFail.Size = new System.Drawing.Size(318, 30);
+            this.lblComfirmationFail.Size = new System.Drawing.Size(324, 30);
             this.lblComfirmationFail.TabIndex = 5;
-            this.lblComfirmationFail.Text = "Are you sure you want to delete?";
+            this.lblComfirmationFail.Text = "Are you sure you want to delete? \r\n";
             this.lblComfirmationFail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnYes

@@ -12,6 +12,7 @@ namespace CareForPaws
 {
     public partial class AddCategoryUC : UserControl
     {
+        public static bool categoryAddConfirmation;
         public AddCategoryUC()
         {
             InitializeComponent();
@@ -51,9 +52,20 @@ namespace CareForPaws
             string CID = "C-" + this.AutoId();
             string categoryName = txtCategoryName.Text;
 
-            if (txtCategoryName.Text == "Category Name" || string.IsNullOrEmpty(txtCategoryName.Text) == true)
+
+
+
+            if (txtCategoryName.StateCommon.Content.Color1 == Color.Gray|| txtCategoryName.Text== "Category Name" || string.IsNullOrEmpty(txtCategoryName.Text) == true)
             {
                 lblCategoryNameEmpty.Visible = true;
+                return;
+            }
+            new ConfirmationAsk("Are you sure you want '" + txtCategoryName.Text + "' to add to category list?", 12, 309).ShowDialog();
+            if (categoryAddConfirmation == true)
+            {
+            }
+            else if (categoryAddConfirmation == false)
+            {
                 return;
             }
 

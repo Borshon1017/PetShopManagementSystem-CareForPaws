@@ -35,11 +35,15 @@ namespace CareForPaws
             AdminHome.recoverAllConfirmation= true;
             AdminHome.updateSellerConfirmation= true;
             SellerHome.logoutConfirmation= true;
+            AddCategoryUC.categoryAddConfirmation = true;
+            UpdateProductUC.updateProductConfirmation = true;
+            UpdateCategoryUC.updateCategoryConfirmation=true;
+            UpdateCategoryUC.deleteCategoryConfirmation = true;
 
-            if (DeleteSellerUC.askStatic == true || AdminHome.logoutConfirmation == true)
-            {
+
+
                 this.Close();
-            }
+            
             }
 
         private void btnNo_Click(object sender, EventArgs e)
@@ -49,6 +53,10 @@ namespace CareForPaws
             AdminHome.recoverAllConfirmation = false;
             AdminHome.updateSellerConfirmation = false;
             SellerHome.logoutConfirmation = false;
+            AddCategoryUC.categoryAddConfirmation = false;
+            UpdateProductUC.updateProductConfirmation = false ;
+            UpdateCategoryUC.updateCategoryConfirmation = false;
+            UpdateCategoryUC.deleteCategoryConfirmation = false; ;
             this.Close();
         }
 

@@ -39,6 +39,13 @@
             this.txtSearchByID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSearchByProductName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.P_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.lblMessage = new System.Windows.Forms.Label();
             this.btnClear = new Guna.UI.WinForms.GunaButton();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
@@ -53,13 +60,7 @@
             this.txtProductName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.P_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteButton = new System.Windows.Forms.DataGridViewImageColumn();
+            this.addSellerUC1 = new CareForPaws.AddSellerUC();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -174,6 +175,85 @@
             this.dgvProduct.TabIndex = 33;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             this.dgvProduct.DoubleClick += new System.EventHandler(this.dgvProduct_DoubleClick);
+            // 
+            // P_ID
+            // 
+            this.P_ID.DataPropertyName = "P_ID";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.P_ID.DefaultCellStyle = dataGridViewCellStyle3;
+            this.P_ID.HeaderText = "ID";
+            this.P_ID.Name = "P_ID";
+            this.P_ID.ReadOnly = true;
+            this.P_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.P_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.P_ID.Width = 60;
+            // 
+            // ProductName
+            // 
+            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductName.DataPropertyName = "ProductName";
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.ProductName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            this.ProductName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProductName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Brand
+            // 
+            this.Brand.DataPropertyName = "Brand";
+            this.Brand.HeaderText = "Brand";
+            this.Brand.Name = "Brand";
+            this.Brand.ReadOnly = true;
+            this.Brand.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Brand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Brand.Visible = false;
+            this.Brand.Width = 80;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "Category";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
+            this.CategoryName.Width = 90;
+            // 
+            // C_ID
+            // 
+            this.C_ID.DataPropertyName = "C_ID";
+            this.C_ID.HeaderText = "";
+            this.C_ID.Name = "C_ID";
+            this.C_ID.ReadOnly = true;
+            this.C_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.C_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.C_ID.Visible = false;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Quantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Quantity.Width = 60;
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.HeaderText = "";
+            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
+            this.DeleteButton.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.ReadOnly = true;
+            this.DeleteButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DeleteButton.Width = 40;
             // 
             // lblMessage
             // 
@@ -431,89 +511,20 @@
             this.txtID.TabIndex = 23;
             this.txtID.Text = "ID";
             // 
-            // P_ID
+            // addSellerUC1
             // 
-            this.P_ID.DataPropertyName = "P_ID";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.P_ID.DefaultCellStyle = dataGridViewCellStyle3;
-            this.P_ID.HeaderText = "ID";
-            this.P_ID.Name = "P_ID";
-            this.P_ID.ReadOnly = true;
-            this.P_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.P_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.P_ID.Width = 60;
-            // 
-            // ProductName
-            // 
-            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductName.DataPropertyName = "ProductName";
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.ProductName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            this.ProductName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProductName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Brand
-            // 
-            this.Brand.DataPropertyName = "Brand";
-            this.Brand.HeaderText = "Brand";
-            this.Brand.Name = "Brand";
-            this.Brand.ReadOnly = true;
-            this.Brand.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Brand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Brand.Visible = false;
-            this.Brand.Width = 80;
-            // 
-            // CategoryName
-            // 
-            this.CategoryName.DataPropertyName = "CategoryName";
-            this.CategoryName.HeaderText = "Category";
-            this.CategoryName.Name = "CategoryName";
-            this.CategoryName.ReadOnly = true;
-            this.CategoryName.Width = 90;
-            // 
-            // C_ID
-            // 
-            this.C_ID.DataPropertyName = "C_ID";
-            this.C_ID.HeaderText = "";
-            this.C_ID.Name = "C_ID";
-            this.C_ID.ReadOnly = true;
-            this.C_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.C_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.C_ID.Visible = false;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            this.Quantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Quantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Quantity.Width = 60;
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.HeaderText = "";
-            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
-            this.DeleteButton.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.ReadOnly = true;
-            this.DeleteButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DeleteButton.Width = 40;
+            this.addSellerUC1.BackColor = System.Drawing.Color.Transparent;
+            this.addSellerUC1.Location = new System.Drawing.Point(0, 0);
+            this.addSellerUC1.Name = "addSellerUC1";
+            this.addSellerUC1.Size = new System.Drawing.Size(652, 570);
+            this.addSellerUC1.TabIndex = 38;
+            this.addSellerUC1.Load += new System.EventHandler(this.addSellerUC1_Load);
             // 
             // UpdateProductUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.addSellerUC1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel2);
@@ -559,5 +570,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn C_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewImageColumn DeleteButton;
+        private AddSellerUC addSellerUC1;
     }
 }

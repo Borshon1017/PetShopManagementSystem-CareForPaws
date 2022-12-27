@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace CareForPaws
 {
+    
     public partial class UpdateProductUC : UserControl
     {
+        public static bool updateProductConfirmation;
         private DataAccess Da { get; set; }
         public UpdateProductUC()
         {
@@ -193,7 +195,7 @@ namespace CareForPaws
                 int count = this.Da.ExecuteDMLQuery(sql);
 
                 if (count >= 1)
-                    MessageBox.Show("Data updated properly");
+                    new ConfirmationDone("Data added Sucessfully", 51, 374).Show();
                 else
                     MessageBox.Show("Data upgradation failed");
             }
@@ -279,6 +281,11 @@ namespace CareForPaws
                 this.Da.ExecuteDMLQuery(sql);
                 this.PopulateGridView();
             }
+        }
+
+        private void addSellerUC1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

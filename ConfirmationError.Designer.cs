@@ -61,6 +61,7 @@
             this.lblComfirmationFail.AutoSize = true;
             this.lblComfirmationFail.Font = new System.Drawing.Font("Segoe UI Symbol", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComfirmationFail.Location = new System.Drawing.Point(14, 12);
+            this.lblComfirmationFail.MaximumSize = new System.Drawing.Size(348, 0);
             this.lblComfirmationFail.Name = "lblComfirmationFail";
             this.lblComfirmationFail.Size = new System.Drawing.Size(298, 60);
             this.lblComfirmationFail.TabIndex = 4;
@@ -80,7 +81,7 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Visible = false;
             // 
-            // ComfirmationError
+            // ConfirmationError
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,7 +91,7 @@
             this.Controls.Add(this.WhitePanel);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ComfirmationError";
+            this.Name = "ConfirmationError";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Error";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

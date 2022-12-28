@@ -236,6 +236,18 @@ namespace CareForPaws
                 string purchaseDate = DateTime.Now.ToString("d");
                 var query = @"insert into TransactionInfo values('"+ transactionID +"', '"+ uID +"', '"+ customerName +"', "+ amountPaid +", '"+ purchaseDate+"');";
                 ds = Da.ExecuteQuery(query);
+                List<string[]> cartRows = new List<string[]>();
+                int index = 0;
+                while (index < this.dgvCart.Rows.Count)
+                {
+                    var productName = dgvCart.Rows[index].Cells["ProductNameCart"].Value.ToString();
+                    var price = dgvCart.Rows[index].Cells["PriceCart"].Value.ToString();
+                    var quantity = dgvCart.Rows[index].Cells["QuantityCart"].Value.ToString();
+                    cartRows.Add(new string[] { productName, price, quantity });
+
+                    index++;
+                }
+                new ConfirmationBilling(cartRows, this.SetCost()).ShowDialog();
                 this.dgvCart.DataSource = null;
                 this.dgvCart.Rows.Clear();
                 this.SetCost();

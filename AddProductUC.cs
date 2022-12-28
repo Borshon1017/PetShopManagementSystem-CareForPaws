@@ -171,7 +171,7 @@ namespace CareForPaws
             }
             catch (IndexOutOfRangeException e)
             {
-                var sql = "insert into ProductInfo values ('P-001', 'Bish', 'Maa Babar Dowa', 'C-010', 100);";
+                var sql = "insert into ProductInfo values ('P-001', 'Bish', 'Maa Babar Dowa', 'C-010', 10, 100);";
                 var ds = this.Da.ExecuteQuery(sql);
                 var dt = Da.ExecuteQueryTable(@"Select * from ProductInfo order by P_ID Desc;");
                 string lastId = dt.Rows[0][0].ToString();

@@ -126,7 +126,7 @@ namespace CareForPaws
         private void btnSettings_Click(object sender, EventArgs e)
         {
             SellerSettings sellerSettings = new SellerSettings(username, password);
-            sellerSettings.Show();
+            sellerSettings.ShowDialog();
         }
     }
 }

@@ -17,7 +17,10 @@ namespace CareForPaws
             InitializeComponent();
         }
 
-        private void txtCustomerName_Enter(object sender, EventArgs e)
+        public String CustomerName { get; set; }
+
+
+        private void txtCustomerName_Enter_1(object sender, EventArgs e)
         {
             if (this.txtCustomerName.Text == "Enter Customer's Name")
             {
@@ -28,7 +31,7 @@ namespace CareForPaws
             }
         }
 
-        private void txtCustomerName_Leave(object sender, EventArgs e)
+        private void txtCustomerName_Leave_1(object sender, EventArgs e)
         {
             if (this.txtCustomerName.Text == "")
             {
@@ -38,8 +41,6 @@ namespace CareForPaws
 
             }
         }
-
-        public String CustomerName { get; set; }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

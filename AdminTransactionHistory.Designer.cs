@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblMessage = new System.Windows.Forms.Label();
             this.txtSearchByPurchaseDate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSearchByID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
             this.T_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.S_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.U_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AmountPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PurchaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,54 +108,54 @@
             this.dgvTransaction.AllowUserToDeleteRows = false;
             this.dgvTransaction.AllowUserToResizeColumns = false;
             this.dgvTransaction.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvTransaction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvTransaction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.White;
             this.dgvTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.T_ID,
-            this.S_ID,
+            this.U_ID,
             this.ProductName,
             this.AmountPaid,
             this.PurchaseDate});
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTransaction.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvTransaction.Location = new System.Drawing.Point(25, 134);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.ReadOnly = true;
             this.dgvTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransaction.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTransaction.RowHeadersVisible = false;
             this.dgvTransaction.RowHeadersWidth = 15;
             this.dgvTransaction.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvTransaction.RowTemplate.Height = 40;
@@ -167,12 +167,12 @@
             // T_ID
             // 
             this.T_ID.DataPropertyName = "T_ID";
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
-            this.T_ID.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.T_ID.DefaultCellStyle = dataGridViewCellStyle3;
             this.T_ID.HeaderText = "ID";
             this.T_ID.Name = "T_ID";
             this.T_ID.ReadOnly = true;
@@ -180,24 +180,24 @@
             this.T_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.T_ID.Width = 80;
             // 
-            // S_ID
+            // U_ID
             // 
-            this.S_ID.DataPropertyName = "S_ID";
-            this.S_ID.HeaderText = "Seller ID";
-            this.S_ID.Name = "S_ID";
-            this.S_ID.ReadOnly = true;
-            this.S_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.S_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.S_ID.Width = 80;
+            this.U_ID.DataPropertyName = "U_ID";
+            this.U_ID.HeaderText = "Seller ID";
+            this.U_ID.Name = "U_ID";
+            this.U_ID.ReadOnly = true;
+            this.U_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.U_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.U_ID.Width = 80;
             // 
             // ProductName
             // 
             this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ProductName.DataPropertyName = "CustomerName";
-            dataGridViewCellStyle32.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
-            this.ProductName.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.ProductName.DefaultCellStyle = dataGridViewCellStyle4;
             this.ProductName.HeaderText = "Customer Name";
             this.ProductName.Name = "ProductName";
             this.ProductName.ReadOnly = true;
@@ -248,7 +248,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearchByID;
         private System.Windows.Forms.DataGridView dgvTransaction;
         private System.Windows.Forms.DataGridViewTextBoxColumn T_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn S_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn U_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn AmountPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn PurchaseDate;

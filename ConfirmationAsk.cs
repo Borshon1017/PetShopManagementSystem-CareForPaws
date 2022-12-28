@@ -44,7 +44,9 @@ namespace CareForPaws
             RecoverSellerUC.recoverSingle = true;
             AdminHome.adminExit=true;
             SellerHome.sellerExit = true;
-            
+            SellerSettings.sellersettingsPasswordChange = true;
+
+
 
 
 
@@ -68,6 +70,7 @@ namespace CareForPaws
             RecoverSellerUC.recoverSingle = false;
             AdminHome.adminExit = false;
             SellerHome.sellerExit = false;
+            SellerSettings.sellersettingsPasswordChange = false;
 
             this.Close();
         }

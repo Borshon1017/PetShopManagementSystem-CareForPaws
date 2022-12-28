@@ -14,6 +14,7 @@ namespace CareForPaws
     {
         private string username;
         private string password;
+        public static bool sellersettingsPasswordChange;
         private DataAccess Da { get; set; }
         public SellerSettings(string u, string p)
         {
@@ -103,6 +104,16 @@ namespace CareForPaws
                 lblPasswordError.Visible = false;
 
             }
+            ConfirmationAsk updatepassword = new ConfirmationAsk("   save current changes?", 12, 309);
+            updatepassword.ShowDialog();
+            if (sellersettingsPasswordChange == true)
+            {
+            }
+            else if (sellersettingsPasswordChange == false)
+            {
+                return;
+            }
+
             /*confirmationask updateinfo = new confirmationask("   save current changes?", 12, 309);
 
             updateinfo.showdialog();
